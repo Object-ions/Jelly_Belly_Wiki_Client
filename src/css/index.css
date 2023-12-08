@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --primary-color: ;
+  --secondary-color: ;
+  --light-color: ;
+  --dark-color: ;
+  --max-width: ;
+  --primary-font: 'Bebas Neue', sans-serif;
+  --secondary-font: 'Alfa Slab One', serif;
+  --text-font: 'Gentium Book Plus', serif;
+}
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  overflow: hidden;
+}
+
+.main-nav img {
+  width: 5rem;
+  
+}
+
+.main-nav .container {
+  display: grid;
+  grid-template-columns: 2fr 6fr 1fr;
+  padding: 1rem;
+  align-items: center;
+}
+
+.main-nav ul {
+  display: flex;
+  /* justify-self: end; */
+}
+
+.main-nav ul li a {
+  padding: 0.75rem;
 }
