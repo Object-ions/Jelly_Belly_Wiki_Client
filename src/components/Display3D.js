@@ -1,8 +1,9 @@
 import React from "react";
 
-const Display3D = () => {
+const Display3D = ({ scrollPosition }) => {
+  const style = { top: `${-scrollPosition}px` };
   return (
-    <div>
+    <div style={style}>
       <h3> Display3D </h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis provident
