@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const InformativeSection = () => {
-  return (
-    <div>InformativeSection</div>
-  )
-}
+  return <div className="InformativeSection">InformativeSection</div>;
+};
 
-export default InformativeSection
+export default InformativeSection;

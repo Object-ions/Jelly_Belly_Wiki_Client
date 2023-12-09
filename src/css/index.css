@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 :root {
-  --primary-color: #e83a4b;
+  --head-color: #e83a4b;
   --secondary-color: #ee9085;
   --dark-red: #bd2328;
   --btn-red: #ec2c2f;
-  --light-color: ;
-  --dark-color: ;
+  --light-body-color: #f9f5f4;
+  --dark-body-color: #eeeae6;
   --max-width: ;
-  --primary-font: "Roboto", sans-serif;
+  --head-font: "Roboto", sans-serif;
   --text-font: "Raleway", sans-serif;
 }
 
@@ -25,12 +25,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--primary-font);
+  font-family: var(--head-font);
 }
 
 a {
   text-decoration: none;
-  font-family: var(--primary-font);
+  font-family: var(--head-font);
 }
 
 ul {
@@ -48,6 +48,9 @@ img {
 }
 
 /* Header */
+.Header {
+  background: var(--head-color);
+}
 
 .Header img {
   width: 5rem;
@@ -67,22 +70,42 @@ img {
 
 .Header ul li a {
   padding: 0.75rem;
+  color: var(--light-body-color);
 }
 
 /* Landing Page */
 
 .LandingSection {
   display: flex;
+  background: var(--light-body-color);
+  height: 80vh;
+}
+.LandingSection .container {
+  display: flex;
+  background: var(--light-body-color);
+  height: 80vh;
 }
 
-.LandingSection .container {
+/* .LandingSection .img-wrapper {
   width: 20rem;
   height: 20rem;
-}
+} */
 
 .LandingSection img {
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
+}
+
+.LandingSection .btn {
+  background: var(--btn-red);
+  padding: 1rem 1rem;
+  border: 1px solid var(--btn-red);
+}
+
+/* Informative Section */
+
+.InformativeSection {
+  background: var(--dark-body-color);
 }
