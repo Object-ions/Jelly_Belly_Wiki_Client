@@ -86,6 +86,7 @@ img {
   grid-gap: 1rem;
   background: var(--light-body-color);
   height: 80vh;
+  padding: 0 1rem;
 }
 
 .LandingSection .container {
@@ -93,10 +94,22 @@ img {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: auto;
+  max-width: 30rem;
 }
 
 .LandingSection .img-wrapper {
   width: 20rem;
+}
+
+.LandingSection p {
+  color: var(--secondary-color);
+  margin-top: 1rem;
+}
+
+.LandingSection h1,
+.LandingSection h2 {
+  color: var(--btn-red);
 }
 
 .LandingSection img {
@@ -104,25 +117,67 @@ img {
   max-height: 100%;
   width: auto;
   height: auto;
+  margin-bottom: 1.5rem;
 }
 
 .LandingSection .btn {
-  background: var(--btn-red);
+  background: var(--dark-red);
   border: 1px solid var(--btn-red);
   padding: 0.5rem 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   display: inline-block;
   color: var(--light-body-color);
 }
 
 .LandingSection .model-3d {
-  background: slategray;
+  background: var(--light-body-color);
   height: 100%;
   width: 100%;
+}
+
+/* Display History */
+.DisplayHistory {
+  background: var(--dark-body-color);
+}
+
+.DisplayHistory h3 {
+  color: #bd2328;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.DisplayHistory .history-grid {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.DisplayHistory .history-grid .item-wrapper {
+  display: flex;
+  align-items: center;
+}
+.DisplayHistory .history-grid .item-wrapper:first-child {
+  grid-column: span 2;
+  border: 1px solid var(--btn-red);
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.DisplayHistory .history-grid h4 {
+  color: var(--head-color);
+  margin-bottom: 0.2rem;
+}
+
+.DisplayHistory .history-grid p {
+  color: var(--dark-red);
+  font-size: 0.6rem;
 }
 
 /* Informative Section */
 
 .InformativeSection {
-  background: var(--dark-body-color);
 }
