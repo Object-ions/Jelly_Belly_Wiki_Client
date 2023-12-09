@@ -21,7 +21,7 @@ const LandingSection = () => {
           </a>
         </div>
       </div>
-      <div>3D model</div>
+      <div className="model-3d">3D model</div>
     </div>
   );
 };
