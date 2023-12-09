@@ -1,34 +1,37 @@
 import React from "react";
 import LogoFav from "../img/fivcon-final.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="main-nav">
+    <div className="Header">
       <div className="container">
         <img src={LogoFav} alt="Jwlly Belly Wiki" />
         <ul>
           <li className="current">
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className="">
-            <a href="#">Beans</a>
+            <Link to="/beans">Beans</Link>
           </li>
           <li className="">
-            <a href="#">Facts</a>
+            <Link to="/facts">Facts</Link>
           </li>
           <li className="">
-            <a href="#">Recipes</a>
+            <Link to="/recipes">Recipes</Link>
           </li>
           <li className="">
-            <a href="#">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li className="">
-            <a href="#">Official Website</a>
+            <a target="_blank" rel="noreferrer" href="http://jellybelly.com">
+              Official Website
+            </a>
           </li>
         </ul>
         <ul>
           <li className="">
-            <a href="#">API</a>
+            <Link to="/api">API</Link>
           </li>
         </ul>
       </div>
