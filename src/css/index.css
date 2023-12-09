@@ -86,9 +86,9 @@ img {
 /* Landing Section */
 
 .LandingSection {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-gap: 1rem;
+  grid-gap: 1rem; */
   background: var(--light-body-color);
   height: 80vh;
   padding: 0 1rem;
@@ -134,11 +134,11 @@ img {
   color: var(--light-body-color);
 }
 
-.LandingSection .model-3d {
+/* .LandingSection .model-3d {
   background: var(--light-body-color);
   height: 100%;
   width: 100%;
-}
+} */
 
 /* Display History */
 .DisplayHistory {
