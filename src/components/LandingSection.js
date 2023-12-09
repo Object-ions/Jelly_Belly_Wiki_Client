@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import BeanLogo from "../img/new-logo-with-3d-look2.png";
+import { useSpring, animated } from "react-spring";
 
 const LandingSection = () => {
+  // Set state for visibility
+  const [isVisible, setIsVisible] = useState(true);
+
+  // Spring animation based on visibility
+  const animation = useSpring({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? "translateY(0)" : "translateY(-100%)",
+    config: { mass: 1, tension: 210, friction: 20 },
+  });
+
+  // Effect for adding and removing the scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const visible = currentScrollPos < 100; // Determines when the component should be visible
+      setIsVisible(visible);
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="LandingSection">
+    <animated.div className="LandingSection" style={animation}>
       <div className="container">
         <div className="img-wrapper">
           <img src={BeanLogo} alt="Jelly Belly Wiki Logo" />
@@ -21,8 +49,8 @@ const LandingSection = () => {
           </a>
         </div>
       </div>
-      <div className="model-3d">3D model</div>
-    </div>
+      {/* <div className="model-3d">3D model</div> */}
+    </animated.div>
   );
 };
 
