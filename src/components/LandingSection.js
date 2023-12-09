@@ -10,13 +10,13 @@ const LandingSection = () => {
         </div>
         <div>
           <h1>Welcome to the World of Jelly Belly:</h1>
-          <h1>A Rainbow of Flavors Awaits!</h1>
+          <h2>A Rainbow of Flavors Awaits!</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias enim
             maxime placeat tenetur deserunt adipisci laborum perferendis
             incidunt aspernatur. Ex.
           </p>
-          <a className="btn" href="#">
+          <a className="btn" href="http://">
             Click here for more info
           </a>
         </div>
