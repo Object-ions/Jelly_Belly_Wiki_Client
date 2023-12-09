@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 :root {
   --primary-color: ;
@@ -6,19 +6,29 @@
   --light-color: ;
   --dark-color: ;
   --max-width: ;
-  --primary-font: 'Bebas Neue', sans-serif;
-  --secondary-font: 'Alfa Slab One', serif;
-  --text-font: 'Gentium Book Plus', serif;
+  --primary-font: "Roboto", sans-serif;
+  --text-font: "Raleway", sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--text-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
 }
 
 a {
   text-decoration: none;
+  font-family: var(--primary-font);
 }
 
 ul {
@@ -35,23 +45,42 @@ img {
   overflow: hidden;
 }
 
-.main-nav img {
+/* Header */
+
+.Header img {
   width: 5rem;
-  
 }
 
-.main-nav .container {
+.Header .container {
   display: grid;
   grid-template-columns: 2fr 6fr 1fr;
   padding: 1rem;
   align-items: center;
 }
 
-.main-nav ul {
+.Header ul {
   display: flex;
   /* justify-self: end; */
 }
 
-.main-nav ul li a {
+.Header ul li a {
   padding: 0.75rem;
+}
+
+/* Landing Page */
+
+.LandingSection {
+  display: flex;
+}
+
+.LandingSection .container {
+  width: 20rem;
+  height: 20rem;
+}
+
+.LandingSection img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
