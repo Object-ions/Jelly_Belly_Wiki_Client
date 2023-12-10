@@ -1,9 +1,9 @@
 import React from "react";
 
 const Display3D = ({ scrollPosition }) => {
-  const style = { top: `${-scrollPosition}px` };
+  const opacity = Math.min(scrollPosition / 500, 1);
   return (
-    <div style={style}>
+    <div style={{ opacity }}>
       <h3> Display3D </h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis provident

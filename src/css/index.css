@@ -24,6 +24,10 @@
   font-family: var(--text-font);
 }
 
+body {
+  padding-top: 5rem;
+}
+
 h1,
 h2,
 h3,
@@ -54,6 +58,12 @@ img {
 
 /* Header */
 .Header {
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
   background: var(--head-color);
 }
 
@@ -90,7 +100,7 @@ img {
   grid-template-columns: 1fr 3fr;
   grid-gap: 1rem; */
   background: var(--light-body-color);
-  height: 80vh;
+  height: 100vh;
   padding: 0 1rem;
 }
 
@@ -133,12 +143,6 @@ img {
   display: inline-block;
   color: var(--light-body-color);
 }
-
-/* .LandingSection .model-3d {
-  background: var(--light-body-color);
-  height: 100%;
-  width: 100%;
-} */
 
 /* Display History */
 .DisplayHistory {
@@ -202,6 +206,11 @@ img {
 .DisplayHistory .history-grid p {
   color: var(--dark-red);
   font-size: 0.6rem;
+}
+
+.Display3D {
+  transition: transform 0.3s ease-out;
+  will-change: transform;
 }
 
 /* Informative Section */
