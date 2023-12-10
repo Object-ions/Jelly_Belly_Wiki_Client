@@ -154,6 +154,20 @@ img {
 .LandingSection .bottom-description {
   position: absolute;
   bottom: 3rem;
+  display: flex;
+  width: 90%;
+  max-width: var(--max-width);
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.LandingSection .bottom-description div {
+  width: 25rem;
+}
+
+.LandingSection .bottom-description svg {
+  color: var(--dark-red) !important;
+  text-align: right;
 }
 
 /* Display History */

@@ -1,5 +1,7 @@
 import React from "react";
 import BeanLogo from "../img/new-logo-with-3d-look2.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const LandingSection = () => {
   return (
@@ -22,8 +24,14 @@ const LandingSection = () => {
         </div>
       </div>
       <div className="bottom-description">
-        <div>arrow right</div>
-        <div>text left</div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis,
+            quibusdam sed. Molestias eius rerum officiis quibusdam ea dolores
+            voluptas atque?
+          </p>
+        </div>
+        <FontAwesomeIcon icon={faArrowDown} fade />
       </div>
     </div>
   );
