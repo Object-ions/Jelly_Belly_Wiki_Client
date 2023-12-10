@@ -97,18 +97,28 @@ img {
 
 .LandingSection {
   background: var(--light-body-color);
-  height: 100vh;
+  height: 95vh;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .LandingSection .container {
   max-width: var(--max-width);
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 2fr;
   grid-gap: 1rem;
-  align-self: center;
-  justify-content: center;
-  margin: auto;
+  margin: 0 auto;
+}
+
+.LandingSection .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .LandingSection .img-wrapper {
@@ -130,7 +140,6 @@ img {
   max-height: 100%;
   width: auto;
   height: auto;
-  margin-bottom: 1.5rem;
 }
 
 .LandingSection .btn {
@@ -140,6 +149,11 @@ img {
   margin-top: 1.5rem;
   display: inline-block;
   color: var(--light-body-color);
+}
+
+.LandingSection .bottom-description {
+  position: absolute;
+  bottom: 3rem;
 }
 
 /* Display History */
@@ -204,11 +218,6 @@ img {
 .DisplayHistory .history-grid p {
   color: var(--dark-red);
   font-size: 0.6rem;
-}
-
-.Display3D {
-  transition: transform 0.3s ease-out;
-  will-change: transform;
 }
 
 /* Informative Section */

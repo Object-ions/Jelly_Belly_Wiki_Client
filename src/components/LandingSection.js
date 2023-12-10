@@ -8,7 +8,7 @@ const LandingSection = () => {
         <div className="img-wrapper">
           <img src={BeanLogo} alt="Jelly Belly Wiki Logo" />
         </div>
-        <div>
+        <div className="text-wrapper">
           <h1>Welcome to the World of Jelly Belly:</h1>
           <h2>A Rainbow of Flavors Awaits!</h2>
           <p>
@@ -20,6 +20,10 @@ const LandingSection = () => {
             Click here for more info
           </a>
         </div>
+      </div>
+      <div className="bottom-description">
+        <div>arrow right</div>
+        <div>text left</div>
       </div>
     </div>
   );
