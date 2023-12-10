@@ -12,7 +12,7 @@ const LandingSection = () => {
         </div>
         <div className="text-wrapper">
           <h1>Welcome to the World of Jelly Belly:</h1>
-          <h2>A Rainbow of Flavors Awaits!</h2>
+          <h3>A Rainbow of Flavors Awaits!</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias enim
             maxime placeat tenetur deserunt adipisci laborum perferendis
@@ -31,7 +31,7 @@ const LandingSection = () => {
             voluptas atque?
           </p>
         </div>
-        <FontAwesomeIcon icon={faArrowDown} fade />
+        <FontAwesomeIcon icon={faArrowDown} fade size="2x" />
       </div>
     </div>
   );

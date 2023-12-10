@@ -37,6 +37,15 @@ h6 {
   font-family: var(--head-font);
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+p {
+  font-size: 1rem;
+}
+
 a {
   text-decoration: none;
   font-family: var(--head-font);
@@ -69,6 +78,11 @@ img {
 
 .Header img {
   width: 5rem;
+  transition: transform 0.3s ease;
+}
+
+.Header img:hover {
+  animation: favicon-shake 0.4s ease 1 alternate;
 }
 
 .Header .container {
@@ -85,12 +99,35 @@ img {
 }
 
 .Header ul li a {
-  padding: 0.75rem;
+  padding: 0.5rem;
+  margin-right: 0.2rem;
+  color: var(--light-body-color);
+  background: transparent;
+  border: 0.1rem solid transparent;
+  border-radius: 3rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.Header ul li a:hover {
+  background: #e87a85;
+  border: 0.1rem solid #e87a85;
   color: var(--light-body-color);
 }
 
 .Header img {
   margin: auto;
+}
+
+.Header .api {
+  border: 0.1rem solid #e87a85;
+  border-radius: 3rem;
+  padding: 0.5rem;
+}
+
+.Header .api:hover {
+  background: #e87a85;
+  border: 0.1rem solid #e87a85;
+  color: var(--light-body-color);
 }
 
 /* Landing Section */
@@ -119,10 +156,16 @@ img {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-right: 5rem;
+  font-size: 1.1rem;
 }
 
 .LandingSection .img-wrapper {
   width: 40rem;
+}
+
+.LandingSection .img-wrapper:hover {
+  animation: favicon-shake 0.7s ease-in-out 2 alternate;
 }
 
 .LandingSection p {
@@ -131,7 +174,7 @@ img {
 }
 
 .LandingSection h1,
-.LandingSection h2 {
+.LandingSection h3 {
   color: var(--btn-red);
 }
 
@@ -162,12 +205,17 @@ img {
 }
 
 .LandingSection .bottom-description div {
-  width: 25rem;
+  width: 10rem;
+}
+
+.LandingSection .bottom-description div p {
+  font-size: 0.7rem;
 }
 
 .LandingSection .bottom-description svg {
   color: var(--dark-red) !important;
   text-align: right;
+  animation-duration: 3s;
 }
 
 /* Display History */
@@ -255,5 +303,21 @@ img {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes favicon-shake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
   }
 }

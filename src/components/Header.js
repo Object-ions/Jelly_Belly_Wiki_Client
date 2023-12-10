@@ -6,11 +6,11 @@ const Header = () => {
   return (
     <div className="Header">
       <div className="container">
-        <img src={LogoFav} alt="Jwlly Belly Wiki" />
+        <Link to="/">
+          <img src={LogoFav} alt="Jwlly Belly Wiki" />
+        </Link>
+
         <ul>
-          <li className="current">
-            <Link to="/">Home</Link>
-          </li>
           <li className="">
             <Link to="/beans">Beans</Link>
           </li>
@@ -23,14 +23,9 @@ const Header = () => {
           <li className="">
             <Link to="/about">About</Link>
           </li>
-          <li className="">
-            <a target="_blank" rel="noreferrer" href="http://jellybelly.com">
-              Official Website
-            </a>
-          </li>
         </ul>
         <ul>
-          <li className="">
+          <li className="api">
             <Link to="/api">API</Link>
           </li>
         </ul>
