@@ -19,7 +19,7 @@ describe("beansReducer", () => {
   test("should change isLoaded to true and update beans", () => {
     const beans = "An article";
     action = {
-      type: actionType.GET_TOP_STORIES_SUCCESS,
+      type: actionType.GET_BEANS_SUCCESS,
       beans,
     };
 
@@ -27,6 +27,20 @@ describe("beansReducer", () => {
       isLoaded: true,
       beans: "An article",
       error: null,
+    });
+  });
+
+  test("should change isLoaded to true and update beans and add an error message", () => {
+    const error = "An error";
+    action = {
+      type: actionType.GET_BEANS_FAILURE,
+      error,
+    };
+
+    expect(beansReducer(initialState, action)).toEqual({
+      isLoaded: true,
+      beans: [],
+      error: "An error",
     });
   });
 });
