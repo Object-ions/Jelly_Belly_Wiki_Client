@@ -3,7 +3,7 @@ import beansReducer from "../../reducers/beans-reducer";
 describe("beansReducer", () => {
   const initialState = {
     isLoaded: false,
-    topStories: [],
+    beans: [],
     error: null,
   };
 
