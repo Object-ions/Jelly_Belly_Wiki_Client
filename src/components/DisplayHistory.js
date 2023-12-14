@@ -15,17 +15,20 @@ const DisplayHistory = () => {
   const [state, dispatch] = useReducer(beansReducer, initialState);
 
   useEffect(() => {
-    fetch(`https://localhost:5001/api/Beans`)
-      .then((res) => {
+    fetch(`https://localhost:5001/api/MileStones`)
+      .then(async (res) => {
         if (!res.ok) {
           throw new Error(`${res.status}: ${res.statusText}`);
         } else {
-          console.log(res.json());
-          return res.json();
+          const waitResponse = await res.json();
+          console.log(waitResponse);
+          // return res.json();
+          return waitResponse;
         }
       })
       .then((jsonifiedResponse) => {
-        const action = getBeansSuccess(jsonifiedResponse.results);
+        console.log(jsonifiedResponse);
+        const action = getBeansSuccess(jsonifiedResponse.items);
         dispatch(action);
       })
       .catch((error) => {
@@ -47,7 +50,7 @@ const DisplayHistory = () => {
           <h3>a Little Bit of History ...</h3>
           <div className="history-grid">
             {/* Static ex */}
-            <div className="item-wrapper">
+            {/* <div className="item-wrapper">
               <div>
                 <h4>1869</h4>
                 <p>
@@ -56,15 +59,15 @@ const DisplayHistory = () => {
                 </p>
               </div>
               <FontAwesomeIcon icon={faArrowRight} className="beatFade" />
-            </div>
+            </div> */}
             {/* END Static ex */}
 
             {/*  Dynamic */}
-            {beans.map((article, index) => (
+            {beans.map((item, index) => (
               <div className="item-wrapper" key={index}>
                 <div>
-                  <h4></h4>
-                  <p></p>
+                  <h4>{item.year}</h4>
+                  <p>{item.description}</p>
                 </div>
                 <FontAwesomeIcon icon={faArrowRight} className="beatFade" />
               </div>
