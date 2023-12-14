@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className="Footer">
       <div className="container">
-        <div className="container">
+        <div>
           <img src={LogoFav} alt="Jwlly Belly Wiki" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
@@ -19,13 +19,21 @@ const Footer = () => {
             deserunt?
           </p>
         </div>
-        <div className="">
+        <div>
           <h3>Site Map</h3>
           <ul className="list">
-            <li>About Jelly Belly Wiki</li>
-            <li>API Documentation</li>
-            <li>Contact Information</li>
-            <li>Privacy Policy</li>
+            <li>
+              <a href="">About Jelly Belly Wiki</a>
+            </li>
+            <li>
+              <a href="">API Documentation</a>
+            </li>
+            <li>
+              <a href="">Contact Information</a>
+            </li>
+            <li>
+              <a href="">Privacy Policy</a>
+            </li>
           </ul>
         </div>
         <div>
@@ -37,10 +45,13 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <h3>Check Out...</h3>
+          <h3>Check Out</h3>
           <FontAwesomeIcon icon={faGithub} className="hover-fade" />
           <FontAwesomeIcon icon={faDiscord} className="hover-fade" />
           <FontAwesomeIcon icon={faTwitter} className="hover-fade" />
+        </div>
+        <div>
+          <p>Copyright &copy; 2023 All Rights Reserved</p>
         </div>
       </div>
     </div>
