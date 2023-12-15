@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="about container">
       <div>
-        <h2>What to find in this API?</h2>
+        <h3>What to find in this API?</h3>
         <hr />
         <div className="info-numbers">
           <div>
@@ -38,6 +38,24 @@ const About = () => {
           All data reflecting from the original
           <a href="http://www.jellybelly.com">Jelly Belly Website</a>
         </h3>
+        <ul>
+          <h3>Check out all endpoints</h3>
+          <li>
+            <a href="">Beans</a>
+          </li>
+          <li>
+            <a href="">Recipes</a>
+          </li>
+          <li>
+            <a href="">History</a>
+          </li>
+          <li>
+            <a href="">Combinations</a>
+          </li>
+          <li>
+            <a href="">Facts</a>
+          </li>
+        </ul>
       </div>
     </div>
   );
