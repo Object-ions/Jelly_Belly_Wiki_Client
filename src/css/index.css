@@ -367,16 +367,21 @@ canvas {
 
 /* About */
 .about {
-  padding: 5rem 2rem;
+  padding: 8rem 2rem;
   border-radius: 2rem;
-  background-color: var(--secondary-color);
+  background: var(--secondary-color);
   color: var(--dark-red);
+}
+
+.about.container > div > h3 {
+  font-family: var(--text-font) !important;
+  font-weight: 500;
 }
 
 .about .info-numbers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -384,6 +389,8 @@ canvas {
 
 .about .info-numbers h3 {
   font-size: 2.5rem;
+  font-family: var(--text-font);
+  font-weight: 300;
 }
 
 .about hr {
@@ -394,12 +401,20 @@ canvas {
 }
 
 .info-numbers-last {
+  margin: 5rem 0 0 3rem;
+  font-size: 1.2rem;
+  font-family: var(--text-font);
+}
+
+.info-numbers-last h3 {
+  font-family: var(--text-font);
+  font-weight: 500;
 }
 
 .info-numbers-last a {
   position: relative;
   display: inline-block;
-  color: var(--head-color);
+  color: #dd4045;
   margin-left: 0.2rem;
 }
 
@@ -410,12 +425,21 @@ canvas {
   bottom: -0.1rem;
   width: 0;
   height: 0.1rem;
-  background-color: #e87a85;
+  background-color: #dd4045;
   transition: width 0.3s linear;
 }
 
 .info-numbers-last a:hover::before {
   width: 100%;
+}
+
+.info-numbers-last ul {
+  margin: 1rem 0 0 5rem;
+  text-align: left;
+}
+
+.info-numbers-last ul li {
+  padding: 0.1rem;
 }
 
 /* Animations */
