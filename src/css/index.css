@@ -442,6 +442,53 @@ canvas {
   padding: 0.1rem;
 }
 
+/* Display Bean */
+.DisplayBean {
+  background: var(--dark-body-color);
+  padding: 5rem 2rem;
+}
+
+.DisplayBean h3 {
+  color: var(--head-color);
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2rem;
+  font-family: "lobster";
+}
+
+.DisplayBean .bean-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 1rem;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: var(--max-width);
+}
+
+.DisplayBean .bean-grid .item-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  border: 1px solid var(--dark-body-color);
+}
+
+.DisplayBean .bean-grid .item-wrapper:hover {
+  border: 1px solid var(--btn-red);
+}
+
+.DisplayBean .bean-grid h4 {
+  color: var(--head-color);
+  margin-bottom: 0.2rem;
+}
+
+.DisplayBean .bean-grid p {
+  color: var(--dark-red);
+  font-size: 0.8rem;
+  text-align: left;
+}
+
 /* Animations */
 .beatFade {
   animation: beatFade 1.5s infinite;
