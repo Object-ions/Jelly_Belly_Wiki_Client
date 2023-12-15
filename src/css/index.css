@@ -393,14 +393,17 @@ canvas {
   background-color: var(--dark-red);
 }
 
-/* .about > div > h3 > a {
+.info-numbers-last {
+}
+
+.info-numbers-last a {
   position: relative;
   display: inline-block;
   color: var(--head-color);
   margin-left: 0.2rem;
 }
 
-.about > div > h3 > a::before {
+.info-numbers-last a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -411,9 +414,9 @@ canvas {
   transition: width 0.3s linear;
 }
 
-.about > div > h3 > a:hover::before {
+.info-numbers-last a:hover::before {
   width: 100%;
-} */
+}
 
 /* Animations */
 .beatFade {
