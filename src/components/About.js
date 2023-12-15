@@ -33,7 +33,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="info-numbers-last">
         <h3>
           All data reflecting from the original
           <a href="http://www.jellybelly.com">Jelly Belly Website</a>
