@@ -12,7 +12,10 @@ const Footer = () => {
     <div className="Footer">
       <div className="container">
         <div>
-          <img src={LogoFav} alt="Jwlly Belly Wiki" />
+          <h3>
+            <img src={LogoFav} alt="Jwlly Belly Wiki" />
+          </h3>
+
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
             laboriosam ut quis pariatur quo architecto sed amet adipisci aliquid
@@ -37,21 +40,39 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3> Copyrights</h3>
+          <h3>Copyrights</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
             laboriosam ut quis pariatur quo architecto sed amet adipisci aliquid
             deserunt?
           </p>
         </div>
-        <div>
+        <div className="social-links">
           <h3>Check Out</h3>
-          <FontAwesomeIcon icon={faGithub} className="hover-fade" />
-          <FontAwesomeIcon icon={faDiscord} className="hover-fade" />
-          <FontAwesomeIcon icon={faTwitter} className="hover-fade" />
+          <a href="">
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="hover-fade"
+              size="2xl"
+            />
+          </a>
+          <a href="">
+            <FontAwesomeIcon
+              icon={faDiscord}
+              className="hover-fade"
+              size="2xl"
+            />
+          </a>
+          <a href="">
+            <FontAwesomeIcon
+              icon={faTwitter}
+              className="hover-fade"
+              size="2xl"
+            />
+          </a>
         </div>
         <div>
-          <p>Copyright &copy; 2023 All Rights Reserved</p>
+          <p>Copyright &copy; 2023 All Rights Reserved, Object-ions</p>
         </div>
       </div>
     </div>
