@@ -8,8 +8,19 @@ const beansReducer = (state, action) => {
         isLoaded: true,
         beans: action.beans,
       };
-
     case actionType.GET_BEANS_FAILURE:
+      return {
+        ...state,
+        isLoaded: true,
+        error: action.error,
+      };
+    case actionType.GET_FACTS_SUCCESS:
+      return {
+        ...state,
+        isLoaded: true,
+        facts: action.facts,
+      };
+    case actionType.GET_FACTS_FAILURE:
       return {
         ...state,
         isLoaded: true,

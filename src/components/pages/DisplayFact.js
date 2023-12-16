@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from "react";
 import beansReducer from "../../reducers/beans-reducer";
-import { getBeansFailure, getBeansSuccess } from "../../actions/index";
+import { getFactsFailure, getFactsSuccess } from "../../actions/index";
 
 const initialState = {
   isLoaded: false,
@@ -24,16 +24,16 @@ const DisplayFact = () => {
             return res.json();
           })
           .catch((error) => {
-            dispatch(getBeansFailure(error.message));
+            dispatch(getFactsFailure(error.message));
           })
       )
     )
       .then((facts) => {
         console.log("Fetched facts:", facts);
-        dispatch(getBeansSuccess(facts.filter((fact) => fact)));
+        dispatch(getFactsSuccess(facts.filter((fact) => fact)));
       })
       .catch((error) => {
-        dispatch(getBeansFailure(error.message));
+        dispatch(getFactsFailure(error.message));
       });
   }, []);
 

@@ -9,3 +9,13 @@ export const getBeansFailure = (error) => ({
   type: actionType.GET_BEANS_FAILURE,
   error,
 });
+
+export const getFactsSuccess = (facts) => ({
+  type: actionType.GET_FACTS_SUCCESS,
+  facts,
+});
+
+export const getFactsFailure = (error) => ({
+  type: actionType.GET_FACTS_FAILURE,
+  error,
+});
