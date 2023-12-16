@@ -24,9 +24,10 @@
   font-family: var(--text-font);
 }
 
-/* body {
-  padding-top: 5rem;
-} */
+body {
+  /* padding-top: 5rem; */
+  background-color: var(--dark-body-color);
+}
 
 h1,
 h2,
@@ -468,8 +469,11 @@ canvas {
 }
 
 .DisplayBean .bean-grid .item-wrapper {
+  height: 20rem;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 0.3rem;
   border: 1px solid var(--dark-body-color);
 }

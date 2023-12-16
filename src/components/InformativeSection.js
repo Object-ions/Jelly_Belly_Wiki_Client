@@ -4,7 +4,7 @@ import SplineViewer from "./SplineViewer";
 const InformativeSection = () => {
   return (
     <div className="InformativeSection">
-      <SplineViewer url="https://prod.spline.design/mjbobhqsR1jJBonF/scene.splinecode" />
+      {/* <SplineViewer url="https://prod.spline.design/mjbobhqsR1jJBonF/scene.splinecode" /> */}
     </div>
   );
 };
