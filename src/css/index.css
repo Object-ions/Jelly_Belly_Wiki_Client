@@ -592,6 +592,8 @@ canvas {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 5rem;
 }
 
 .Display-facts .fact-side img {

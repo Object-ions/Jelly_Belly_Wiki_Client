@@ -2,6 +2,7 @@ import React, { useEffect, useReducer } from "react";
 import beansReducer from "../../reducers/beans-reducer";
 import { getFactsFailure, getFactsSuccess } from "../../actions/index";
 import cherryImg from "../../img/cherry-red.png";
+import "flowbite";
 
 const initialState = {
   isLoaded: false,
