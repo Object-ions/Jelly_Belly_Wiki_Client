@@ -10,6 +10,16 @@ export const getBeansFailure = (error) => ({
   error,
 });
 
+export const getSingleBeanSuccess = (singleBean) => ({
+  type: actionType.GET_SINGLE_BEAN_SUCCESS,
+  singleBean,
+});
+
+export const getSingleBeanFailure = (error) => ({
+  type: actionType.GET_SINGLE_BEAN_FAILURE,
+  error,
+});
+
 export const getFactsSuccess = (facts) => ({
   type: actionType.GET_FACTS_SUCCESS,
   facts,
