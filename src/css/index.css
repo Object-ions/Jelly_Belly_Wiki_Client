@@ -275,10 +275,10 @@ canvas {
   padding: 1rem;
 }
 
-.DisplayHistory .history-grid .item-wrapper:last-child {
+/* .DisplayHistory .history-grid .item-wrapper:last-child {
   border: 1px solid var(--btn-red);
   font-size: 1rem;
-}
+} */
 
 .DisplayHistory .history-grid .item-wrapper svg {
   padding: 0.5rem;
@@ -486,8 +486,7 @@ canvas {
 
 /* Informative Section */
 
-.InformativeSection {
-  background: var(--dark-body-color);
+.info-grid {
   padding: 5rem 2rem;
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -496,10 +495,86 @@ canvas {
   padding-bottom: 3rem;
   text-align: center;
   font-size: 1.2rem;
-  max-width: var(--max-width);
 }
 
-.InformativeSection
+.info-grid .item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: var(--light-body-color);
+  padding: 3rem 0;
+  border: 1px solid var(--light-body-color);
+  border-radius: 2rem;
+}
+
+.info-grid .item-wrapper:hover {
+  border: 1px solid var(--btn-red);
+  border-radius: 2rem;
+}
+
+.info-grid .item-wrapper h3 {
+  font-family: var(--text-font);
+  color: var(--dark-red);
+}
+
+.info-grid .explore-beans {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding: 2rem;
+}
+
+.info-grid .explore-beans h3 a {
+  font-family: "lobster";
+  font-size: 2.2rem;
+  color: var(--dark-red);
+  position: relative;
+  display: inline-block;
+}
+.info-grid .explore-beans h3 a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  width: 0;
+  height: 0.1rem;
+  background-color: var(--dark-red);
+  transition: width 0.3s linear;
+}
+
+.info-grid .explore-beans h3 a:hover::before {
+  width: 100%;
+}
+
+.InformativeSection .info-grid .item-wrapper.explore-beans.info-top {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.InformativeSection .info-grid .item-wrapper.explore-beans.info-top h2 {
+  font-family: "lobster";
+  font-size: 2.2rem;
+  color: var(--dark-red);
+}
+
+.InformativeSection .info-grid .item-wrapper.explore-beans.info-top:hover {
+  border: 1px solid var(--light-body-color);
+}
+
+.InformativeSection .info-grid .item-wrapper.explore-beans.info-bottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.InformativeSection .info-grid .item-wrapper.explore-beans.info-bottom:hover {
+  border: 1px solid var(--light-body-color);
+}
+
+.info-grid .img-wrapper {
+  width: 20rem;
+  margin-top: 2rem;
+}
 
 /* Animations */
 .beatFade {
