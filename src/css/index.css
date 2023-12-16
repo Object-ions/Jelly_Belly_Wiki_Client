@@ -553,7 +553,7 @@ canvas {
 }
 
 .InformativeSection .info-grid .item-wrapper.explore-beans.info-top h2 {
-  font-family: "lobster";
+  font-family: var(--head-font);
   font-size: 2.2rem;
   color: var(--dark-red);
 }
