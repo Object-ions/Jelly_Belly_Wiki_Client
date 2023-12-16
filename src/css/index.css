@@ -584,9 +584,17 @@ canvas {
   border-radius: 2rem;
   background: var(--light-pink);
   color: var(--dark-red);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
-.Display-facts img {
+.Display-facts .fact-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Display-facts .fact-side img {
   width: 5rem;
 }
 

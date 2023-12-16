@@ -48,16 +48,22 @@ const DisplayFact = () => {
     return (
       <div className="container">
         <div className="Display-facts">
-          <img src={cherryImg} />
-          <div>
-            <h2>Explore Beans</h2>
+          <div className="fact-side">
+            <img src={cherryImg} />
+            <h2>Did You Know?</h2>
+            <p>
+              Very Cherry has been the most popular Jelly Belly flavor for many
+              years, only briefly surpassed by Buttered Popcorn in 1998.
+            </p>
           </div>
-          {facts.map((fact, index) => (
-            <div key={index} className="item-wrapper">
-              <h3>{fact.title}</h3>
-              <p>{fact.description}</p>
-            </div>
-          ))}
+          <div>
+            {facts.map((fact, index) => (
+              <div key={index} className="item-wrapper">
+                <h3>{fact.title}</h3>
+                <p>{fact.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
