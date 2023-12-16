@@ -295,15 +295,6 @@ canvas {
   font-size: 0.8rem;
 }
 
-/* Informative Section */
-
-.InformativeSection {
-  width: 100%;
-}
-.InformativeSection #logo {
-  display: none;
-}
-
 /* Footer */
 
 .Footer {
@@ -492,6 +483,23 @@ canvas {
   font-size: 0.8rem;
   text-align: left;
 }
+
+/* Informative Section */
+
+.InformativeSection {
+  background: var(--dark-body-color);
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 1rem;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: var(--max-width);
+}
+
+.InformativeSection
 
 /* Animations */
 .beatFade {
