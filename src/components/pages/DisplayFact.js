@@ -3,6 +3,7 @@ import beansReducer from "../../reducers/beans-reducer";
 import { getFactsFailure, getFactsSuccess } from "../../actions/index";
 import cherryImg from "../../img/cherry-red.png";
 import "flowbite";
+import beanImg from "../../img/bean-filled-color.png";
 
 const initialState = {
   isLoaded: false,
@@ -14,7 +15,7 @@ const DisplayFact = () => {
   const [state, dispatch] = useReducer(beansReducer, initialState);
 
   useEffect(() => {
-    const factIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+    const factIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     Promise.all(
       factIds.map((id) =>
@@ -50,12 +51,22 @@ const DisplayFact = () => {
       <div className="container">
         <div className="Display-facts">
           <div className="fact-side">
-            <img src={cherryImg} />
-            <h2>Did You Know?</h2>
-            <p>
-              Very Cherry has been the most popular Jelly Belly flavor for many
-              years, only briefly surpassed by Buttered Popcorn in 1998.
-            </p>
+            <div>
+              <img src={cherryImg} id="cherryImg-fact" />
+              <h2>Did You Know?</h2>
+              <p>
+                Very Cherry has been the most popular Jelly Belly flavor for
+                many years, only briefly surpassed by Buttered Popcorn in 1998.
+              </p>
+            </div>
+            <div>
+              <img src={beanImg} id="beanImg-fact" />
+              <h2>Did You Know?</h2>
+              <p>
+                Very Cherry has been the most popular Jelly Belly flavor for
+                many years, only briefly surpassed by Buttered Popcorn in 1998.
+              </p>
+            </div>
           </div>
           <div>
             {facts.map((fact, index) => (
