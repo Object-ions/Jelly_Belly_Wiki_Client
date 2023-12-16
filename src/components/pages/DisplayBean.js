@@ -53,7 +53,7 @@ const DisplayBean = () => {
                   <h4>{item.flavorName}</h4>
                   <p>{item.description}</p>
                 </div>
-                <img src={item.imageUrl} />
+                <img src={item.imageUrl} alt={item.flavorName} />
               </div>
             ))}
             {/* END Dynamic */}
