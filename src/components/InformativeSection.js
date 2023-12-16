@@ -19,13 +19,11 @@ const InformativeSection = () => {
         } else {
           const waitResponse = await res.json();
           console.log(waitResponse);
-          // return res.json();
           return waitResponse;
         }
       })
       .then((jsonifiedResponse) => {
-        console.log(jsonifiedResponse);
-        const action = getBeansSuccess(jsonifiedResponse.items);
+        const action = getBeansSuccess([jsonifiedResponse]);
         dispatch(action);
       })
       .catch((error) => {
@@ -41,22 +39,17 @@ const InformativeSection = () => {
   } else if (!isLoaded) {
     return <h1>Loading...</h1>;
   } else {
+    const bean = beans[0];
     return (
-      <div className="DisplayBean">
-        <div className="container">
-          <h3>a Little Bit of Bean ...</h3>
-          <div className="bean-grid">
-            {/*  Dynamic */}
+      <div className="InformativeSection">
+        <div className="item-wrapper">
+          <h3>{bean.flavorName}</h3>
+          <img src={bean.imageUrl} alt={bean.flavorName}></img>
+        </div>
 
-            <div className="item-wrapper">
-              <div>
-                <h4>{beans.flavorName}</h4>
-                <p>{beans.description}</p>
-              </div>
-              <img src={beans.imageUrl} />
-            </div>
-            {/* END Dynamic */}
-          </div>
+        <div className="item-wrapper">
+          <h3>Explore 100+ beans</h3>
+          {/* arrow */}
         </div>
       </div>
     );
@@ -64,17 +57,3 @@ const InformativeSection = () => {
 };
 
 export default InformativeSection;
-
-// return (
-//   <div className="InformativeSection">
-//     <div className="item-wrapper">
-//       <h3>Name Of Bean</h3>
-//       <img src=""></img>
-//     </div>
-
-//     <div className="item-wrapper">
-//       <h3>Explore 100+ beans</h3>
-//       {/* arrow */}
-//     </div>
-//   </div>
-// );

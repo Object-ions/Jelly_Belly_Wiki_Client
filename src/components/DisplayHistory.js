@@ -21,13 +21,10 @@ const DisplayHistory = () => {
           throw new Error(`${res.status}: ${res.statusText}`);
         } else {
           const waitResponse = await res.json();
-          console.log(waitResponse);
-          // return res.json();
           return waitResponse;
         }
       })
       .then((jsonifiedResponse) => {
-        console.log(jsonifiedResponse);
         const action = getBeansSuccess(jsonifiedResponse.items);
         dispatch(action);
       })
