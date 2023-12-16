@@ -45,8 +45,10 @@ const InformativeSection = () => {
   } else {
     return (
       <div className="InformativeSection container">
-        <h2>Beans</h2>
-        <div className="info-grid ">
+        <div className="info-grid">
+          <div className="item-wrapper explore-beans info-top">
+            <h2>Explore Beans</h2>
+          </div>
           {beans.map((bean, index) => (
             <div key={index} className="item-wrapper">
               <h3>{bean.flavorName}</h3>
@@ -55,8 +57,10 @@ const InformativeSection = () => {
               </div>
             </div>
           ))}
-          <div className="item-wrapper">
-            <h3>Explore 100+ beans</h3>
+          <div className="item-wrapper explore-beans info-bottom">
+            <h3>
+              <a href="">Explore More Beans...</a>
+            </h3>
             {/* arrow */}
           </div>
         </div>
