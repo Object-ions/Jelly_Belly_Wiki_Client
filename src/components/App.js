@@ -7,6 +7,7 @@ import DisplayFact from "./pages/DisplayFact";
 import DisplayRecipe from "./pages/DisplayRecipe";
 import DisplayApi from "./pages/DisplayApi";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BeanCard from "./BeanCard";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DisplayControl />} />
         <Route path="/beans" element={<DisplayBean />} />
+        <Route path="/beans/:beanId" element={<BeanCard />} />
         <Route path="/facts" element={<DisplayFact />} />
         <Route path="/recipes" element={<DisplayRecipe />} />
         <Route path="/api" element={<DisplayApi />} />

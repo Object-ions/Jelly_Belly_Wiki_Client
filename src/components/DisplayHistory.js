@@ -46,20 +46,6 @@ const DisplayHistory = () => {
         <div className="container">
           <h3>a Little Bit of History ...</h3>
           <div className="history-grid">
-            {/* Static ex */}
-            {/* <div className="item-wrapper">
-              <div>
-                <h4>1869</h4>
-                <p>
-                  Gustav Goelitz opens a candy business in Belleville, Illinois,
-                  laying the foundation for the company's future.
-                </p>
-              </div>
-              <FontAwesomeIcon icon={faArrowRight} className="beatFade" />
-            </div> */}
-            {/* END Static ex */}
-
-            {/*  Dynamic */}
             {beans.map((item, index) => (
               <div className="item-wrapper" key={index}>
                 <div>
@@ -69,7 +55,6 @@ const DisplayHistory = () => {
                 <FontAwesomeIcon icon={faArrowRight} className="beatFade" />
               </div>
             ))}
-            {/* END Dynamic */}
           </div>
         </div>
       </div>

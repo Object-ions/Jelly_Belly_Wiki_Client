@@ -1,6 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import beansReducer from "../../reducers/beans-reducer";
 import { getBeansFailure, getBeansSuccess } from "../../actions/index";
+import { Link } from "react-router-dom";
 
 const initialState = {
   isLoaded: false,
@@ -47,10 +48,12 @@ const DisplayBean = () => {
           <h3>a Little Bit of Bean ...</h3>
           <div className="bean-grid">
             {/*  Dynamic */}
-            {beans.map((item, index) => (
-              <div className="item-wrapper" key={index}>
+            {beans.map((item) => (
+              <div className="item-wrapper" key={item.beanId}>
                 <div>
-                  <h4>{item.flavorName}</h4>
+                  <Link to={"/beans/" + item.beanId}>
+                    <h4>{item.flavorName}</h4>
+                  </Link>
                   <p>{item.description}</p>
                 </div>
                 <img src={item.imageUrl} alt={item.flavorName} />

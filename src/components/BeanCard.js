@@ -1,6 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import beansReducer from "./../reducers/beans-reducer";
 import { getSingleBeanFailure, getSingleBeanSuccess } from "./../actions/index";
+import { useParams } from "react-router-dom";
 
 const initialState = {
   isLoaded: false,
@@ -10,9 +11,11 @@ const initialState = {
 
 const BeanCard = () => {
   const [state, dispatch] = useReducer(beansReducer, initialState);
+  const params = useParams();
+  console.log(params);
 
   useEffect(() => {
-    const singleBeanIds = [1];
+    const singleBeanIds = [55];
 
     Promise.all(
       singleBeanIds.map((id) =>
@@ -58,7 +61,7 @@ const BeanCard = () => {
                 <img src={singleBean.imgUrl} />
                 <p>Description: {singleBean.description}</p>
                 <p>colorGroup: {singleBean.colorGroup}</p>
-                <p>Ingredients:: {singleBean.ingredients[0]}</p>
+                <p>Ingredients: {singleBean.ingredients[0]}</p>
                 <p>Color Group: {singleBean.colorGroup}</p>
                 <p>Hexadecimal Color: {singleBean.backgroundColor}</p>
                 <p>Bean ID: {singleBean.beanId}</p>

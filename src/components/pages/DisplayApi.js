@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import BeanCard from "../BeanCard";
 
 const DisplayApi = () => {
   return (
-    <div>DisplayApi</div>
-  )
-}
+    <>
+      <BeanCard />
+    </>
+  );
+};
 
-export default DisplayApi
+export default DisplayApi;
