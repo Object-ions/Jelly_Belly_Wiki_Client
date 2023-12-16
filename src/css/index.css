@@ -8,6 +8,7 @@
 :root {
   --head-color: #e83a4b;
   --secondary-color: #ee9085;
+  --light-pink: #fec9c4;
   --dark-red: #bd2328;
   --btn-red: #ec2c2f;
   --light-body-color: #f9f5f4;
@@ -574,6 +575,19 @@ canvas {
 .info-grid .img-wrapper {
   width: 20rem;
   margin-top: 2rem;
+}
+
+/* Display Facts */
+
+.Display-facts {
+  padding: 8rem 2rem;
+  border-radius: 2rem;
+  background: var(--light-pink);
+  color: var(--dark-red);
+}
+
+.Display-facts img {
+  width: 5rem;
 }
 
 /* Animations */

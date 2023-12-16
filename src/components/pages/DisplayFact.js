@@ -1,6 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import beansReducer from "../../reducers/beans-reducer";
 import { getFactsFailure, getFactsSuccess } from "../../actions/index";
+import cherryImg from "../../img/cherry-red.png";
 
 const initialState = {
   isLoaded: false,
@@ -45,22 +46,18 @@ const DisplayFact = () => {
     return <h1>Loading...</h1>;
   } else {
     return (
-      <div className="InformativeSection container">
-        <div className="info-grid">
-          <div className="item-wrapper explore-beans info-top">
+      <div className="container">
+        <div className="Display-facts">
+          <img src={cherryImg} />
+          <div>
             <h2>Explore Beans</h2>
           </div>
           {facts.map((fact, index) => (
             <div key={index} className="item-wrapper">
               <h3>{fact.title}</h3>
+              <p>{fact.description}</p>
             </div>
           ))}
-          <div className="item-wrapper explore-beans info-bottom">
-            <h3>
-              <a href="">Explore More Beans...</a>
-            </h3>
-            {/* arrow */}
-          </div>
         </div>
       </div>
     );
