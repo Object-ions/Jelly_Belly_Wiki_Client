@@ -29,6 +29,7 @@ const DisplayFact = () => {
       )
     )
       .then((facts) => {
+        console.log("Fetched facts:", facts);
         dispatch(getBeansSuccess(facts.filter((fact) => fact)));
       })
       .catch((error) => {
@@ -44,16 +45,22 @@ const DisplayFact = () => {
     return <h1>Loading...</h1>;
   } else {
     return (
-      <div>
-        <div>
-          <div>
-            <h2>Explore Facts</h2>
+      <div className="InformativeSection container">
+        <div className="info-grid">
+          <div className="item-wrapper explore-beans info-top">
+            <h2>Explore Beans</h2>
           </div>
           {facts.map((fact, index) => (
             <div key={index} className="item-wrapper">
               <h3>{fact.title}</h3>
             </div>
           ))}
+          <div className="item-wrapper explore-beans info-bottom">
+            <h3>
+              <a href="">Explore More Beans...</a>
+            </h3>
+            {/* arrow */}
+          </div>
         </div>
       </div>
     );
