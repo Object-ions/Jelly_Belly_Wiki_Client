@@ -2,8 +2,8 @@ import React, { useEffect, useReducer } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-import beansReducer from "./../reducers/beans-reducer";
-import { getBeansFailure, getBeansSuccess } from "./../actions/index";
+import beansReducer from "../reducers/beans-reducer";
+import { getBeansFailure, getBeansSuccess } from "../actions/index";
 
 const initialState = {
   isLoaded: false,

@@ -1,6 +1,9 @@
 import React, { useEffect, useReducer } from "react";
-import beansReducer from "./../reducers/beans-reducer";
-import { getBeansFailure, getBeansSuccess } from "./../actions/index";
+import beansReducer from "../reducers/beans-reducer";
+import { getBeansFailure, getBeansSuccess } from "../actions/index";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const initialState = {
   isLoaded: false,
@@ -58,10 +61,12 @@ const InformativeSection = () => {
             </div>
           ))}
           <div className="item-wrapper explore-beans info-bottom">
-            <h3>
-              <a href="">Explore More Beans...</a>
-            </h3>
-            {/* arrow */}
+            <Link to="/beans">
+              <h3>
+                Explore More Beans
+                <FontAwesomeIcon icon={faArrowRightLong} />
+              </h3>
+            </Link>
           </div>
         </div>
       </div>
