@@ -746,26 +746,33 @@ canvas {
 /* Contact */
 .Contact {
   height: 400px;
-
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .Contact {
   position: relative;
   background-image: var(--bg-img);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat;
   background-position: center;
 }
 
 .Contact::before,
-.Contact::after {
+.Contact::after,
+.Contact-container::before,
+.Contact-container::after {
   content: "";
   position: absolute;
+  z-index: 1;
+}
+
+/* Top Fade */
+.Contact::before {
+  top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  height: 80px;
   background: linear-gradient(
     to bottom,
     rgb(237, 234, 230),
@@ -773,19 +780,48 @@ canvas {
   );
 }
 
-.Contact::before {
-  top: 0;
-  height: 80px;
-}
-
+/* Bottom Fade */
 .Contact::after {
   bottom: 0;
+  left: 0;
+  right: 0;
   height: 80px;
   background: linear-gradient(
     to top,
     rgb(237, 234, 230),
     rgba(255, 255, 255, 0)
   );
+}
+
+/* Left Fade */
+.Contact-container::before {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  background: linear-gradient(
+    to right,
+    rgb(237, 234, 230),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+/* Right Fade */
+.Contact-container::after {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  background: linear-gradient(
+    to left,
+    rgb(237, 234, 230),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.Contact-container {
+  position: relative;
+  height: 100%;
 }
 
 /* Error */
