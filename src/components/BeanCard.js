@@ -2,6 +2,7 @@ import React, { useEffect, useReducer } from "react";
 import beansReducer from "./../reducers/beans-reducer";
 import { getSingleBeanFailure, getSingleBeanSuccess } from "./../actions/index";
 import { useParams } from "react-router-dom";
+import ErrorComponent from "./ErrorComponent";
 
 const initialState = {
   isLoaded: false,
@@ -39,7 +40,7 @@ const BeanCard = () => {
   console.log(singleBean);
 
   if (error) {
-    return <h1>Error: {error}</h1>;
+    return <ErrorComponent error={error} />;
   } else if (!isLoaded) {
     return <h1>Loading...</h1>;
   } else {
