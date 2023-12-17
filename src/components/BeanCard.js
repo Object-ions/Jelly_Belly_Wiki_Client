@@ -46,24 +46,55 @@ const BeanCard = () => {
   } else {
     return (
       <div className="container">
-        <div>
-          <p>Mock text</p>
-          <div>
-            <div className="">
-              <p>Group Name: {singleBean.groupName.join(",")}</p>
-              <h3>Flavor Name: {singleBean.flavorName}</h3>
-              <img src={singleBean.imgUrl} />
-              <p>Description: {singleBean.description}</p>
-              <p>colorGroup: {singleBean.colorGroup}</p>
-              <p>Ingredients: {singleBean.ingredients.join(",")}</p>
-              <p>Color Group: {singleBean.colorGroup}</p>
-              <p>Hexadecimal Color: {singleBean.backgroundColor}</p>
-              <p>Bean ID: {singleBean.beanId}</p>
-              <p>Kosher: </p>
-              <p>Seasonal: </p>
-              <p>Gluten Free: </p>
-              <p>Sugar Free: </p>
+        <div className="Bean-card">
+          <div className="bean-card-item">
+            <p>Group Name:</p>
+            <p>{singleBean.groupName.join(",")}</p>
+          </div>
+          <div className="bean-card-item">
+            <h3>Flavor Name:</h3>
+            <h3>{singleBean.flavorName}</h3>
+          </div>
+          <div className="bean-card-item">
+            <p>Description:</p>
+            <p>{singleBean.description}</p>
+            <div className="img-wrapper">
+              <img src={singleBean.imageUrl} />
             </div>
+          </div>
+          <div className="bean-card-item">
+            <p>Ingredients:</p>
+            <p>{singleBean.ingredients.join(",")}</p>
+          </div>
+          <div className="bean-card-item">
+            <p>Color Group:</p>
+            <p>"{singleBean.colorGroup}"</p>
+          </div>
+          <div className="bean-card-item">
+            <p>Hexadecimal Color:</p>
+            <div id="bean-bg-color">{singleBean.backgroundColor}</div>
+          </div>
+          <div className="bean-card-item">
+            <p>Bean ID:</p>
+            <p>{singleBean.beanId}</p>
+          </div>
+          <div className="bean-card-item">
+            <p>Kosher: </p>
+            <p>{singleBean.kosher ? "yes" : "no"}</p>
+          </div>
+          <div className="bean-card-item">
+            {" "}
+            <p>Seasonal:</p>
+            <p>{singleBean.seasonal ? "yes" : "no"}</p>
+          </div>
+          <div className="bean-card-item">
+            <p>Gluten Free: </p>
+            <p>{singleBean.glutenFree ? "yes" : "no"}</p>
+          </div>
+          <div className="bean-card-item">
+            {" "}
+            <p>Sugar Free: </p>
+            <p>{singleBean.sugarFree ? "yes" : "no"}</p>
           </div>
         </div>
       </div>
