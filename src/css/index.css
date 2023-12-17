@@ -581,10 +581,10 @@ canvas {
   margin-top: 2rem;
 }
 
-/* Display Facts */
+/* Example Facts */
 
-.Display-facts {
-  padding: 8rem 2rem;
+.Example-facts {
+  padding: 5rem 2rem;
   border-radius: 2rem;
   background: var(--light-pink);
   color: var(--dark-red);
@@ -592,11 +592,19 @@ canvas {
   grid-template-columns: 1fr 2fr;
 }
 
-.Display-facts .item-wrapper {
+.Example-facts > :first-child {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 3rem;
+  font-family: var(--text-font);
+  margin-bottom: 2rem;
+}
+
+.Example-facts .item-wrapper {
   padding: 0.75rem 0;
 }
 
-.Display-facts .fact-side {
+.Example-facts .fact-side {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -605,8 +613,30 @@ canvas {
   justify-content: space-between;
 }
 
-.Display-facts .fact-side img {
+.Example-facts .fact-side img {
   width: 5rem;
+}
+
+.Example-facts a {
+  position: relative;
+  display: inline-block;
+  color: var(--head-color);
+  margin-top: 5rem;
+}
+
+.Example-facts a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  width: 0;
+  height: 0.1rem;
+  background-color: var(--head-color);
+  transition: width 0.3s linear;
+}
+
+.Example-facts a:hover::before {
+  width: 100%;
 }
 
 #beanImg-fact {

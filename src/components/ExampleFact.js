@@ -4,6 +4,9 @@ import { getFactsFailure, getFactsSuccess } from "../actions/index";
 import cherryImg from "./../img/cherry-red.png";
 import "flowbite";
 import beanImg from "./../img/bean-filled-color.png";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const initialState = {
   isLoaded: false,
@@ -11,11 +14,11 @@ const initialState = {
   error: null,
 };
 
-const DisplayFact = () => {
+const ExampleFact = () => {
   const [state, dispatch] = useReducer(beansReducer, initialState);
 
   useEffect(() => {
-    const factIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const factIds = [23, 2, 3, 4, 5, 6, 7, 8, 9];
 
     Promise.all(
       factIds.map((id) =>
@@ -49,7 +52,8 @@ const DisplayFact = () => {
   } else {
     return (
       <div className="container">
-        <div className="Display-facts">
+        <div className="Example-facts">
+          <h2>Did You Know?</h2>
           <div className="fact-side">
             <div>
               <img src={cherryImg} id="cherryImg-fact" />
@@ -75,6 +79,9 @@ const DisplayFact = () => {
                 <p>{fact.description}</p>
               </div>
             ))}
+            <Link to="/facts">
+              Check Out More Facts <FontAwesomeIcon icon={faArrowRightLong} />
+            </Link>
           </div>
         </div>
       </div>
@@ -82,4 +89,4 @@ const DisplayFact = () => {
   }
 };
 
-export default DisplayFact;
+export default ExampleFact;
