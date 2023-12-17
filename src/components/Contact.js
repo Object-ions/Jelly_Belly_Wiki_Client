@@ -1,4 +1,5 @@
 import React from "react";
+import mandarin from "../img/mandarin.png";
 
 const Contact = () => {
   return (
@@ -15,6 +16,7 @@ const Contact = () => {
             <textarea name="text-area" required />
             <button type="submit">Submit</button>
           </form>
+          <img src={mandarin} />
         </div>
       </div>
     </div>

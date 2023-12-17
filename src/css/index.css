@@ -828,12 +828,25 @@ canvas {
   background: rgba(255, 255, 255, 0.7);
   height: 100%;
   padding: 5rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 1rem;
 }
 
 .Contact-inside h3 {
   font-family: "lobster";
   text-align: center;
   font-size: 3rem;
+  padding-bottom: 1.5rem;
+  grid-column: 1/ -1;
+}
+
+.Contact-inside img,
+.Contact-inside .Contact-form {
+  grid-column: span 1;
 }
 
 .Contact-form {
@@ -841,6 +854,9 @@ canvas {
   flex-direction: column;
   width: 20rem;
   text-align: left;
+  background: rgba(237, 234, 230, 0.9);
+  padding: 2rem;
+  border-radius: 1.5rem;
 }
 
 .Contact-form label {
@@ -853,6 +869,18 @@ canvas {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   width: 100%;
+  border: none;
+  border-radius: 0.7rem;
+}
+
+.Contact-form button[type="submit"] {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.7rem;
+  background: var(--secondary-color);
+  color: var(--dark-red);
 }
 
 .Contact-form textarea[name="text-area"] {
@@ -863,6 +891,8 @@ canvas {
   padding: 1rem;
   font-size: 1rem;
   resize: vertical;
+  border: none;
+  margin-bottom: 1.2rem;
 }
 
 /* Error */
