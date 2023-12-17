@@ -19,6 +19,7 @@
     "react-router-dom": "^6.20.1",
     "react-scripts": "5.0.1",
     "react-scroll-animation": "^1.0.3",
+    "react-scroll-parallax": "^3.4.5",
     "react-spring": "^9.7.3",
     "web-vitals": "^2.1.4"
   },
