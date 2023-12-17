@@ -62,6 +62,10 @@ img {
   width: 100%;
 }
 
+svg {
+  margin: 0 0.5rem;
+}
+
 canvas {
   width: 80%;
   height: 1398px;
@@ -615,23 +619,61 @@ canvas {
 
 /* Bean Card */
 .Bean-card {
+  max-width: 885px;
   background: var(--light-body-color);
-  margin: 5rem 0;
-  padding: 5rem;
+  margin: 3rem auto;
+  padding: 3rem;
   border-radius: 2.5rem;
 }
-.Bean-card {
-  background: var(--light-body-color);
-  margin: 5rem 0;
-  padding: 5rem;
-  border-radius: 2.5rem;
+
+.Bean-card a {
+  position: relative;
+  display: inline-block;
+  color: var(--head-color);
+  margin-top: 5rem;
+}
+
+.Bean-card a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  width: 0;
+  height: 0.1rem;
+  background-color: var(--head-color);
+  transition: width 0.3s linear;
+}
+
+.Bean-card a:hover::before {
+  width: 100%;
+}
+
+.Bean-card .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.Bean-card .bean-card-wrapper {
+  margin: 0.75rem 0;
+  color: var(--head-color);
+}
+
+.Bean-card .bean-card-wrapper.centered {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.Bean-card .img-wrapper {
+  margin: 3rem auto;
+  width: 30rem;
 }
 
 .Bean-card #bean-bg-color {
   height: 2rem;
   width: 6rem;
   background: var(--btn-red);
-  color: var(--dark-body-color);
+  color: var(--light-body-color);
   text-align: center;
   display: flex;
   justify-content: center;
