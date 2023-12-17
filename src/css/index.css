@@ -745,13 +745,47 @@ canvas {
 
 /* Contact */
 .Contact {
-  background-image: var(--bg-img);
   height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
   max-width: var(--max-width);
   margin: 0 auto;
+}
+
+.Contact {
+  position: relative;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Contact::before,
+.Contact::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgb(237, 234, 230),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.Contact::before {
+  top: 0;
+  height: 80px;
+}
+
+.Contact::after {
+  bottom: 0;
+  height: 80px;
+  background: linear-gradient(
+    to top,
+    rgb(237, 234, 230),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 /* Error */
