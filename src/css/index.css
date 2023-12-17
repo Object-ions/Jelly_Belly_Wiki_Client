@@ -613,14 +613,44 @@ canvas {
   margin-bottom: 1.5rem;
 }
 
+/* Bean Card */
+.Bean-card {
+  background: var(--light-body-color);
+  margin: 5rem 0;
+  padding: 5rem;
+  border-radius: 2.5rem;
+}
+.Bean-card {
+  background: var(--light-body-color);
+  margin: 5rem 0;
+  padding: 5rem;
+  border-radius: 2.5rem;
+}
+
+.Bean-card #bean-bg-color {
+  height: 2rem;
+  width: 6rem;
+  background: var(--btn-red);
+  color: var(--dark-body-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
 /* Error */
 .error {
   display: flex;
   flex-direction: column;
-  background: var(--light-body-color);
-  height: 80vh;
+  background: var(--dark-body-color);
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--dark-red);
+  border-radius: 3rem;
+  width: 50%;
+  padding-top: 5rem;
+  margin: 2rem auto;
 }
 
 .error h1 {
