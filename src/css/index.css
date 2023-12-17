@@ -439,6 +439,10 @@ canvas {
   padding: 0.1rem;
 }
 
+#about-ul {
+  margin: 1rem 0 0 0;
+}
+
 /* Display Bean */
 .DisplayBean {
   background: var(--dark-body-color);

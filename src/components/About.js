@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
@@ -38,22 +41,37 @@ const About = () => {
           All data reflecting from the original
           <a href="http://www.jellybelly.com">Jelly Belly Website</a>
         </h3>
-        <ul>
+        <ul id="about-ul">
           <h3>Check out all endpoints</h3>
           <li>
-            <a href="">Beans</a>
+            <Link to="/beans">
+              Beans
+              <FontAwesomeIcon icon={faArrowRightLong} />
+            </Link>
           </li>
           <li>
-            <a href="">Recipes</a>
+            <Link to="/recipes">
+              Recipes
+              <FontAwesomeIcon icon={faArrowRightLong} />
+            </Link>
           </li>
           <li>
-            <a href="">History</a>
+            <Link to="/facts">
+              Facts
+              <FontAwesomeIcon icon={faArrowRightLong} />
+            </Link>
           </li>
           <li>
-            <a href="">Combinations</a>
+            <Link to="/combinations">
+              Combinations
+              <FontAwesomeIcon icon={faArrowRightLong} />
+            </Link>
           </li>
           <li>
-            <a href="">Facts</a>
+            <Link to="/history">
+              History
+              <FontAwesomeIcon icon={faArrowRightLong} />
+            </Link>
           </li>
         </ul>
       </div>
