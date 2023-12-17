@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import DisplayControl from "./pages/DisplayControl";
 import DisplayBean from "./pages/DisplayBean";
-import DisplayFact from "./ExampleFact";
+import DisplayFact from "./pages/DisplayFact";
 import DisplayRecipe from "./pages/DisplayRecipe";
 import DisplayApi from "./pages/DisplayApi";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
