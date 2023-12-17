@@ -745,12 +745,12 @@ canvas {
 
 /* Contact */
 .Contact {
-  height: 400px;
   max-width: var(--max-width);
   margin: 2rem auto;
 }
 
 .Contact {
+  color: var(--head-color);
   position: relative;
   background-image: var(--bg-img);
   background-size: contain;
@@ -822,6 +822,47 @@ canvas {
 .Contact-container {
   position: relative;
   height: 100%;
+}
+
+.Contact-inside {
+  background: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  padding: 5rem;
+}
+
+.Contact-inside h3 {
+  font-family: "lobster";
+  text-align: center;
+  font-size: 3rem;
+}
+
+.Contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  text-align: left;
+}
+
+.Contact-form label {
+  text-align: left;
+  margin-bottom: 0.2rem;
+  margin-left: 1rem;
+}
+
+.Contact-form input {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.Contact-form textarea[name="text-area"] {
+  width: 100%;
+  height: 15rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  resize: vertical;
 }
 
 /* Error */
