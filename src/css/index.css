@@ -269,6 +269,7 @@ canvas {
 
 .DisplayHistory .history-grid .item-wrapper:hover {
   border: 1px solid var(--btn-red);
+  border-radius: 1rem;
 }
 
 .DisplayHistory .history-grid .item-wrapper:first-child {
@@ -276,14 +277,34 @@ canvas {
   grid-column-end: span 2;
   justify-content: space-between;
   border: 1px solid var(--btn-red);
+  border-radius: 1rem;
   font-size: 1rem;
   padding: 1rem;
 }
 
-/* .DisplayHistory .history-grid .item-wrapper:last-child {
-  border: 1px solid var(--btn-red);
-  font-size: 1rem;
-} */
+.DisplayHistory a {
+  position: relative;
+  display: inline-block;
+  color: var(--head-color);
+  margin-top: 2rem;
+  text-align: center;
+  margin-left: 5rem;
+}
+
+.DisplayHistory a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  width: 0;
+  height: 0.1rem;
+  background-color: #e87a85;
+  transition: width 0.3s linear;
+}
+
+.DisplayHistory a:hover::before {
+  width: 100%;
+}
 
 .DisplayHistory .history-grid .item-wrapper svg {
   padding: 0.5rem;

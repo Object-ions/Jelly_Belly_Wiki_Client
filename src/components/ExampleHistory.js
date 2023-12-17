@@ -1,9 +1,10 @@
 import React, { useEffect, useReducer } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-
 import beansReducer from "../reducers/beans-reducer";
 import { getBeansFailure, getBeansSuccess } from "../actions/index";
+import { Link } from "react-router-dom";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const initialState = {
   isLoaded: false,
@@ -57,6 +58,10 @@ const DisplayHistory = () => {
             ))}
           </div>
         </div>
+        <Link to="/history">
+          Explore More History
+          <FontAwesomeIcon icon={faArrowRightLong} />
+        </Link>
       </div>
     );
   }
