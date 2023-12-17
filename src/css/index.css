@@ -16,6 +16,7 @@
   --max-width: 1400px;
   --head-font: "Roboto", sans-serif;
   --text-font: "Raleway", sans-serif;
+  --bg-img: url("../img/table-of-beans.png");
 }
 
 * {
@@ -740,6 +741,17 @@ canvas {
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
+}
+
+/* Contact */
+.Contact {
+  background-image: var(--bg-img);
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 /* Error */
