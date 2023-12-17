@@ -45,18 +45,16 @@ const DisplayBean = () => {
     return (
       <div className="DisplayBean">
         <div className="container">
-          <h3>a Little Bit of Bean ...</h3>
+          <h3>Explore All Beans ...</h3>
           <div className="bean-grid">
             {/*  Dynamic */}
             {beans.map((item) => (
               <div className="item-wrapper" key={item.beanId}>
-                <div>
-                  <Link to={"/beans/" + item.beanId}>
-                    <h4>{item.flavorName}</h4>
-                  </Link>
-                  <p>{item.description}</p>
-                </div>
+                <Link to={"/beans/" + item.beanId}>
+                  <h4>{item.flavorName}</h4>
+                </Link>
                 <img src={item.imageUrl} alt={item.flavorName} />
+                <p>{item.description}</p>
               </div>
             ))}
             {/* END Dynamic */}
