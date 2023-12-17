@@ -5,44 +5,38 @@ import { useParams } from "react-router-dom";
 
 const initialState = {
   isLoaded: false,
-  singleBean: [],
+  singleBean: {},
   error: null,
 };
 
 const BeanCard = () => {
   const [state, dispatch] = useReducer(beansReducer, initialState);
-  const params = useParams();
-  console.log(params);
+  const { beanId } = useParams();
 
   useEffect(() => {
-    const singleBeanIds = [55];
-
-    Promise.all(
-      singleBeanIds.map((id) =>
-        fetch(`https://localhost:5001/api/Beans/${id}`)
-          .then((res) => {
-            if (!res.ok) {
-              throw new Error(`${res.status}: ${res.statusText}`);
-            }
-            return res.json();
-          })
-          .catch((error) => {
-            dispatch(getSingleBeanFailure(error.message));
-          })
-      )
-    )
+    fetch(`https://localhost:5001/api/Beans/${beanId}`)
+      .then(async (res) => {
+        if (!res.ok) {
+          throw new Error(`${res.status}: ${res.statusText}`);
+        } else {
+          const waitResponse = await res.json();
+          return waitResponse;
+        }
+      })
       .then((singleBean) => {
-        console.log("Fetched singleBean:", singleBean);
-        dispatch(
-          getSingleBeanSuccess(singleBean.filter((singleBean) => singleBean))
-        );
+        const action = getSingleBeanSuccess(singleBean);
+        dispatch(action);
+        console.log(singleBean);
       })
       .catch((error) => {
-        dispatch(getSingleBeanFailure(error.message));
+        const action = getSingleBeanFailure(error.message);
+        dispatch(action);
       });
   }, []);
 
   const { error, isLoaded, singleBean } = state;
+
+  console.log(singleBean);
 
   if (error) {
     return <h1>Error: {error}</h1>;
@@ -54,23 +48,21 @@ const BeanCard = () => {
         <div>
           <p>Mock text</p>
           <div>
-            {singleBean.map((singleBean, index) => (
-              <div key={index} className="">
-                <p>Group Name: {singleBean.groupName[1]}</p>
-                <h3>Flavor Name: {singleBean.flavorName}</h3>
-                <img src={singleBean.imgUrl} />
-                <p>Description: {singleBean.description}</p>
-                <p>colorGroup: {singleBean.colorGroup}</p>
-                <p>Ingredients: {singleBean.ingredients[0]}</p>
-                <p>Color Group: {singleBean.colorGroup}</p>
-                <p>Hexadecimal Color: {singleBean.backgroundColor}</p>
-                <p>Bean ID: {singleBean.beanId}</p>
-                <p>Kosher: </p>
-                <p>Seasonal: </p>
-                <p>Gluten Free: </p>
-                <p>Sugar Free: </p>
-              </div>
-            ))}
+            <div className="">
+              <p>Group Name: {singleBean.groupName.join(",")}</p>
+              <h3>Flavor Name: {singleBean.flavorName}</h3>
+              <img src={singleBean.imgUrl} />
+              <p>Description: {singleBean.description}</p>
+              <p>colorGroup: {singleBean.colorGroup}</p>
+              <p>Ingredients: {singleBean.ingredients.join(",")}</p>
+              <p>Color Group: {singleBean.colorGroup}</p>
+              <p>Hexadecimal Color: {singleBean.backgroundColor}</p>
+              <p>Bean ID: {singleBean.beanId}</p>
+              <p>Kosher: </p>
+              <p>Seasonal: </p>
+              <p>Gluten Free: </p>
+              <p>Sugar Free: </p>
+            </div>
           </div>
         </div>
       </div>
