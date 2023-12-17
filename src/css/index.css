@@ -613,6 +613,23 @@ canvas {
   margin-bottom: 1.5rem;
 }
 
+/* Error */
+.error {
+  display: flex;
+  flex-direction: column;
+  background: var(--light-body-color);
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.error h1 {
+  color: var(--dark-red);
+}
+.error img {
+  width: 15rem;
+}
+
 /* Animations */
 .beatFade {
   animation: beatFade 1.5s infinite;
