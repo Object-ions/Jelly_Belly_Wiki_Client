@@ -830,6 +830,7 @@ canvas {
   padding: 5rem;
   display: grid;
   justify-content: center;
+  justify-items: center;
   align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
