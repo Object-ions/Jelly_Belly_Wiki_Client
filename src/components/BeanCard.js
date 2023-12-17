@@ -58,7 +58,7 @@ const BeanCard = () => {
             <p>{singleBean.description}</p>
           </div>
           <div className="img-wrapper">
-            <img src={singleBean.imageUrl} />
+            <img src={singleBean.imageUrl} alt="Bean" />
           </div>
           <div className="bean-card-wrapper">
             <p>Group Name:</p>

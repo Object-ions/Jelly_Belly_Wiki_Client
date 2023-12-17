@@ -6,7 +6,7 @@ const ErrorComponent = ({ error }) => {
     <div className="error">
       <h1>Oh no, an error:</h1>
       <h1>{error}</h1>
-      <img src={errorImg} />
+      <img src={errorImg} alt="sad-bean" />
     </div>
   );
 };

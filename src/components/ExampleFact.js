@@ -7,6 +7,7 @@ import beanImg from "./../img/bean-filled-color.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import ErrorComponent from "./ErrorComponent";
 
 const initialState = {
   isLoaded: false,
@@ -46,7 +47,7 @@ const ExampleFact = () => {
   const { error, isLoaded, facts } = state;
 
   if (error) {
-    return <h1>Error: {error}</h1>;
+    return <ErrorComponent error={error} />;
   } else if (!isLoaded) {
     return <h1>Loading...</h1>;
   } else {
@@ -56,7 +57,7 @@ const ExampleFact = () => {
           <h2>Did You Know?</h2>
           <div className="fact-side">
             <div>
-              <img src={cherryImg} id="cherryImg-fact" />
+              <img src={cherryImg} id="cherryImg-fact" alt="cherry" />
               <h2>Did You Know?</h2>
               <p>
                 Very Cherry has been the most popular Jelly Belly flavor for
@@ -64,7 +65,7 @@ const ExampleFact = () => {
               </p>
             </div>
             <div>
-              <img src={beanImg} id="beanImg-fact" />
+              <img src={beanImg} id="beanImg-fact" alt="beans" />
               <h2>Did You Know?</h2>
               <p>
                 Very Cherry has been the most popular Jelly Belly flavor for

@@ -4,6 +4,7 @@ import { getBeansFailure, getBeansSuccess } from "../actions/index";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import ErrorComponent from "./ErrorComponent";
 
 const initialState = {
   isLoaded: false,
@@ -42,7 +43,7 @@ const InformativeSection = () => {
   const { error, isLoaded, beans } = state;
 
   if (error) {
-    return <h1>Error: {error}</h1>;
+    return <ErrorComponent error={error} />;
   } else if (!isLoaded) {
     return <h1>Loading...</h1>;
   } else {
