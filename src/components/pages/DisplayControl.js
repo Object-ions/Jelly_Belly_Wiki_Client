@@ -1,19 +1,20 @@
 import React from "react";
-import InformativeSection from "../InformativeSection";
 import LandingSection from "../LandingSection";
-import DisplayHistory from "../DisplayHistory";
+import ExampleBean from "../ExampleBean";
+import ExampleHistory from "../ExampleHistory";
 import About from "../About";
-import DisplayFact from "./DisplayFact";
+import ExampleFact from "../ExampleFact";
 import SplineViewer from "../SplineViewer";
+import { Parallax } from "react-scroll-parallax";
 
 const DisplayControl = () => {
   return (
     <>
       <LandingSection />
       <About />
-      <DisplayHistory />
-      <InformativeSection />
-      <DisplayFact />
+      <ExampleHistory />
+      <ExampleBean />
+      <ExampleFact />
 
       {/* <SplineViewer url="https://prod.spline.design/mjbobhqsR1jJBonF/scene.splinecode" /> */}
     </>
