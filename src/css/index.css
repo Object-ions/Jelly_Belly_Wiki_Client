@@ -364,10 +364,15 @@ canvas {
 
 /* About */
 .about {
+  color: var(--dark-red);
+  background: linear-gradient(to bottom, #f9f5f4, #edeae6);
+}
+
+.about .container {
   padding: 8rem 2rem;
   border-radius: 2rem;
+  /* max-width: 1200px; */
   background: var(--secondary-color);
-  color: var(--dark-red);
 }
 
 .about.container > div > h3 {
