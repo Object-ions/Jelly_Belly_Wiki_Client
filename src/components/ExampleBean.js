@@ -62,10 +62,8 @@ const InformativeSection = () => {
           ))}
           <div className="item-wrapper explore-beans info-bottom">
             <Link to="/beans">
-              <h3>
-                Explore More Beans
-                <FontAwesomeIcon icon={faArrowRightLong} />
-              </h3>
+              Explore More Beans
+              <FontAwesomeIcon icon={faArrowRightLong} />
             </Link>
           </div>
         </div>

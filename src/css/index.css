@@ -534,14 +534,14 @@ canvas {
   padding: 2rem;
 }
 
-.info-grid .explore-beans h3 a {
-  font-family: "lobster";
-  font-size: 2.2rem;
+.info-grid .explore-beans a {
+  font-family: var(--text-font);
+  font-size: 1.5rem;
   color: var(--dark-red);
   position: relative;
   display: inline-block;
 }
-.info-grid .explore-beans h3 a::before {
+.info-grid .explore-beans a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -552,7 +552,7 @@ canvas {
   transition: width 0.3s linear;
 }
 
-.info-grid .explore-beans h3 a:hover::before {
+.info-grid .explore-beans a:hover::before {
   width: 100%;
 }
 
