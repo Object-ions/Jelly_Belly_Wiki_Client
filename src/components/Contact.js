@@ -16,7 +16,7 @@ const Contact = () => {
             <textarea name="text-area" required />
             <button type="submit">Submit</button>
           </form>
-          <img src={mandarin} />
+          <img src={mandarin} alt="Bean" />
         </div>
       </div>
     </div>
