@@ -7,6 +7,8 @@ import ExampleFact from "../ExampleFact";
 import SplineViewer from "../SplineViewer";
 import { Parallax } from "react-scroll-parallax";
 import Contact from "../Contact";
+import ExampleRecipe from "../ExampleRecipe";
+import ExampleCombination from "../ExampleCombination";
 
 const DisplayControl = () => {
   return (
@@ -16,6 +18,8 @@ const DisplayControl = () => {
       <ExampleHistory />
       <ExampleBean />
       <ExampleFact />
+      <ExampleRecipe />
+      <ExampleCombination />
       <Contact />
 
       {/* <SplineViewer url="https://prod.spline.design/mjbobhqsR1jJBonF/scene.splinecode" /> */}
