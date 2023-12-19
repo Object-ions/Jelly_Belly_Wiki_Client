@@ -21,12 +21,18 @@ const Header = () => {
             <Link to="/recipes">Recipes</Link>
           </li>
           <li className="">
+            <Link to="/combinations">Combinations</Link>
+          </li>
+          <li className="">
+            <Link to="/history">History</Link>
+          </li>
+          <li className="">
             <Link to="/about">About</Link>
           </li>
         </ul>
         <ul>
           <li className="api">
-            <Link to="/api">API</Link>
+            <Link to="/api">API Doc</Link>
           </li>
         </ul>
       </div>
