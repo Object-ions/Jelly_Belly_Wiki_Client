@@ -47,13 +47,22 @@ const BeanCard = () => {
     return <LoadingComponent />;
   } else {
     return (
-      <div className="container">
-        <div className="Bean-card">
-          <h1>{singleBean.name}</h1>
-          <p>{singleBean.description}</p>
-          <img src={singleBean.imageUrl} alt="" />
-          <p>Make {singleBean.makingAmount}</p>
-          <Link to={singleBean}>Click here for more recipes</Link>
+      <div className="ExampleRecipe">
+        <div className="container">
+          <div className="recipe-card">
+            <h1>{singleBean.name}</h1>
+            <p>{singleBean.description}</p>
+            <img src={singleBean.imageUrl} alt={singleBean.name} />
+            <p>Make {singleBean.makingAmount}</p>
+            <Link to={singleBean}>Click here for more recipes</Link>
+          </div>
+          <div className="recipe-card">
+            <h1>{singleBean.name}</h1>
+            <p>{singleBean.description}</p>
+            <img src={singleBean.imageUrl} alt={singleBean.name} />
+            <p>Make {singleBean.makingAmount}</p>
+            <Link to={singleBean}>Click here for more recipes</Link>
+          </div>
         </div>
       </div>
     );
