@@ -948,7 +948,6 @@ canvas {
 
 /* Explore Recipes */
 .DisplayRecipe {
-  background: var(--dark-body-color);
   padding: 5rem 2rem;
 }
 
@@ -975,7 +974,7 @@ canvas {
   display: flex;
   align-items: flex-start;
   padding: 1rem;
-  border: 1px px solid var(--dark-body-color);
+  border: 1px solid var(--dark-body-color);
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid var(--dark-body-color);
