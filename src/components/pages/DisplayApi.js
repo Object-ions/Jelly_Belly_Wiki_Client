@@ -4,7 +4,7 @@ import BeanCard from "../BeanCard";
 const DisplayApi = () => {
   return (
     <>
-      <BeanCard />
+      <div>API</div>
     </>
   );
 };
