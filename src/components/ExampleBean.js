@@ -12,7 +12,7 @@ const initialState = {
   error: null,
 };
 
-const InformativeSection = () => {
+const ExampleBean = () => {
   const [state, dispatch] = useReducer(beansReducer, initialState);
 
   useEffect(() => {
@@ -48,21 +48,23 @@ const InformativeSection = () => {
     return <h1>Loading...</h1>;
   } else {
     return (
-      <div className="InformativeSection container">
+      <div className="ExampleBean container">
         <div className="info-grid">
           <div className="item-wrapper explore-beans info-top">
             <h2>Explore Beans</h2>
           </div>
           {beans.map((bean, index) => (
             <div key={index} className="item-wrapper">
-              <h3>{bean.flavorName}</h3>
+              <Link to={"/beans/" + bean.beanId}>
+                <h3>{bean.flavorName}</h3>
+              </Link>
               <div className="img-wrapper">
                 <img src={bean.imageUrl} alt={bean.flavorName} />
               </div>
             </div>
           ))}
           <div className="item-wrapper explore-beans info-bottom">
-            <Link to="/beans">
+            <Link to={"/beans/"}>
               Explore More Beans
               <FontAwesomeIcon icon={faArrowRightLong} />
             </Link>
@@ -73,4 +75,4 @@ const InformativeSection = () => {
   }
 };
 
-export default InformativeSection;
+export default ExampleBean;
