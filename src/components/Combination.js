@@ -1,12 +1,15 @@
 import React, { useEffect, useReducer } from "react";
 import beansReducer from "../reducers/beans-reducer";
 import { getSingleBeanFailure, getSingleBeanSuccess } from "../actions/index";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import LoadingComponent from "./LoadingComponent";
-import cherryTurnover from "./../img/Cherry-Turnovers.jpeg";
+import cherryTurnover from "./../img/Cherry-Turnovers.png";
+import miniCherry from "./../img//mini-cherry.png";
+import miniCoconut from "./../img/mini-coconut.png";
+import miniPopcorn from "./../img/mini-popcorn.png";
 
 const initialState = {
   isLoaded: false,
@@ -53,7 +56,17 @@ const ExampleCombination = () => {
         <br />
         <br />
         <h3>{singleBean.name}</h3>
-        <p>{singleBean.tag}</p>
+        <p>{singleBean.tag.join(",")}</p>
+        <div className="inline">
+          <img className="mini-bean" src={miniCherry} alt="mini" />
+          <p>+</p>
+          <img className="mini-bean" src={miniCherry} alt="mini" />
+          <p>+</p>
+          <img className="mini-bean" src={miniCoconut} alt="mini" />
+          <p>+</p>
+          <img className="mini-bean" src={miniPopcorn} alt="mini" />
+          <p>=</p>
+        </div>
         <img src={cherryTurnover} alt={singleBean.name} />
       </div>
     );

@@ -1030,6 +1030,7 @@ canvas {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
+  margin-bottom: 3rem;
 }
 
 /* Example Recipe */
@@ -1052,6 +1053,26 @@ canvas {
   margin: 0;
   padding: 3rem;
   border-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.ExampleRecipe .recipe-card .inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ExampleRecipe .recipe-card p {
+  margin-top: 0.5rem;
+}
+
+.ExampleRecipe .recipe-card img {
+  width: 25rem;
+  max-height: 25rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
 }
 
 .ExampleRecipe .recipe-card a {
@@ -1060,10 +1081,8 @@ canvas {
   color: var(--head-color);
 }
 
-.ExampleRecipe .recipe-card img {
-  width: 25rem;
-  max-height: 25rem;
-  border-radius: 2rem;
+.ExampleRecipe .recipe-card .mini-bean {
+  width: 5rem;
 }
 
 .ExampleRecipe .recipe-card a::before {

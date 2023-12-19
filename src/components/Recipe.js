@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import beansReducer from "../reducers/beans-reducer";
 import { getSingleBeanFailure, getSingleBeanSuccess } from "../actions/index";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
