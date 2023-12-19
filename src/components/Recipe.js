@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from "react";
-import beansReducer from "./../reducers/beans-reducer";
-import { getSingleBeanFailure, getSingleBeanSuccess } from "./../actions/index";
+import beansReducer from "../reducers/beans-reducer";
+import { getSingleBeanFailure, getSingleBeanSuccess } from "../actions/index";
 import { Link, NavLink, useParams } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,7 +13,7 @@ const initialState = {
   error: null,
 };
 
-const BeanCard = () => {
+const ExampleRecipe = () => {
   const [state, dispatch] = useReducer(beansReducer, initialState);
 
   useEffect(() => {
@@ -47,26 +47,17 @@ const BeanCard = () => {
     return <LoadingComponent />;
   } else {
     return (
-      <div className="ExampleRecipe">
-        <div className="container">
-          <div className="recipe-card">
-            <h1>{singleBean.name}</h1>
-            <p>{singleBean.description}</p>
-            <img src={singleBean.imageUrl} alt={singleBean.name} />
-            <p>Make {singleBean.makingAmount}</p>
-            <Link to={singleBean}>Click here for more recipes</Link>
-          </div>
-          <div className="recipe-card">
-            <h1>{singleBean.name}</h1>
-            <p>{singleBean.description}</p>
-            <img src={singleBean.imageUrl} alt={singleBean.name} />
-            <p>Make {singleBean.makingAmount}</p>
-            <Link to={singleBean}>Click here for more recipes</Link>
-          </div>
+      <div className="container">
+        <div className="recipe-card">
+          <h1>{singleBean.name}</h1>
+          <p>{singleBean.description}</p>
+          <img src={singleBean.imageUrl} alt={singleBean.name} />
+          <p>Recipe for {singleBean.makingAmount}</p>
+          <Link to={singleBean}>Click here for more recipes</Link>
         </div>
       </div>
     );
   }
 };
 
-export default BeanCard;
+export default ExampleRecipe;
