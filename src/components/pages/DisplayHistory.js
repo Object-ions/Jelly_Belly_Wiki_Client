@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import beansReducer from "../../reducers/beans-reducer";
 import { getBeansFailure, getBeansSuccess } from "../../actions/index";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import ErrorComponent from "../ErrorComponent";
 import happyBean from "../../img/happy-bean.png";
 
