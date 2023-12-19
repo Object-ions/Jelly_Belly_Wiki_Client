@@ -9,6 +9,9 @@ import DisplayApi from "./pages/DisplayApi";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BeanCard from "./BeanCard";
 import { ParallaxProvider } from "react-scroll-parallax";
+import DisplayCombination from "./pages/DisplayCombination";
+import RecipeCard from "./RecipeCard";
+import DisplayHistory from "./pages/DisplayHistory";
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
           <Route path="/beans/:beanId" element={<BeanCard />} />
           <Route path="/facts" element={<DisplayFact />} />
           <Route path="/recipes" element={<DisplayRecipe />} />
+          <Route path="/recipes/:recipeId" element={<RecipeCard />} />
+          <Route path="/combinations" element={<DisplayCombination />} />
+          <Route path="/history" element={<DisplayHistory />} />
           <Route path="/api" element={<DisplayApi />} />
         </Routes>
 
