@@ -60,7 +60,7 @@ const DisplayRecipe = () => {
                   {item.makingAmount ? <p>Make: {item.makingAmount}</p> : ""}
                   {item.totalTime ? <p>Total Time: {item.totalTime}</p> : ""}
                 </div>
-                <Link to={"/recipe"}>
+                <Link to={"/recipes/" + item.recipeId}>
                   check out this recipe
                   <FontAwesomeIcon icon={faArrowRight} className="beatFade" />
                 </Link>

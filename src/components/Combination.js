@@ -52,7 +52,12 @@ const ExampleCombination = () => {
   } else {
     return (
       <div className="recipe-card">
-        <Link to={"/combinations"}>Click here for more combinations</Link>
+        <div>
+          <Link to={"/combinations"}>
+            Click here for more combinations
+            <FontAwesomeIcon icon={faArrowRightLong} />
+          </Link>
+        </div>
         <br />
         <br />
         <h3>{singleBean.name}</h3>

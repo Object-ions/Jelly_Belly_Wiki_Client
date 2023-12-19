@@ -48,13 +48,24 @@ const ExampleRecipe = () => {
   } else {
     return (
       <div className="recipe-card">
-        <Link to={"/recipes"}>Click here for more recipes</Link>
+        <div>
+          <Link to={"/recipes"}>
+            Click here for more recipes
+            <FontAwesomeIcon icon={faArrowRightLong} />
+          </Link>
+        </div>
         <br />
         <br />
         <h3>{singleBean.name}</h3>
         <p>Recipe for {singleBean.makingAmount}</p>
         <p>{singleBean.description}</p>
         <img src={singleBean.imageUrl} alt={singleBean.name} />
+        <div>
+          <Link to={"/recipes/" + singleBean.recipeId}>
+            Check out {singleBean.name} Recipe
+            <FontAwesomeIcon icon={faArrowRightLong} />
+          </Link>
+        </div>
       </div>
     );
   }
