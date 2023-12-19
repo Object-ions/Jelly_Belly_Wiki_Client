@@ -3,6 +3,7 @@ import beansReducer from "../../reducers/beans-reducer";
 import { getBeansFailure, getBeansSuccess } from "../../actions/index";
 import { Link } from "react-router-dom";
 import ErrorComponent from "../ErrorComponent";
+import Loading from "../LoadingComponent";
 
 const initialState = {
   isLoaded: false,
@@ -41,7 +42,7 @@ const DisplayBean = () => {
   if (error) {
     return <ErrorComponent error={error} />;
   } else if (!isLoaded) {
-    return <h1>Loading...</h1>;
+    return <Loading />;
   } else {
     return (
       <div className="DisplayBean">

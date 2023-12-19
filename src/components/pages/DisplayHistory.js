@@ -5,6 +5,7 @@ import beansReducer from "../../reducers/beans-reducer";
 import { getBeansFailure, getBeansSuccess } from "../../actions/index";
 import ErrorComponent from "../ErrorComponent";
 import happyBean from "../../img/happy-bean.png";
+import Loading from "../LoadingComponent";
 
 const initialState = {
   isLoaded: false,
@@ -40,7 +41,7 @@ const DisplayHistory = () => {
   if (error) {
     return <ErrorComponent error={error} />;
   } else if (!isLoaded) {
-    return <h1>Loading...</h1>;
+    return <Loading />;
   } else {
     return (
       <div className="DisplayHistory">
