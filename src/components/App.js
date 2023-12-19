@@ -12,6 +12,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import DisplayCombination from "./pages/DisplayCombination";
 import RecipeCard from "./RecipeCard";
 import DisplayHistory from "./pages/DisplayHistory";
+import DisplayAbout from "./pages/DisplayAbout";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/recipes/:recipeId" element={<RecipeCard />} />
           <Route path="/combinations" element={<DisplayCombination />} />
           <Route path="/history" element={<DisplayHistory />} />
+          <Route path="/about" element={<DisplayAbout />} />
           <Route path="/api" element={<DisplayApi />} />
         </Routes>
 

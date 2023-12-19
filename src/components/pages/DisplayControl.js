@@ -2,7 +2,7 @@ import React from "react";
 import LandingSection from "../LandingSection";
 import ExampleBean from "../ExampleBean";
 import ExampleHistory from "../ExampleHistory";
-import About from "../About";
+import DisplayAbout from "../pages/DisplayAbout";
 import ExampleFact from "../ExampleFact";
 import SplineViewer from "../SplineViewer";
 import { Parallax } from "react-scroll-parallax";
@@ -12,7 +12,7 @@ const DisplayControl = () => {
   return (
     <>
       <LandingSection />
-      <About />
+      <DisplayAbout />
       <ExampleHistory />
       <ExampleBean />
       <ExampleFact />
