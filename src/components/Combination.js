@@ -48,14 +48,13 @@ const ExampleCombination = () => {
     return <LoadingComponent />;
   } else {
     return (
-      <div className="container">
-        <div className="recipe-card">
-          <h1>{singleBean.name}</h1>
-          <p>{singleBean.description}</p>
-          <img src={cherryTurnover} alt={singleBean.name} />
-          <p>Recipe for {singleBean.makingAmount}</p>
-          <Link to={singleBean}>Click here for more combinations</Link>
-        </div>
+      <div className="recipe-card">
+        <Link to={"/combinations"}>Click here for more combinations</Link>
+        <br />
+        <br />
+        <h3>{singleBean.name}</h3>
+        <p>{singleBean.tag}</p>
+        <img src={cherryTurnover} alt={singleBean.name} />
       </div>
     );
   }

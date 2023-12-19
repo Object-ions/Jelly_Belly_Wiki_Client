@@ -47,14 +47,14 @@ const ExampleRecipe = () => {
     return <LoadingComponent />;
   } else {
     return (
-      <div className="container">
-        <div className="recipe-card">
-          <h1>{singleBean.name}</h1>
-          <p>{singleBean.description}</p>
-          <img src={singleBean.imageUrl} alt={singleBean.name} />
-          <p>Recipe for {singleBean.makingAmount}</p>
-          <Link to={singleBean}>Click here for more recipes</Link>
-        </div>
+      <div className="recipe-card">
+        <Link to={"/recipes"}>Click here for more recipes</Link>
+        <br />
+        <br />
+        <h3>{singleBean.name}</h3>
+        <p>Recipe for {singleBean.makingAmount}</p>
+        <p>{singleBean.description}</p>
+        <img src={singleBean.imageUrl} alt={singleBean.name} />
       </div>
     );
   }
