@@ -47,36 +47,72 @@ const RecipeCard = () => {
     return <h1>Loading...</h1>;
   } else {
     return (
-      <div className="container">
-        <div className="Bean-card">
-          <div className="bean-card-wrapper centered">
-            <h3>{singleBean.name}</h3>
-            <p>{singleBean.description}</p>
-            {singleBean.prepTime ? <p> {singleBean.prepTime} </p> : ""}
-            {singleBean.cookTime ? <p> {singleBean.cookTime} </p> : ""}
-            {singleBean.totalTime ? <p> {singleBean.totalTime} </p> : ""}
-            {singleBean.makingAmount ? (
-              <p> Recipe makes {singleBean.makingAmount} </p>
-            ) : (
-              ""
-            )}
-            <div>
+      <div className="RecipeCard">
+        <div className="container">
+          <div className="recipe-card-wrapper">
+            {/* Name */}
+            <div className="item-wrapper">
+              <h3>{singleBean.name}</h3>
+            </div>
+            {/* Description */}
+            <div className="item-wrapper">
+              <p>{singleBean.description}</p>
+            </div>
+            {/* Timing */}
+            <div className="item-wrapper">
+              {singleBean.prepTime ? (
+                <p>Preparation time: {singleBean.prepTime} </p>
+              ) : (
+                ""
+              )}
+              {singleBean.cookTime ? (
+                <p>Cook time: {singleBean.cookTime} </p>
+              ) : (
+                ""
+              )}
+              {singleBean.totalTime ? (
+                <p>Total time: {singleBean.totalTime} </p>
+              ) : (
+                ""
+              )}
+              {singleBean.makingAmount ? (
+                <p> Recipe makes {singleBean.makingAmount} </p>
+              ) : (
+                ""
+              )}
+            </div>
+            {/* Image */}
+            <div className="img-wrapper">
+              <img src={singleBean.imageUrl} alt={singleBean.name} />
+            </div>
+            {/* Ingredients */}
+            <div className="item-wrapper">
               <h4>Ingredients</h4>
               <p>{singleBean.ingredients}</p>
             </div>
-            {singleBean.additional1 ? <p>{singleBean.additional1}</p> : ""}
-            {singleBean.additional2 ? <p>{singleBean.additional1}</p> : ""}
-            {singleBean.additional3 ? <p>{singleBean.additional1}</p> : ""}
-            <div>
+            {/* Additional */}
+            <div className="item-wrapper">
+              {singleBean.additions1 ? <p>{singleBean.additions1}</p> : ""}
+              {singleBean.additions2 ? <br /> : ""}
+              {singleBean.additions2 ? <p>{singleBean.additions2}</p> : ""}
+              {singleBean.additions3 ? <br /> : ""}
+              {singleBean.additions3 ? <p>{singleBean.additions3}</p> : ""}
+            </div>
+            {/* Directions */}
+            <div className="item-wrapper">
               <h4>Directions</h4>
               <p>{singleBean.directions}</p>
             </div>
-            <div>
-              <h4>Tips</h4>
-              <p>{singleBean.tips}</p>
+            {/* Tips */}
+            <div className="item-wrapper">
+              {singleBean.tips ? <p>Tips - {singleBean.tips}</p> : ""}
             </div>
           </div>
         </div>
+        <Link to={"/recipes"}>
+          Back to recipes
+          <FontAwesomeIcon icon={faArrowRightLong} />
+        </Link>
       </div>
     );
   }
