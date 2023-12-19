@@ -507,6 +507,7 @@ canvas {
 
 .DisplayBean .bean-grid .item-wrapper:hover {
   border: 1px solid var(--btn-red);
+  background-color: rgba(249, 245, 244, 0.8);
   border-radius: 1rem;
 }
 
@@ -570,12 +571,7 @@ canvas {
   text-align: center;
 }
 
-.DisplayFact .fact-grid img {
-  width: 50%;
-  margin: auto;
-}
-
-/* Informative Section */
+/* EXAMPLE BEAN*/
 
 .info-grid {
   padding: 5rem 2rem;
@@ -969,6 +965,12 @@ canvas {
 }
 .error img {
   width: 15rem;
+}
+
+/* Happy Bean */
+.happy-bean {
+  width: 50%;
+  margin: auto;
 }
 
 /* Animations */
