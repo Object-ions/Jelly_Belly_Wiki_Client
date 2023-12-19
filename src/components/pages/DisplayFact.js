@@ -48,7 +48,7 @@ const DisplayFact = () => {
         <div className="container">
           <h3>Explore All Facts ...</h3>
           <div className="fact-grid">
-            <img src={happyBean} alt="happy-bean" />
+            <img src={happyBean} alt="happy-bean" className="happy-bean" />
             {/*  Dynamic */}
             {beans.map((item) => (
               <div className="item-wrapper" key={item.factId}>
