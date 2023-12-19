@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
 import AboutAdittion from "../AboutAdittion";
+
 const DisplayAbout = () => {
   const location = useLocation();
   const isAboutPage = location.pathname === "/about";
