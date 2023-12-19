@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
-import AboutAdittion from "../AboutAdittion";
+import AboutAddition from "../AboutAddition";
 
 const DisplayAbout = () => {
   const location = useLocation();
@@ -81,7 +81,7 @@ const DisplayAbout = () => {
             </li>
           </ul>
         </div>
-        {isAboutPage ? <AboutAdittion /> : ""}
+        {isAboutPage ? <AboutAddition /> : ""}
       </div>
     </div>
   );
