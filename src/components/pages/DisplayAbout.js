@@ -2,10 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
-
-const About = () => {
+import { useLocation } from "react-router-dom";
+import AboutAdittion from "../AboutAdittion";
+const DisplayAbout = () => {
+  const location = useLocation();
+  const isAboutPage = location.pathname === "/about";
   return (
-    <div className="about">
+    <div className={`about ${isAboutPage ? "full-screen" : ""}`}>
       <div className="container">
         <div>
           <h3>What to find in this API?</h3>
@@ -77,9 +80,10 @@ const About = () => {
             </li>
           </ul>
         </div>
+        {isAboutPage ? <AboutAdittion /> : ""}
       </div>
     </div>
   );
 };
 
-export default About;
+export default DisplayAbout;

@@ -471,6 +471,11 @@ canvas {
   margin: 1rem 0 0 0;
 }
 
+.AboutAddition {
+  margin: 3rem auto;
+  text-align: center;
+}
+
 /* Display Bean */
 .DisplayBean {
   background: var(--dark-body-color);
@@ -1065,6 +1070,10 @@ canvas {
 .happy-bean {
   width: 50%;
   margin: auto;
+}
+
+.full-screen {
+  height: 80vh;
 }
 
 /* Animations */
