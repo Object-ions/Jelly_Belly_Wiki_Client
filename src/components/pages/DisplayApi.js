@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import "./DisplayApi.css";
-import Setup from "../api/Setup";
 import Opening from "../api/Opening";
-import DataSample from "../api/DataSample";
-import Endpoints from "../api/Endpoints";
-import KnownBugs from "../api/KnownBugs";
-import License from "../api/License";
-import Pagination from "../api/Pagination";
-import Query from "../api/Query";
-import TechUsed from "../api/TechUsed";
-import Description from "../api/Description";
-import Features from "../api/Features";
+import Setup from "../api/Setup";
 import CreateDatabase from "../api/CreateDatabase";
+import Endpoints from "../api/Endpoints";
+import Query from "../api/Query";
+import DataSample from "../api/DataSample";
 import Examples from "../api/Examples";
+import Pagination from "../api/Pagination";
 
 const DisplayApi = () => {
   const [activeComponent, setActiveComponent] = useState("opening");
@@ -27,20 +22,10 @@ const DisplayApi = () => {
         return <DataSample />;
       case "endpoints":
         return <Endpoints />;
-      case "knownbugs":
-        return <KnownBugs />;
-      case "license":
-        return <License />;
       case "pagination":
         return <Pagination />;
       case "query":
         return <Query />;
-      case "techused":
-        return <TechUsed />;
-      case "description":
-        return <Description />;
-      case "features":
-        return <Features />;
       case "createdatabase":
         return <CreateDatabase />;
       case "examples":
@@ -80,59 +65,28 @@ const DisplayApi = () => {
               Endpoints
             </li>
             <li
-              className={activeComponent === "datasample" ? "active" : ""}
-              onClick={() => setActiveComponent("datasample")}
-            >
-              Data Sample
-            </li>
-            <li
-              className={activeComponent === "knownbugs" ? "active" : ""}
-              onClick={() => setActiveComponent("knownbugs")}
-            >
-              Known Bugs
-            </li>
-            <li
-              className={activeComponent === "license" ? "active" : ""}
-              onClick={() => setActiveComponent("license")}
-            >
-              License
-            </li>
-            <li
-              className={activeComponent === "pagination" ? "active" : ""}
-              onClick={() => setActiveComponent("pagination")}
-            >
-              Pagination
-            </li>
-            <li
               className={activeComponent === "query" ? "active" : ""}
               onClick={() => setActiveComponent("query")}
             >
               Query
             </li>
             <li
-              className={activeComponent === "techused" ? "active" : ""}
-              onClick={() => setActiveComponent("techused")}
+              className={activeComponent === "datasample" ? "active" : ""}
+              onClick={() => setActiveComponent("datasample")}
             >
-              Technologies Used
+              Data Sample
             </li>
-            <li
-              className={activeComponent === "description" ? "active" : ""}
-              onClick={() => setActiveComponent("description")}
-            >
-              Description
-            </li>
-            <li
-              className={activeComponent === "features" ? "active" : ""}
-              onClick={() => setActiveComponent("features")}
-            >
-              Features
-            </li>
-
             <li
               className={activeComponent === "examples" ? "active" : ""}
               onClick={() => setActiveComponent("examples")}
             >
               Examples
+            </li>
+            <li
+              className={activeComponent === "pagination" ? "active" : ""}
+              onClick={() => setActiveComponent("pagination")}
+            >
+              Pagination
             </li>
           </ul>
         </aside>
