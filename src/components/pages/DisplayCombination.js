@@ -56,7 +56,7 @@ const DisplayCombination = () => {
               <div className="item-wrapper" key={index}>
                 <div>
                   <h4>{item.name}</h4>
-                  <p>{item.tag.join(",")}</p>
+                  <p>{item.tag[0].replaceAll(",", "")}</p>
                 </div>
               </div>
             ))}
