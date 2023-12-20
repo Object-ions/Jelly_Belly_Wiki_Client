@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+pre {
+  font-family: "Space Mono", monospace;
+  padding: 10px;
+  border: 1px solid #ccc;
+  overflow-x: auto;
+}

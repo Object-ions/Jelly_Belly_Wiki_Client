@@ -1,4 +1,5 @@
 import React from "react";
+import "./DisplayApi.css";
 import Setup from "../api/Setup";
 import Opening from "../api/Opening";
 import DataSample from "../api/DataSample";
@@ -10,22 +11,26 @@ import Query from "../api/Query";
 import TechUsed from "../api/TechUsed";
 import Description from "../api/Description";
 import Features from "../api/Features";
+import CreateDatabase from "../api/CreateDatabase";
+import Examples from "../api/Examples";
 
 const DisplayApi = () => {
   return (
-    <div className="">
+    <>
       <Opening />
       <Description />
       <Features />
       <TechUsed />
       <Setup />
-      <DataSample />
+      <CreateDatabase />
+      <Pagination />
       <Endpoints />
+      <Query />
+      <Examples />
+      <DataSample />
       <KnownBugs />
       <License />
-      <Pagination />
-      <Query />
-    </div>
+    </>
   );
 };
 
