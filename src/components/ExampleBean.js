@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import ErrorComponent from "./ErrorComponent";
+import LoadingComponent from "./LoadingComponent";
 
 const initialState = {
   isLoaded: false,
@@ -45,7 +46,7 @@ const ExampleBean = () => {
   if (error) {
     return <ErrorComponent error={error} />;
   } else if (!isLoaded) {
-    return <h1>Loading...</h1>;
+    return <LoadingComponent />;
   } else {
     return (
       <div className="ExampleBean container">

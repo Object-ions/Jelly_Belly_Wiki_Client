@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import LoadingComponent from "./LoadingComponent";
 
 const initialState = {
   isLoaded: false,
@@ -44,7 +45,7 @@ const RecipeCard = () => {
   if (error) {
     return <ErrorComponent error={error} />;
   } else if (!isLoaded) {
-    return <h1>Loading...</h1>;
+    return <LoadingComponent />;
   } else {
     return (
       <div className="RecipeCard">
