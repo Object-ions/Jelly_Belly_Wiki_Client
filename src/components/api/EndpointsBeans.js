@@ -1,6 +1,7 @@
 import React from "react";
-import ColorGroupTable from "./ColorGroupTable";
-import FlavorNameTable from "./FlavorNameTable";
+import ColorGroupTable from "./TableColorGroup";
+import FlavorNameTable from "./TableFlavorName";
+import TableGroupName from "./TableGroupName";
 
 const EndpointsBeans = () => {
   return (
@@ -107,6 +108,7 @@ const EndpointsBeans = () => {
       </ul>
       <ColorGroupTable />
       <FlavorNameTable />
+      <TableGroupName />
     </>
   );
 };
