@@ -80,7 +80,7 @@ const DisplayApi = () => {
               className={activeComponent === "examples" ? "active" : ""}
               onClick={() => setActiveComponent("examples")}
             >
-              Examples
+              How to Utilize This API
             </li>
             <li
               className={activeComponent === "pagination" ? "active" : ""}
