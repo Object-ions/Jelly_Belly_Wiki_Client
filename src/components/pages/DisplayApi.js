@@ -15,14 +15,14 @@ import CreateDatabase from "../api/CreateDatabase";
 import Examples from "../api/Examples";
 
 const DisplayApi = () => {
-  const [activeComponent, setActiveComponent] = useState("setup");
+  const [activeComponent, setActiveComponent] = useState("opening");
 
   const getActiveComponent = () => {
     switch (activeComponent) {
-      case "setup":
-        return <Setup />;
       case "opening":
         return <Opening />;
+      case "setup":
+        return <Setup />;
       case "datasample":
         return <DataSample />;
       case "endpoints":
@@ -56,16 +56,16 @@ const DisplayApi = () => {
         <aside className="sidebar">
           <ul>
             <li
-              className={activeComponent === "setup" ? "active" : ""}
-              onClick={() => setActiveComponent("setup")}
-            >
-              Setup
-            </li>
-            <li
               className={activeComponent === "opening" ? "active" : ""}
               onClick={() => setActiveComponent("opening")}
             >
               Opening
+            </li>
+            <li
+              className={activeComponent === "setup" ? "active" : ""}
+              onClick={() => setActiveComponent("setup")}
+            >
+              Setup
             </li>
             <li
               className={activeComponent === "datasample" ? "active" : ""}
