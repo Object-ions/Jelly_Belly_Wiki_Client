@@ -59,7 +59,7 @@ const DisplayApi = () => {
               className={activeComponent === "opening" ? "active" : ""}
               onClick={() => setActiveComponent("opening")}
             >
-              Opening
+              Introductions
             </li>
             <li
               className={activeComponent === "setup" ? "active" : ""}
@@ -68,16 +68,22 @@ const DisplayApi = () => {
               Setup
             </li>
             <li
-              className={activeComponent === "datasample" ? "active" : ""}
-              onClick={() => setActiveComponent("datasample")}
+              className={activeComponent === "createdatabase" ? "active" : ""}
+              onClick={() => setActiveComponent("createdatabase")}
             >
-              Data Sample
+              Create and Launch the Database
             </li>
             <li
               className={activeComponent === "endpoints" ? "active" : ""}
               onClick={() => setActiveComponent("endpoints")}
             >
               Endpoints
+            </li>
+            <li
+              className={activeComponent === "datasample" ? "active" : ""}
+              onClick={() => setActiveComponent("datasample")}
+            >
+              Data Sample
             </li>
             <li
               className={activeComponent === "knownbugs" ? "active" : ""}
@@ -121,12 +127,7 @@ const DisplayApi = () => {
             >
               Features
             </li>
-            <li
-              className={activeComponent === "createdatabase" ? "active" : ""}
-              onClick={() => setActiveComponent("createdatabase")}
-            >
-              Create Database
-            </li>
+
             <li
               className={activeComponent === "examples" ? "active" : ""}
               onClick={() => setActiveComponent("examples")}

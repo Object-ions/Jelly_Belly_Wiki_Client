@@ -36,8 +36,8 @@ const CreateDatabase = () => {
 
       <h2>Using API</h2>
       <p>
-        To access the API endpoints, utilize tools like a browser, Postman, or
-        Swagger.
+        To access the API endpoints and see the data you can utilize tools like
+        a browser, Postman, or Swagger.
       </p>
       <p>
         (If working with Swagger, go to either{" "}
@@ -49,6 +49,11 @@ const CreateDatabase = () => {
           http://localhost:5000/swagger/index.html
         </a>
         .)
+      </p>
+      <p>At This point you can make api calls </p>
+      <p>
+        To see how to integrate this API in your application check out "End
+        Points" and "Data Samples".
       </p>
     </>
   );
