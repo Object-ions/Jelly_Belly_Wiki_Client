@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import ColorGroupTable from "./TableColorGroup";
 import FlavorNameTable from "./TableFlavorName";
 import TableGroupName from "./TableGroupName";
 
 const EndpointsBeans = () => {
+  const [activeTable, setActiveTable] = useState(null);
+
+  const handleTableChange = (tableName) => {
+    if (activeTable === tableName) {
+      setActiveTable(null); // Hide the table if the same link is clicked again
+    } else {
+      setActiveTable(tableName); // Show the selected table
+    }
+  };
   return (
     <>
       <h4>"Beans"</h4>
@@ -44,13 +53,22 @@ const EndpointsBeans = () => {
           <strong>groupName</strong> (string, optional): Filters beans by group
           name.
         </li>
+        <li onClick={() => handleTableChange("GroupName")}>
+          To see list of group names look at this <a>table</a>
+        </li>
         <li>
           <strong>flavorName</strong> (string, optional): Filters beans by
           flavor name.
         </li>
+        <li onClick={() => handleTableChange("FlavorName")}>
+          To see list of flavor names look at this <a>table</a>
+        </li>
         <li>
           <strong>colorGroup</strong> (string, optional): Filters beans by color
-          group. To see list of color groups continue to the table below.
+          group.
+        </li>
+        <li onClick={() => handleTableChange("ColorGroup")}>
+          To see list of color groups look at this <a>table</a>
         </li>
         <li>
           <strong>glutenFree</strong> (boolean, optional): Filters beans by
@@ -106,9 +124,9 @@ const EndpointsBeans = () => {
           </pre>
         </li>
       </ul>
-      <ColorGroupTable />
-      <FlavorNameTable />
-      <TableGroupName />
+      {activeTable === "ColorGroup" && <ColorGroupTable />}
+      {activeTable === "FlavorName" && <FlavorNameTable />}
+      {activeTable === "GroupName" && <TableGroupName />}
     </>
   );
 };
