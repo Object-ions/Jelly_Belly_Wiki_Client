@@ -28,6 +28,7 @@ const DataSample = () => {
 
       {selectedResponse === "flavorName" && (
         <div className="flavorName">
+          <p>The following query will return beans with the name "7UP".</p>
           <p>https://localhost:5001/api/Beans?flavorName=7up</p>
 
           <h2>Server Response</h2>
@@ -74,6 +75,7 @@ const DataSample = () => {
 
       {selectedResponse === "flavorId" && (
         <div className="flavorId">
+          <p>The following query will return beans with id of 24.</p>
           <p>https://localhost:5001/api/Beans/24</p>
 
           <h2>Server Response</h2>
@@ -110,6 +112,10 @@ const DataSample = () => {
       )}
       {selectedResponse === "pagination" && (
         <div className="pagination">
+          <p>
+            The following query will return beans with ID of 7 to 8 from the
+            dataset- page number 4, with 2 beans on each page.
+          </p>
           <p>https://localhost:5001/api/Beans?pageIndex=1&pageSize=2</p>
 
           <h2>Server Response</h2>

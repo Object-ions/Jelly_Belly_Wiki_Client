@@ -1,105 +1,172 @@
 import React from "react";
+import Recipe from "../Recipe";
 
 const Examples = () => {
-  // Example query URLs as strings
-  const exampleQueryBeans =
-    "https://localhost:5001/api/Beans?pageIndex=2&pageSize=2";
-  const exampleQueryFacts =
-    "https://localhost:5001/api/Facts?pageIndex=1&pageSize=2";
-
-  // Sample JSON responses as strings
-  const sampleJsonBeans = `{
-  "totalCount": 114,
-  "pageSize": 2,
-  "currentPage": 2,
-  "totalPages": 57,
-  "items": [
-    {
-      "beanId": 3,
-      "groupName": ["Jelly Belly Official Flavors", "Soda Pop Shoppe® Flavors"],
-      "groupNameSerialized": "Jelly Belly Official Flavors, Soda Pop Shoppe® Flavors",
-      "flavorName": "A&W® Root Beer",
-      "description": "Say 'Cheers' With The Flavor Of This All-American Classic Drink.",
-      "colorGroup": "saddlebrown",
-      "backgroundColor": "#792E27",
-      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/63b9e71d-9866-4044-9af7-7a64a52b0e0e",
-      "ingredients": [
-        "Sugar, Corn Syrup, Modified Food Starch, Contains 2% Or Less Of The Following: Natural & Artificial Flavors, Color Added, Vegetable & Fruit Juice (Color), Beeswax, Carnauba Wax, Confectioner'S Glaze."
-      ],
-      "glutenFree": false,
-      "sugarFree": false,
-      "seasonal": false,
-      "kosher": true
-    },
-    {
-      "beanId": 4,
-      "groupName": ["Superfruit Flavors"],
-      "groupNameSerialized": "Superfruit Flavors",
-      "flavorName": "Acai Berry",
-      "description": "Hard To Pronounce But A Delight To Enjoy. A Super Sweet And Rich Berry Taste Unlike Any Other.",
-      "colorGroup": "darkslategray",
-      "backgroundColor": "#5B3640",
-      "imageUrl": "https://cdn-tp1.mozu.com/9046-m1/cms/files/6f0c6164-71c8-47f6-a55f-893f5fd58fa0",
-      "ingredients": [
-        "Cane Sugar, Tapioca Syrup, Modified Food Starch, Sour Cherry Juice From Concentrate, Blueberry Juice From Blueberry Puree, Pomegranate Juice From Concentrate, Acai Puree, Natural Flavors, Acerola (Barbados) Cherry Juice, Cranberry Puree, Citric Acid, Apple (Color), Confectioner'S Glaze, Beeswax, Grape Concentrate (Color), Carrot (Color), Carnauba Wax, Black Currant (Color), Hibiscus (Color), Color Added."
-      ],
-      "glutenFree": false,
-      "sugarFree": false,
-      "seasonal": false,
-      "kosher": true
-    }
-  ]
-}`;
-
-  const sampleJsonFacts = `{
-  "totalCount": 99,
-  "pageSize": 2,
-  "currentPage": 1,
-  "totalPages": 50,
-  "items": [
-    {
-      "factId": 1,
-      "title": "Popularity of Flavors",
-      "description": "Very Cherry has been the most popular Jelly Belly flavor for many years, only briefly surpassed by Buttered Popcorn in 1998."
-    },
-    {
-      "factId": 2,
-      "title": "Caloric Content",
-      "description": "Each bean contains only 4 calories, meaning that a handful of 25 beans amounts to 100 calories."
-    }
-  ]
-}`;
-
   return (
     <>
-      <h2>Examples</h2>
+      <section>
+        <h2>General Steps for Utilizing the API</h2>
+        <h3>API Endpoint and Request:</h3>
+        <p>
+          Identify the correct API endpoint to fetch the desired data. For
+          fetching a specific recipe, the endpoint is{" "}
+          <code>https://localhost:5001/api/Recipes/{"{id}"}</code>, where{" "}
+          <code>{"{id}"}</code> is the dynamic part that can be replaced with
+          the desired recipe's ID.
+        </p>
+        <p>
+          Example: To fetch a recipe with ID 24, use{" "}
+          <code>https://localhost:5001/api/Recipes/24</code>.
+        </p>
 
-      <h3>Example Queries</h3>
-      <p>
-        The following query will return beans with ID of 3 to 4 from the dataset
-        (page number 2, with 2 beans on each page).
-      </p>
-      <pre>
-        <code>{exampleQueryBeans}</code>
-      </pre>
+        <h3>Making the Request:</h3>
+        <p>
+          Use an HTTP client or library relevant to your technology stack to
+          make a GET request to the API endpoint. Handle potential errors such
+          as network issues, server errors, or endpoint not found. This is
+          crucial for robust applications.
+        </p>
 
-      <h3>Sample JSON Response from the above query</h3>
-      <pre>
-        <code>{sampleJsonBeans}</code>
-      </pre>
+        <h3>Handling the Response:</h3>
+        <p>
+          Upon receiving a successful response (usually indicated by status code
+          200), parse the response body, which is typically in JSON format.
+          Extract the necessary information from the response for use in your
+          application.
+        </p>
 
-      <p>
-        The following query will return facts with ID of 1 and 2 from the
-        dataset (page number 1, with 2 facts on each page).
-      </p>
-      <pre>
-        <code>{exampleQueryFacts}</code>
-      </pre>
+        <h2>Example Usage Based on the Provided Code</h2>
+        <h3>1. Fetching Data:</h3>
+        <pre>
+          <code>
+            {`fetch('https://localhost:5001/api/Recipes/24')
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(\`\${res.status}: \${res.statusText}\`);
+    }
+    return res.json();
+  })
+  .then(singleBean => {
+    // Process the data (singleBean) here
+  })
+  .catch(error => {
+    // Handle errors here
+  });`}
+          </code>
+        </pre>
 
-      <h3>Sample JSON Response from the above query</h3>
-      <pre>
-        <code>{sampleJsonFacts}</code>
-      </pre>
+        <h3>2. Utilizing the Fetched Data:</h3>
+        <p>
+          After fetching the data, you can utilize it in various ways depending
+          on your application's requirements. Based on your{" "}
+          <code>ExampleRecipe</code> component, here's how the data is used:
+        </p>
+        <ul>
+          <li>
+            Display Recipe Name: The <code>singleBean.name</code> property is
+            used to display the name of the recipe.
+          </li>
+          <li>
+            Show Making Amount: <code>singleBean.makingAmount</code> indicates
+            how much the recipe yields.
+          </li>
+          <li>
+            Recipe Description: <code>singleBean.description</code> provides
+            details about the recipe.
+          </li>
+          <li>
+            Display Image: The image URL <code>singleBean.imageUrl</code> is
+            used to display a picture of the recipe.
+          </li>
+          <li>
+            Navigation Link: <code>singleBean.recipeId</code> is used to create
+            a link to a more detailed recipe page.
+          </li>
+        </ul>
+      </section>
+
+      <h3>
+        This JSX code is taken from a component within the Jelly Belly Wiki UI,
+        and it serves as an example illustrating how to utilize the API.
+      </h3>
+
+      <section>
+        <pre>
+          <code>
+            {`<div className="recipe-card">
+        <div>
+          <Link to={"/recipes"}>
+            Click here for more recipes
+            <FontAwesomeIcon icon={faArrowRightLong} />
+          </Link>
+        </div>
+        <br />
+        <br />
+        <h3>{singleBean.name}</h3>
+        <p>Recipe for {singleBean.makingAmount}</p>
+        <p>{singleBean.description}</p>
+        <img src={singleBean.imageUrl} alt={singleBean.name} />
+        <div>
+          <Link to={"/recipes/" + singleBean.recipeId}>
+            Check out {singleBean.name} Recipe
+            <FontAwesomeIcon icon={faArrowRightLong} />
+          </Link>
+        </div>
+      </div>`}
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>Example of Utilizing API Response in ExampleRecipe</h2>
+        <div>
+          <h3>Display Recipe Name:</h3>
+          <p>
+            Example: <code>{"<h3>{singleBean.name}</h3>"}</code>
+          </p>
+        </div>
+        <div>
+          <h3>Display Recipe Amount:</h3>
+          <p>
+            Example:{" "}
+            <code>{"<p>Recipe for {singleBean.makingAmount}</p>"}</code>
+          </p>
+        </div>
+        <div>
+          <h3>Display Recipe Description:</h3>
+          <p>
+            Example: <code>{"<p>{singleBean.description}</p>"}</code>
+          </p>
+        </div>
+        <div>
+          <h3>Display Recipe Image:</h3>
+          <p>
+            Example:{" "}
+            <code>
+              {"<img src={singleBean.imageUrl} alt={singleBean.name} />"}
+            </code>
+          </p>
+        </div>
+        <div>
+          <h3>Navigation Link to Detailed Recipe:</h3>
+          <p>
+            Example:{" "}
+            <code>
+              {
+                "<Link to={`/recipes/${singleBean.recipeId}`}>Check out {singleBean.name} Recipe <FontAwesomeIcon icon={faArrowRightLong} /></Link>"
+              }
+            </code>
+          </p>
+        </div>
+      </section>
+      <section>
+        <p>
+          This represents the rendering of the component containing the code
+          mentioned above, excluding the CSS.
+        </p>
+        <h2>Recipe.JSX</h2>
+        <Recipe />
+      </section>
     </>
   );
 };

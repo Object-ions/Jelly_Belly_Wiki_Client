@@ -1,6 +1,6 @@
 import React from "react";
-import ExampleRecipe from "./Recipe";
-import ExampleCombination from "./Combination";
+import Recipe from "./Recipe";
+import Combination from "./Combination";
 
 const ExampleRecpComb = () => {
   return (
@@ -8,8 +8,8 @@ const ExampleRecpComb = () => {
       <div className="ExampleRecpComb">
         <div className="ExampleRecipe">
           <h2>Explore More ...</h2>
-          <ExampleRecipe />
-          <ExampleCombination />
+          <Recipe />
+          <Combination />
         </div>
       </div>
     </div>
