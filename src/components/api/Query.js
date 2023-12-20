@@ -1,6 +1,6 @@
 import React from "react";
 
-const query = () => {
+const Query = () => {
   return (
     <>
       <h3>API Endpoints with Query Options and Examples</h3>
@@ -130,4 +130,4 @@ const query = () => {
   );
 };
 
-export default query;
+export default Query;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const pagination = () => {
+const Pagination = () => {
   return (
     <>
       <h4>Pagination Info</h4>
@@ -32,4 +32,4 @@ const pagination = () => {
   );
 };
 
-export default pagination;
+export default Pagination;

@@ -7,7 +7,7 @@ import License from "./License";
 
 const Opening = () => {
   return (
-    <div>
+    <div className="doc">
       <h1>Jelly Belly Wiki API</h1>
       <hr />
       <p>By Moses Atia Poston</p>

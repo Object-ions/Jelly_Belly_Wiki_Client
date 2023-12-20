@@ -41,9 +41,10 @@ pre {
 
 .API .sidebar ul li {
   cursor: pointer;
-  padding: 0.7rem;
+  padding: 0.7rem 1.5rem;
   border: 1px solid var(--dark-body-color);
   list-style-type: none;
+  margin-bottom: 0.5rem;
 }
 
 .API .sidebar ul li:hover {
@@ -72,6 +73,10 @@ pre {
 .API .main-content {
   padding: 20px;
   overflow-y: auto;
+}
+
+.main-content .doc hr {
+  margin-bottom: 0.8rem;
 }
 
 .endpoint-header,
