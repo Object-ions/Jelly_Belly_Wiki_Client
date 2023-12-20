@@ -1,5 +1,9 @@
 import React from "react";
 import EndpointsBeans from "./EndpointsBeans";
+import EndpointsRecipes from "./EndpointsRecipes";
+import EndpointsCombinations from "./EndpointsCombinations";
+import EndpointsFacts from "./EndpointsFacts";
+import EndpointsMilestones from "./EndpointsMilestones";
 
 const endpoints = () => {
   return (
@@ -15,6 +19,10 @@ const endpoints = () => {
       </ol>
       <h3>HTTP Request Structure</h3>
       <EndpointsBeans />
+      {/* <EndpointsFacts /> */}
+      {/* <EndpointsRecipes /> */}
+      {/* <EndpointsCombinations /> */}
+      {/* <EndpointsMilestones /> */}
     </>
   );
 };

@@ -73,3 +73,70 @@ pre {
   padding: 20px;
   overflow-y: auto;
 }
+
+.endpoint-header,
+.parameter-header {
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.endpoint-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.endpoint-table th,
+.endpoint-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.endpoint-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.endpoint-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.endpoint-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.parameter-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.parameter-list li {
+  margin-bottom: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.additional-info-header,
+.example-request-header {
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+.additional-info-list,
+.example-request-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.additional-info-list li,
+.example-request-list li {
+  margin-bottom: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.example-request-list pre {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
