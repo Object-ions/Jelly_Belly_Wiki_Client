@@ -1,5 +1,6 @@
 import React from "react";
 import ColorGroupTable from "./ColorGroupTable";
+import FlavorNameTable from "./FlavorNameTable";
 
 const EndpointsBeans = () => {
   return (
@@ -105,6 +106,7 @@ const EndpointsBeans = () => {
         </li>
       </ul>
       <ColorGroupTable />
+      <FlavorNameTable />
     </>
   );
 };
