@@ -1,8 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
+:root {
+  --head-color: #e83a4b;
+  --secondary-color: #ee9085;
+  --light-pink: #fbd6d3;
+  --dark-red: #bd2328;
+  --btn-red: #ec2c2f;
+  --light-body-color: #f9f5f4;
+  --dark-body-color: #eeeae6;
+  --max-width: 1400px;
+  --head-font: "Roboto", sans-serif;
+  --text-font: "Raleway", sans-serif;
+  --computer-font: "Space Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--text-font);
+}
+
 pre {
-  font-family: "Space Mono", monospace;
-  padding: 10px;
+  font-family: var(--computer-font);
+  padding: 1rem;
   border: 1px solid #ccc;
   overflow-x: auto;
+  border-radius: 1rem;
+}
+
+.API .active {
+  background-color: var(--light-body-color);
+  border: 1px solid var(--head-color);
+  border-radius: 1.5rem;
+}
+
+.API .sidebar {
+  margin-top: 2rem;
+}
+
+.API .sidebar ul li {
+  cursor: pointer;
+  padding: 0.7rem;
+  border: 1px solid var(--dark-body-color);
+  list-style-type: none;
+}
+
+.API .sidebar ul li:hover {
+  background-color: var(--light-body-color);
+  border-radius: 1.5rem;
+}
+
+.API .sidebar ul li.active,
+.API .sidebar ul li.active:hover {
+  background-color: var(--light-body-color);
+  border: 1px solid var(--head-color);
+  border-radius: 1.5rem;
+}
+
+.API .container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 79vh;
+}
+
+.API .sidebar {
+  background-color: var(--dark-body-color);
+  overflow-y: auto;
+}
+
+.API .main-content {
+  padding: 20px;
+  overflow-y: auto;
 }

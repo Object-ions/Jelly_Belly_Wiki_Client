@@ -1,7 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DisplayApi.css";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-
 import Setup from "../api/Setup";
 import Opening from "../api/Opening";
 import DataSample from "../api/DataSample";
@@ -17,69 +15,129 @@ import CreateDatabase from "../api/CreateDatabase";
 import Examples from "../api/Examples";
 
 const DisplayApi = () => {
+  const [activeComponent, setActiveComponent] = useState("setup");
+
+  const getActiveComponent = () => {
+    switch (activeComponent) {
+      case "setup":
+        return <Setup />;
+      case "opening":
+        return <Opening />;
+      case "datasample":
+        return <DataSample />;
+      case "endpoints":
+        return <Endpoints />;
+      case "knownbugs":
+        return <KnownBugs />;
+      case "license":
+        return <License />;
+      case "pagination":
+        return <Pagination />;
+      case "query":
+        return <Query />;
+      case "techused":
+        return <TechUsed />;
+      case "description":
+        return <Description />;
+      case "features":
+        return <Features />;
+      case "createdatabase":
+        return <CreateDatabase />;
+      case "examples":
+        return <Examples />;
+      default:
+        return <Opening />;
+    }
+  };
+
   return (
-    <>
+    <div className="API">
       <div className="container">
-        <nav className="sidebar">
+        <aside className="sidebar">
           <ul>
-            <li>
-              <Link to="/setup">Setup</Link>
+            <li
+              className={activeComponent === "setup" ? "active" : ""}
+              onClick={() => setActiveComponent("setup")}
+            >
+              Setup
             </li>
-            <li>
-              <Link to="/opening">Opening</Link>
+            <li
+              className={activeComponent === "opening" ? "active" : ""}
+              onClick={() => setActiveComponent("opening")}
+            >
+              Opening
             </li>
-            <li>
-              <Link to="/datasample">Data Sample</Link>
+            <li
+              className={activeComponent === "datasample" ? "active" : ""}
+              onClick={() => setActiveComponent("datasample")}
+            >
+              Data Sample
             </li>
-            <li>
-              <Link to="/endpoints">Endpoints</Link>
+            <li
+              className={activeComponent === "endpoints" ? "active" : ""}
+              onClick={() => setActiveComponent("endpoints")}
+            >
+              Endpoints
             </li>
-            <li>
-              <Link to="/knownbugs">Known Bugs</Link>
+            <li
+              className={activeComponent === "knownbugs" ? "active" : ""}
+              onClick={() => setActiveComponent("knownbugs")}
+            >
+              Known Bugs
             </li>
-            <li>
-              <Link to="/license">License</Link>
+            <li
+              className={activeComponent === "license" ? "active" : ""}
+              onClick={() => setActiveComponent("license")}
+            >
+              License
             </li>
-            <li>
-              <Link to="/pagination">Pagination</Link>
+            <li
+              className={activeComponent === "pagination" ? "active" : ""}
+              onClick={() => setActiveComponent("pagination")}
+            >
+              Pagination
             </li>
-            <li>
-              <Link to="/query">Query</Link>
+            <li
+              className={activeComponent === "query" ? "active" : ""}
+              onClick={() => setActiveComponent("query")}
+            >
+              Query
             </li>
-            <li>
-              <Link to="/techused">Technologies Used</Link>
+            <li
+              className={activeComponent === "techused" ? "active" : ""}
+              onClick={() => setActiveComponent("techused")}
+            >
+              Technologies Used
             </li>
-            <li>
-              <Link to="/description">Description</Link>
+            <li
+              className={activeComponent === "description" ? "active" : ""}
+              onClick={() => setActiveComponent("description")}
+            >
+              Description
             </li>
-            <li>
-              <Link to="/features">Features</Link>
+            <li
+              className={activeComponent === "features" ? "active" : ""}
+              onClick={() => setActiveComponent("features")}
+            >
+              Features
             </li>
-            <li>
-              <Link to="/createdatabase">Create Database</Link>
+            <li
+              className={activeComponent === "createdatabase" ? "active" : ""}
+              onClick={() => setActiveComponent("createdatabase")}
+            >
+              Create Database
             </li>
-            <li>
-              <Link to="/examples">Examples</Link>
+            <li
+              className={activeComponent === "examples" ? "active" : ""}
+              onClick={() => setActiveComponent("examples")}
+            >
+              Examples
             </li>
           </ul>
-        </nav>
+        </aside>
+        <section className="main-content">{getActiveComponent()}</section>
       </div>
-
-      {/* break */}
-      <Opening />
-      <Description />
-      <Features />
-      <TechUsed />
-      <Setup />
-      <CreateDatabase />
-      <Pagination />
-      <Endpoints />
-      <Query />
-      <Examples />
-      <DataSample />
-      <KnownBugs />
-      <License />
-    </>
+    </div>
   );
 };
 
