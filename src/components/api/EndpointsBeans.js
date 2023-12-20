@@ -1,4 +1,5 @@
 import React from "react";
+import ColorGroupTable from "./ColorGroupTable";
 
 const EndpointsBeans = () => {
   return (
@@ -47,7 +48,7 @@ const EndpointsBeans = () => {
         </li>
         <li>
           <strong>colorGroup</strong> (string, optional): Filters beans by color
-          group.
+          group. To see list of color groups continue to the table below.
         </li>
         <li>
           <strong>glutenFree</strong> (boolean, optional): Filters beans by
@@ -103,6 +104,7 @@ const EndpointsBeans = () => {
           </pre>
         </li>
       </ul>
+      <ColorGroupTable />
     </>
   );
 };
