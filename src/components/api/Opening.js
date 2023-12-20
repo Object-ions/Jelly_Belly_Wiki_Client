@@ -1,7 +1,13 @@
 import React from "react";
 
-const opening = () => {
-  return <div>opening</div>;
+const Opening = () => {
+  return (
+    <div>
+      <h1>Jelly Belly Wiki API</h1>
+      <hr />
+      <p>By Moses Atia Poston</p>
+    </div>
+  );
 };
 
-export default opening;
+export default Opening;
