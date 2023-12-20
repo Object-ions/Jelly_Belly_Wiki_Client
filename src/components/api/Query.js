@@ -10,6 +10,25 @@ const query = () => {
         between words.
       </p>
 
+      <p>
+        To find Parameter Details and obtain a comprehensive list of attributes
+        such as groupName, flavorName, colorGroup, and more, please follow these
+        steps:
+      </p>
+      <ul>
+        <li>Navigate to the documentation page titled "Endpoints."</li>
+
+        <li>
+          Look for links or references to tables within the documentation.
+        </li>
+
+        <li>
+          In these tables, you should be able to locate the desired information,
+          including groupName, flavorName, colorGroup, and any other relevant
+          details about parameters.
+        </li>
+      </ul>
+
       <h4>Beans</h4>
       <p>Base URL: https://localhost:5001/api/beans</p>
       <ul>
