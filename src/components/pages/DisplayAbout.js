@@ -50,31 +50,31 @@ const DisplayAbout = () => {
           <ul id="about-ul">
             <h3>Check out all endpoints</h3>
             <li>
-              <Link to="/beans">
+              <Link to="/api/">
                 Beans
                 <FontAwesomeIcon icon={faArrowRightLong} />
               </Link>
             </li>
             <li>
-              <Link to="/recipes">
+              <Link to="/api/">
                 Recipes
                 <FontAwesomeIcon icon={faArrowRightLong} />
               </Link>
             </li>
             <li>
-              <Link to="/facts">
+              <Link to="/api/">
                 Facts
                 <FontAwesomeIcon icon={faArrowRightLong} />
               </Link>
             </li>
             <li>
-              <Link to="/combinations">
+              <Link to="/api/">
                 Combinations
                 <FontAwesomeIcon icon={faArrowRightLong} />
               </Link>
             </li>
             <li>
-              <Link to="/history">
+              <Link to="/api/">
                 History
                 <FontAwesomeIcon icon={faArrowRightLong} />
               </Link>
