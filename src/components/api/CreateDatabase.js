@@ -2,9 +2,9 @@ import React from "react";
 
 const CreateDatabase = () => {
   return (
-    <>
-      <h4>Create the Database</h4>
-      <ol start="6">
+    <div className="doc">
+      <h3>Create the Database</h3>
+      <ul>
         <li>
           In your terminal, under the project's production directory{" "}
           <code>JellyBellyWikiApi.Solution</code>, run this command to create
@@ -21,9 +21,9 @@ const CreateDatabase = () => {
             </code>
           </pre>
         </li>
-      </ol>
+      </ul>
 
-      <h2>Launching the API</h2>
+      <h3>Launching the API</h3>
       <p>
         In the command line in the project's production directory{" "}
         <code>JellyBellyWikiApi.Solution</code>, enter the command{" "}
@@ -34,7 +34,7 @@ const CreateDatabase = () => {
         <code>$ dotnet watch run</code>
       </pre>
 
-      <h2>Using API</h2>
+      <h3>Using API</h3>
       <p>
         To access the API endpoints and see the data you can utilize tools like
         a browser, Postman, or Swagger.
@@ -55,7 +55,7 @@ const CreateDatabase = () => {
         To see how to integrate this API in your application check out "End
         Points" and "Data Samples".
       </p>
-    </>
+    </div>
   );
 };
 

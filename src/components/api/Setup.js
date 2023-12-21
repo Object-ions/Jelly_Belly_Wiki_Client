@@ -10,26 +10,33 @@ const Setup = () => {
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=[YOUR-DATABASE-NAME-HERE];uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
+    "DefaultConnection": "Server=localhost;Port=3306;
+    database=[YOUR-DATABASE-NAME-HERE];
+    uid=[YOUR-USERNAME-HERE];
+    pwd=[YOUR-PASSWORD-HERE];"
   }
 }`;
 
   return (
-    <>
+    <div className="doc">
       <h2>Setup/Installation Requirements</h2>
 
       <h3>Required Technology</h3>
-
-      <ol>
+      <ul>
         <li>
-          Follow the instructions on this{" "}
-          <a href="https://old.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql">
+          1. Follow the instructions on this{" "}
+          <a
+            href="https://old.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql"
+            target="blank"
+          >
             page
           </a>{" "}
-          for installing and configuring MySQL.
+          for installing and configuring MySQL if you don't already have it
+          installed.
         </li>
+        <br />
         <li>
-          Installing dotnet-ef:
+          2. Installing dotnet-ef:
           <pre>
             <code>
               $ dotnet tool install --global dotnet-ef --version 6.0.0
@@ -37,19 +44,18 @@ const Setup = () => {
           </pre>
         </li>
         <li>
-          Install Postman
-          <br />
-          (Optional){" "}
-          <a href="https://www.postman.com/downloads/">
-            Download and install Postman
-          </a>
-          .
+          3. Install Postman -{" "}
+          <a href="https://www.postman.com/downloads/" target="blank">
+            Download
+          </a>{" "}
+          and install Postman (Optional - recommended if you wish to conduct API
+          testing and data retrieval independently, without immediate
+          application integration.).
         </li>
-      </ol>
+      </ul>
 
-      <h4>Cloning the Repo:</h4>
-
-      <ol>
+      <ul>
+        <li>4. Cloning the Repo:</li>
         <li>Open Terminal.</li>
         <li>
           Change your directory to where you would want the cloned directory.
@@ -62,11 +68,11 @@ const Setup = () => {
             </code>
           </pre>
         </li>
-      </ol>
+      </ul>
 
-      <h4>Set up a Connection String to Database</h4>
+      <h3>Set up a Connection String to Database</h3>
 
-      <ol start="4">
+      <ul>
         <li>
           Using the terminal, navigate to the production directory-{" "}
           <code>JellyBellyWikiApi.Solution</code> and create a new file called{" "}
@@ -87,12 +93,14 @@ const Setup = () => {
               your database
             </li>
           </ul>
+          <br />
+          <code>appsettings.json:</code>
           <pre>
             <code className="language-json">{connectionStringTemplate}</code>
           </pre>
         </li>
-      </ol>
-    </>
+      </ul>
+    </div>
   );
 };
 

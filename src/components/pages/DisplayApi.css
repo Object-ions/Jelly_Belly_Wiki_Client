@@ -26,11 +26,15 @@ body {
 }
 
 pre {
-  font-family: var(--computer-font);
   padding: 1rem;
   border: 1px solid #ccc;
   overflow-x: auto;
   border-radius: 1rem;
+  margin: 0.3rem -0.9rem;
+}
+
+code {
+  color: darkblue;
 }
 
 .API .active {
@@ -102,12 +106,21 @@ pre {
   overflow-y: auto;
 }
 
+.main-content .doc ul {
+  margin: 0.5rem 0;
+}
+
+.main-content .doc ul li {
+  margin: 0.5rem 0 0 0.5rem;
+}
+
 .main-content .doc hr {
   margin-bottom: 0.8rem;
 }
 
 .main-content .doc h2,
-.main-content .doc h3 {
+.main-content .doc h3,
+.main-content .doc h4 {
   margin-top: 1.2rem;
 }
 
