@@ -2,8 +2,8 @@ import React from "react";
 
 const Pagination = () => {
   return (
-    <>
-      <h4>Pagination Info</h4>
+    <div className="doc">
+      <h3>Pagination Info</h3>
       <p>
         The API supports pagination for listing endpoints. Pagination allows you
         to retrieve a subset of records, making it efficient for large datasets.
@@ -28,7 +28,7 @@ const Pagination = () => {
         If pagination is not defined in the request, default values will be
         used.
       </p>
-    </>
+    </div>
   );
 };
 

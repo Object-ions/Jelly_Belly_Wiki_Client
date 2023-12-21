@@ -8,9 +8,10 @@ import Query from "../api/Query";
 import DataSample from "../api/DataSample";
 import Examples from "../api/Examples";
 import Pagination from "../api/Pagination";
+import More from "../api/More";
 
 const DisplayApi = () => {
-  const [activeComponent, setActiveComponent] = useState("opening");
+  const [activeComponent, setActiveComponent] = useState("more");
 
   const getActiveComponent = () => {
     switch (activeComponent) {
@@ -30,6 +31,8 @@ const DisplayApi = () => {
         return <CreateDatabase />;
       case "examples":
         return <Examples />;
+      case "more":
+        return <More />;
       default:
         return <Opening />;
     }
@@ -40,6 +43,12 @@ const DisplayApi = () => {
       <div className="container">
         <aside className="sidebar">
           <ul>
+            <li
+              className={activeComponent === "more" ? "active" : ""}
+              onClick={() => setActiveComponent("more")}
+            >
+              About This Project
+            </li>
             <li
               className={activeComponent === "opening" ? "active" : ""}
               onClick={() => setActiveComponent("opening")}

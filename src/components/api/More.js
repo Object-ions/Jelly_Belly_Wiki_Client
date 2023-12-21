@@ -41,27 +41,46 @@ const More = () => {
         This project is divided into three main parts, each with its own
         repository:
       </p>
-      <ol>
+      <ul>
         <li>
-          <strong>Web Scraper Repository</strong> (URL to be added): This
-          repository contains scripts and supporting files for data collection.
-          It details the methodology used for creatively gathering data step by
-          step until it was ready to be seeded into the C# API.
+          <strong>1. Web Scraper Repository</strong> (
+          <a
+            href="https://github.com/Object-ions/capstone-supporting-files"
+            target="blank"
+          >
+            GitHub Repo
+          </a>
+          ): This repository contains scripts and supporting files for data
+          collection using Python, BeautifulSoup and ChromeDrive. It details the
+          methodology used for creatively gathering data step by step until it
+          was ready to be seeded into the C# API.
         </li>
         <li>
-          <strong>API Repository</strong> (URL to be added): The heart of the
-          project, this repository holds the C# and EF Core .Net API with MySql
-          migrations. It serves as the core database of the project. Detailed
-          instructions on how to use this API are available in the repository,
-          similar to the API Documentation provided in the UI.
+          <strong>2. API Repository</strong> (
+          <a
+            href="https://github.com/Object-ions/Jelly-Belly-Wiki-API"
+            target="blank"
+          >
+            GitHub Repo
+          </a>
+          ) : The heart of the project, this repository holds the C# and EF Core
+          .Net API with MySql migrations. It serves as the core database of the
+          project. Detailed instructions on how to use this API are available in
+          the repository, similar to the API Documentation provided in the UI.
         </li>
         <li>
-          <strong>UI Repository</strong> (URL to the UI repo): The User
-          Interface makes full use of the API's database, showcasing one
-          approach to design by utilizing all the endpoints and their various
-          options.
+          <strong>3. UI Repository</strong> (
+          <a
+            href="https://github.com/Object-ions/Jelly_Belly_Wiki_Client"
+            target="blank"
+          >
+            GitHub Repo
+          </a>
+          ) : The User Interface makes full use of the API's database,
+          showcasing one approach to design by utilizing all the endpoints and
+          their various options.
         </li>
-      </ol>
+      </ul>
 
       <h3>Purpose and Learning</h3>
       <p>
@@ -69,6 +88,11 @@ const More = () => {
         questions, or comments. Feel free to reach out to me if you have any.
         Your insights and interactions are valuable for the continuous
         development and improvement of this project.
+      </p>
+      <p>
+        <strong>Note:</strong> This is not the final version of this project,
+        and it will continue to evolve. As it's a large-scale work and I am a
+        precise person, this is still a work in progress.
       </p>
     </div>
   );

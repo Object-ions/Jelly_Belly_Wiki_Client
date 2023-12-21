@@ -93,7 +93,7 @@ code {
 .API .container {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  height: 79vh;
+  height: 82vh;
 }
 
 .API .sidebar {
@@ -106,6 +106,9 @@ code {
   overflow-y: auto;
 }
 
+.main-content .doc ol {
+  padding-left: 1.5rem;
+}
 .main-content .doc ul {
   margin: 0.5rem 0;
 }
@@ -156,59 +159,20 @@ code {
 }
 
 .endpoint-table th {
-  background-color: #f4f4f4;
+  background-color: var(--light-body-color);
   color: #333;
 }
 
 .endpoint-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: var(--light-body-color);
 }
 
 .endpoint-table tr:hover {
-  background-color: #f1f1f1;
-}
-
-.parameter-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.parameter-list li {
-  margin-bottom: 5px;
-  font-family: Arial, sans-serif;
-}
-
-.additional-info-header,
-.example-request-header {
-  color: #333;
-  font-family: Arial, sans-serif;
-  margin-top: 20px;
-}
-
-.additional-info-list,
-.example-request-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.additional-info-list li,
-.example-request-list li {
-  margin-bottom: 5px;
-  font-family: Arial, sans-serif;
-}
-
-.example-request-list pre {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 10px;
+  background-color: var(--light-body-color);
 }
 
 ::-webkit-scrollbar {
-  width: 0.75rem;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  width: 0.7rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -219,3 +183,8 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--head-color);
 }
+
+/* .Footer {
+  position: absolute;
+  bottom: 0;
+} */
