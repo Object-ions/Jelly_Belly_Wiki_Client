@@ -2,6 +2,7 @@ import React from "react";
 import BeanLogo from "../img/new-logo-with-3d-look2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const LandingSection = () => {
   return (
@@ -14,13 +15,15 @@ const LandingSection = () => {
           <h1>Welcome to the World of Jelly Belly:</h1>
           <h3>A Rainbow of Flavors Awaits!</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias enim
-            maxime placeat tenetur deserunt adipisci laborum perferendis
-            incidunt aspernatur. Ex.
+            The User Interface of this website makes full use of the API's
+            database, showcasing one approach to design by utilizing all the
+            endpoints and their various options. Check out the API documentation
           </p>
-          <a className="btn" href="http://">
+
+          <Link to={"/api/"} className="btn">
+            {" "}
             Click here for more info
-          </a>
+          </Link>
         </div>
       </div>
       <div className="bottom-description">
