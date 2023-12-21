@@ -10,7 +10,12 @@ const Opening = () => {
     <div className="doc">
       <h1>Jelly Belly Wiki API</h1>
       <hr />
-      <p>By Moses Atia Poston</p>
+      <p>
+        By{" "}
+        <a href="https://github.com/Object-ions" target="blank">
+          Moses Atia Poston
+        </a>
+      </p>
       <Description />
       <Features />
       <TechUsed />

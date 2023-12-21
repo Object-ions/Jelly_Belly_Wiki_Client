@@ -41,10 +41,10 @@ const License = () => {
         TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
         SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       </p>
-
+      <br />
       <p>
-        - If you detect any bug in the program, please reach out to me at
-        <a href="mailto:moshikoatia@gmail.com">moshikoatia@gmail.com</a>.
+        If you detect any bug in the program, please reach out to me at:{" "}
+        <a href="mailto:mailto:moshikoatia@gmail.com">moshikoatia@gmail.com</a>.
       </p>
     </>
   );
