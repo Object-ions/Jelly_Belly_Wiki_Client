@@ -8,29 +8,28 @@ const DataSample = () => {
   };
 
   return (
-    <>
+    <div className="doc">
       <h2>Request URL</h2>
-
+      <br />
       <p>Click on an option to see the requested URL with the response body:</p>
       <ul>
         <li onClick={() => handleSelectResponse("flavorName")}>
-          response for query on Beans by flavorName
+          <a>response for query on Beans by flavorName</a>
         </li>
         <li onClick={() => handleSelectResponse("flavorId")}>
-          response for query on Beans by id
+          <a>response for query on Beans by id</a>
         </li>
         <li onClick={() => handleSelectResponse("pagination")}>
-          response for query on Beans by paging
+          <a>response for query on Beans by paging</a>
         </li>
       </ul>
-
-      <p>To see all query options check the label "Query"</p>
 
       {selectedResponse === "flavorName" && (
         <div className="flavorName">
           <p>The following query will return beans with the name "7UP".</p>
-          <p>https://localhost:5001/api/Beans?flavorName=7up</p>
-
+          <pre>
+            <code>https://localhost:5001/api/Beans?flavorName=7up</code>
+          </pre>
           <h2>Server Response</h2>
           <h3>Code:</h3>
           <pre>
@@ -76,8 +75,9 @@ const DataSample = () => {
       {selectedResponse === "flavorId" && (
         <div className="flavorId">
           <p>The following query will return beans with id of 24.</p>
-          <p>https://localhost:5001/api/Beans/24</p>
-
+          <pre>
+            <code>https://localhost:5001/api/Beans/24</code>
+          </pre>
           <h2>Server Response</h2>
           <h3>Code:</h3>
           <pre>
@@ -116,7 +116,9 @@ const DataSample = () => {
             The following query will return beans with ID of 7 to 8 from the
             dataset- page number 4, with 2 beans on each page.
           </p>
-          <p>https://localhost:5001/api/Beans?pageIndex=1&pageSize=2</p>
+          <pre>
+            <code>https://localhost:5001/api/Beans?pageIndex=1&pageSize=2</code>
+          </pre>
 
           <h2>Server Response</h2>
           <h3>Code:</h3>
@@ -179,7 +181,9 @@ const DataSample = () => {
           </pre>
         </div>
       )}
-    </>
+      <br />
+      <p>To see all query options check the label "Query"</p>
+    </div>
   );
 };
 

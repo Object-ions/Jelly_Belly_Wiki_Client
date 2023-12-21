@@ -3,21 +3,11 @@ import Recipe from "../Recipe";
 
 const Examples = () => {
   return (
-    <>
+    <div className="doc">
       <section>
         <h2>General Steps for Utilizing the API</h2>
         <h3>API Endpoint and Request:</h3>
-        <p>
-          Identify the correct API endpoint to fetch the desired data. For
-          fetching a specific recipe, the endpoint is{" "}
-          <code>https://localhost:5001/api/Recipes/{"{id}"}</code>, where{" "}
-          <code>{"{id}"}</code> is the dynamic part that can be replaced with
-          the desired recipe's ID.
-        </p>
-        <p>
-          Example: To fetch a recipe with ID 24, use{" "}
-          <code>https://localhost:5001/api/Recipes/24</code>.
-        </p>
+        <p>Identify the correct API endpoint to fetch the desired data.</p>
 
         <h3>Making the Request:</h3>
         <p>
@@ -167,7 +157,7 @@ const Examples = () => {
         <h2>Recipe.JSX</h2>
         <Recipe />
       </section>
-    </>
+    </div>
   );
 };
 

@@ -3,31 +3,23 @@ import React from "react";
 const Query = () => {
   return (
     <div className="doc">
-      <h3>API Endpoints with Query Options and Examples</h3>
-      <p>
-        Note: When searching with phrases that include spaces, the URL will
-        automatically replace spaces with "%20". You can search with spaces
-        between words.
-      </p>
-
+      <h2>API Endpoints with Query Options and Examples</h2>
+      <br />
       <p>
         To find Parameter Details and obtain a comprehensive list of attributes
-        such as groupName, flavorName, colorGroup, and more, please follow these
-        steps:
+        such as: 'groupName', 'flavorName', 'colorGroup', and more, please
+        follow these steps:
       </p>
-      <ul>
-        <li>Navigate to the documentation page titled "Endpoints."</li>
 
-        <li>
-          Look for links or references to tables within the documentation.
-        </li>
+      <p>Navigate to the documentation page titled "Endpoints."</p>
 
-        <li>
-          In these tables, you should be able to locate the desired information,
-          including groupName, flavorName, colorGroup, and any other relevant
-          details about parameters.
-        </li>
-      </ul>
+      <p>Look for links or references to tables within the documentation.</p>
+
+      <p>
+        In these tables, you should be able to locate the desired information,
+        including groupName, flavorName, colorGroup, and any other relevant
+        details about parameters.
+      </p>
 
       <h4>Beans</h4>
       <p>Base URL: https://localhost:5001/api/beans</p>
@@ -126,6 +118,11 @@ const Query = () => {
           </a>
         </li>
       </ul>
+      <p>
+        * Note: When searching with phrases that include spaces, the URL will
+        automatically replace spaces with "%20". You can search with spaces
+        between words.
+      </p>
     </div>
   );
 };
