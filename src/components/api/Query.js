@@ -2,7 +2,7 @@ import React from "react";
 
 const Query = () => {
   return (
-    <>
+    <div className="doc">
       <h3>API Endpoints with Query Options and Examples</h3>
       <p>
         Note: When searching with phrases that include spaces, the URL will
@@ -126,7 +126,7 @@ const Query = () => {
           </a>
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 

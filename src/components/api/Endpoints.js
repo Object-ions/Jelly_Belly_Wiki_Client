@@ -13,33 +13,34 @@ const Endpoints = () => {
   };
 
   return (
-    <>
+    <div className="doc">
       <h2>Endpoints</h2>
-      <ol>
+      <ul>
         <h3>List of Endpoints:</h3>
         <li onClick={() => handleSelectEndpoint("Beans")}>
-          <a>Beans</a>
+          <a>- Beans</a>
         </li>
         <li onClick={() => handleSelectEndpoint("Facts")}>
-          <a>Facts</a>
+          <a>- Facts</a>
         </li>
         <li onClick={() => handleSelectEndpoint("Recipes")}>
-          <a>Recipes</a>
+          <a>- Recipes</a>
         </li>
         <li onClick={() => handleSelectEndpoint("Combinations")}>
-          <a>Combinations</a>
+          <a>- Combinations</a>
         </li>
         <li onClick={() => handleSelectEndpoint("Milestones")}>
-          <a>History</a>
+          <a>- History</a>
         </li>
-      </ol>
+      </ul>
       <h3>HTTP Request Structure</h3>
       {selectedEndpoint === "Beans" && <EndpointsBeans />}
       {selectedEndpoint === "Facts" && <EndpointsFacts />}
       {selectedEndpoint === "Recipes" && <EndpointsRecipes />}
       {selectedEndpoint === "Combinations" && <EndpointsCombinations />}
       {selectedEndpoint === "Milestones" && <EndpointsMilestones />}
-    </>
+      <p>For more example requests check out 'Query'</p>
+    </div>
   );
 };
 
