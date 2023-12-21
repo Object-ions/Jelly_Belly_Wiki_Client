@@ -20,23 +20,23 @@ const DisplayAbout = () => {
               <p>Jelly belly beans</p>
             </div>
             <div>
-              <h3>7</h3>
+              <h3>8</h3>
               <p>Properties on each bean</p>
             </div>
             <div>
-              <h3>100</h3>
+              <h3>99 +</h3>
               <p>Facts on Jelly Belly</p>
             </div>
             <div>
-              <h3>10</h3>
-              <p>Jelly Belly landmarks</p>
+              <h3>20 +</h3>
+              <p>Milestones in the Jelly Belly History</p>
             </div>
             <div>
-              <h3>25</h3>
+              <h3>25 +</h3>
               <p>Recipes</p>
             </div>
             <div>
-              <h3>35</h3>
+              <h3>50 +</h3>
               <p>Jelly Belly Combinations</p>
             </div>
           </div>
