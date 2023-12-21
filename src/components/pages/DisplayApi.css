@@ -79,6 +79,10 @@ pre {
   margin-bottom: 0.8rem;
 }
 
+.main-content .doc h2 {
+  margin-top: 0.8rem;
+}
+
 .endpoint-header,
 .parameter-header {
   color: #333;

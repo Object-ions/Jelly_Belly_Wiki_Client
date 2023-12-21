@@ -3,7 +3,7 @@ import React from "react";
 const knownBugs = () => {
   return (
     <div>
-      <h3>Known Bugs</h3>
+      <h2>Known Bugs</h2>
       <p>no known bugs</p>
     </div>
   );

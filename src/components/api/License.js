@@ -4,7 +4,7 @@ const License = () => {
   return (
     <>
       <h2>License</h2>
-
+      <hr />
       <p>
         <a
           href="https://choosealicense.com/licenses/mit/"
