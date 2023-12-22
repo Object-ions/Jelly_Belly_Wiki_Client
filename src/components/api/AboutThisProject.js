@@ -94,6 +94,21 @@ const More = () => {
         and it will continue to evolve. As it's a large-scale work and I am a
         precise person, this is still a work in progress.
       </p>
+      <h3> Ongoing Development</h3>
+
+      <p>
+        Please note that this project is not in its final form. Future updates
+        will include enhanced descriptions, text improvements, and refined
+        styling to improve user experience and interface aesthetics.
+        Additionally, significant portions of the codebase are slated for
+        refactoring to optimize performance and maintainability.
+      </p>
+
+      <p>
+        This project is very much a work in progress, and regular updates are
+        planned to address these aspects. Your patience and understanding are
+        greatly appreciated as these improvements are made.
+      </p>
     </div>
   );
 };
