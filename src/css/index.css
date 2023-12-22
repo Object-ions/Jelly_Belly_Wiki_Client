@@ -1182,7 +1182,7 @@ canvas {
   border: 1px solid var(--dark-red);
   border-radius: 3rem;
   width: 50%;
-  padding-top: 5rem;
+  padding: 5rem;
   margin: 2rem auto;
 }
 
