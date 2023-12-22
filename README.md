@@ -20,7 +20,7 @@ This repository, **Jelly_Belly_Wiki_Client**, is part of a larger project that i
 
 2. **Jelly-Belly-Wiki-API**: [Jelly-Belly-Wiki-API Repository](https://github.com/Object-ions/Jelly-Belly-Wiki-API): This repository contains the API implementation and the seeded data from the scraping process. The API is built using C# and EF Core .Net with MySql migrations.
 
-3. **UI (This Repository)**: The client-side component focusing on user interface and interaction. It includes all frontend development, offering a visually appealing and demonstrates the API's application and functional user experience.
+3. **Jelly-Belly-Wiki-Client (This Repository)**: The client-side component focusing on user interface and interaction. It includes all frontend development, offering a visually appealing and demonstrates the API's application and functional user experience.
 
 ## Explore the project:
 
