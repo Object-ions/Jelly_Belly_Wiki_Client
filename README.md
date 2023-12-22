@@ -2,7 +2,7 @@
 
 **By Moses Atia Poston**
 
-## Project Description
+## [Project Description](#project-description)
 
 The Jelly Belly Wiki project uniquely combines front-end and back-end technologies, inspired by a passion for Jelly Belly confections. This project integrates a React-based user interface with a robust C# .NET EF Core backend, all centered around a bespoke API.
 
@@ -12,7 +12,26 @@ Challenges in building and seeding the API, particularly in handling data consis
 
 To read more about the data scraping and API back-end and database check out the next section 'Project Overview'
 
-## Project Overview
+## Table of Contents
+
+1. [Project Description](#project-description)
+2. [Project Overview](#project-overview)
+3. [Explore the Project](#explore-the-project)
+4. [Technologies Used](#technologies-used)
+5. [Setup and Installation](#setup-and-installation)
+6. [Test-Driven Development (TDD) with Jest](#test-driven-development-tdd-with-jest)
+   - [State Management and Actions Testing](#state-management-and-actions-testing)
+   - [Running the Tests](#running-the-tests)
+   - [Example Tests](#example-tests)
+7. [Known Issue](#known-issue)
+8. [Ongoing Development](#ongoing-development)
+9. [Copyright and Data Accuracy Disclaimer](#copyright-and-data-accuracy-disclaimer)
+   - [Content Origin](#content-origin)
+   - [Disclaimer](#disclaimer)
+   - [Consumer Advice](#consumer-advice)
+10. [License](#license)
+
+## [Project Overview](#project-overview)
 
 This repository, **Jelly_Belly_Wiki_Client**, is part of a larger project that is divided into three main segments:
 
@@ -22,11 +41,11 @@ This repository, **Jelly_Belly_Wiki_Client**, is part of a larger project that i
 
 3. **Jelly-Belly-Wiki-Client (This Repository)**: The client-side component focusing on user interface and interaction. It includes all frontend development, offering a visually appealing and demonstrates the API's application and functional user experience.
 
-## Explore the project:
+## [Explore the Project](#explore-the-project)
 
 By dividing my project into these three distinct parts, I aim to create a comprehensive and efficient solution that encompasses data collection, user interaction, and data retrieval through an API. Feel free to explore each repository for more details and contributions.
 
-## Technologies Used
+## [Technologies Used](#technologies-used)
 
 - HTML
 - CSS
@@ -37,7 +56,7 @@ By dividing my project into these three distinct parts, I aim to create a compre
 - Fetch API
 - Jelly Belly Wiki API
 
-## Setup and Installation
+## [Setup and Installation](#setup-and-installation)
 
 To set up and run the Jelly Belly Wiki Client locally:
 
@@ -73,11 +92,11 @@ To set up and run the Jelly Belly Wiki Client locally:
 6. **Access the Application**:
    If it doesn't automatically open, visit [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
-## Test-Driven Development (TDD) with Jest
+## [Test-Driven Development (TDD) with Jest](#test-driven-development-tdd-with-jest)
 
 The Jelly Belly Wiki Client adopts a TDD approach using Jest to ensure the reliability and robustness of the application. This section briefly outlines the testing structure and methodology used.
 
-### State Management and Actions Testing
+### [State Management and Actions Testing](#state-management-and-actions-testing)
 
 The application uses React's `useReducer` hook for state management, complemented by a series of actions to handle state changes. The reducers and actions are thoroughly tested to ensure they function correctly and update the application's state as expected.
 
@@ -89,7 +108,7 @@ Reducers are tested to ensure they correctly handle actions and update the state
 
 Action creators are tested to ensure they return the correct action objects. For example, actions related to fetching beans data (`getBeansSuccess` and `getBeansFailure`) are tested to verify they create the right action type with the provided payload.
 
-### Running the Tests
+### [Running the Tests](#running-the-tests)
 
 To run the tests, use the following command in your terminal at the root directory of the project:
 
@@ -99,7 +118,7 @@ npm run test
 
 This command initiates the test suite and provides output on test results, including any failures and their causes.
 
-### Example Tests
+### [Example Tests](#example-tests)
 
 1. **Reducers Test (`beans-reducer.test.js`)**:
 
@@ -111,31 +130,31 @@ This command initiates the test suite and provides output on test results, inclu
 
 These tests contribute to the stability and maintainability of the application, validating the behavior of core Redux functionalities.
 
-## Known Issue
+## [Known Issue](#known-issue)
 
 As of December 21, 2023, there is a known issue in the 'Contact Me' section of the application. This section is intended to use a PHP method for sending emails directly to me from the website. However, this functionality is not yet fully implemented. Users are advised that the 'Contact Me' feature may not operate as expected until this issue is resolved.
 
-## Ongoing Development
+## [Ongoing Development](#ongoing-development)
 
 Please note that this project is not in its final form. Future updates will include enhanced descriptions, text improvements, and refined styling to improve user experience and interface aesthetics. Additionally, significant portions of the codebase are slated for refactoring to optimize performance and maintainability.
 
 This project is very much a work in progress, and regular updates are planned to address these aspects. Your patience and understanding are greatly appreciated as these improvements are made.
 
-## Copyright and Data Accuracy Disclaimer
+## [Copyright and Data Accuracy Disclaimer](#copyright-and-data-accuracy-disclaimer)
 
-### Content Origin
+### [Content Origin](#content-origin)
 
 Please be aware that all data and information presented in this application, including the UI and the database, are derived from the official Jelly Belly website. This project does not claim originality of the content and acknowledges that all information is borrowed from publicly available sources.
 
-### Disclaimer
+### [Disclaimer](#disclaimer)
 
 While every effort has been made to ensure the accuracy of the information, there may be instances of errors, typos, or inaccuracies. Therefore, this resource should not be solely relied upon, especially for health-related decisions. I do not assume responsibility for the content's accuracy.
 
-### Consumer Advice
+### [Consumer Advice](#consumer-advice)
 
 Before consuming any Jelly Belly products, it is strongly advised to consult the official Jelly Belly website or product packaging to verify ingredients, calorie content, and other nutritional information. This step is crucial for those with dietary restrictions or allergies.
 
-## License
+## [License](#license)
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
