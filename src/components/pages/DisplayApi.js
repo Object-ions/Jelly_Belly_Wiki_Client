@@ -8,10 +8,11 @@ import Query from "../api/Query";
 import DataSample from "../api/DataSample";
 import Examples from "../api/Examples";
 import Pagination from "../api/Pagination";
-import More from "../api/More";
+import AboutThisProject from "../api/AboutThisProject";
+import CopyRights from "../api/CopyRights";
 
 const DisplayApi = () => {
-  const [activeComponent, setActiveComponent] = useState("more");
+  const [activeComponent, setActiveComponent] = useState("aboutThisProject");
 
   const getActiveComponent = () => {
     switch (activeComponent) {
@@ -31,8 +32,10 @@ const DisplayApi = () => {
         return <CreateDatabase />;
       case "examples":
         return <Examples />;
-      case "more":
-        return <More />;
+      case "aboutThisProject":
+        return <AboutThisProject />;
+      case "copyrights":
+        return <CopyRights />;
       default:
         return <Opening />;
     }
@@ -44,8 +47,8 @@ const DisplayApi = () => {
         <aside className="sidebar">
           <ul>
             <li
-              className={activeComponent === "more" ? "active" : ""}
-              onClick={() => setActiveComponent("more")}
+              className={activeComponent === "aboutThisProject" ? "active" : ""}
+              onClick={() => setActiveComponent("aboutThisProject")}
             >
               About This Project
             </li>
@@ -96,6 +99,12 @@ const DisplayApi = () => {
               onClick={() => setActiveComponent("pagination")}
             >
               Pagination
+            </li>
+            <li
+              className={activeComponent === "copyrights" ? "active" : ""}
+              onClick={() => setActiveComponent("copyrights")}
+            >
+              Copyright and Data Accuracy
             </li>
           </ul>
         </aside>
