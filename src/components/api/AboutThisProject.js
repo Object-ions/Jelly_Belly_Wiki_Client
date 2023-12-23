@@ -43,9 +43,9 @@ const More = () => {
       </p>
       <ul>
         <li>
-          <strong>1. Web Scraper Repository</strong> (
+          <strong>1. Jelly Belly Wiki API Data Collection</strong> (
           <a
-            href="https://github.com/Object-ions/capstone-supporting-files"
+            href="https://github.com/Object-ions/Jelly-Belly-Wiki-API-Data-Collection"
             target="blank"
           >
             GitHub Repo
@@ -56,7 +56,7 @@ const More = () => {
           was ready to be seeded into the C# API.
         </li>
         <li>
-          <strong>2. API Repository</strong> (
+          <strong>2. Jelly Belly Wiki API</strong> (
           <a
             href="https://github.com/Object-ions/Jelly-Belly-Wiki-API"
             target="blank"
@@ -69,7 +69,7 @@ const More = () => {
           the repository, similar to the API Documentation provided in the UI.
         </li>
         <li>
-          <strong>3. UI Repository</strong> (
+          <strong>3. Jelly Belly Wiki Client</strong> (
           <a
             href="https://github.com/Object-ions/Jelly_Belly_Wiki_Client"
             target="blank"
