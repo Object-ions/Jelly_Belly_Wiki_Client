@@ -30,12 +30,13 @@ To read more about the data scraping and API back-end and database check out the
    - [Disclaimer](#disclaimer)
    - [Consumer Advice](#consumer-advice)
 10. [License](#license)
+11. [contact](#contact)
 
 ## [Project Overview](#project-overview)
 
 This repository, **Jelly_Belly_Wiki_Client**, is part of a larger project that is divided into three main segments:
 
-1. **Capstone Supporting Files**: [Capstone Supporting Files Repository](https://github.com/Object-ions/capstone-supporting-files): A repository dedicated to scripts and supporting files for data collection, primarily using Python for web scraping from the official Jelly Belly website.
+1. **Jelly Belly Wiki API Data Collection**: [Jelly-Belly-Wiki-API-Data-Collection](https://github.com/Object-ions/Jelly-Belly-Wiki-API-Data-Collection): A repository dedicated to scripts and supporting files for data collection, primarily using Python for web scraping from the official Jelly Belly website.
 
 2. **Jelly-Belly-Wiki-API**: [Jelly-Belly-Wiki-API Repository](https://github.com/Object-ions/Jelly-Belly-Wiki-API): This repository contains the API implementation and the seeded data from the scraping process. The API is built using C# and EF Core .Net with MySql migrations.
 
@@ -166,4 +167,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-- If you detect any bug in the program, please reach out to me at [moshikoatia@gmail.com](mailto:moshikoatia@gmail.com).
+### [contact](#contact)
+
+If you detect any bug in the program, please reach out to me at [moshikoatia@gmail.com](mailto:moshikoatia@gmail.com).
