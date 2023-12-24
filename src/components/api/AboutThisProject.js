@@ -80,6 +80,16 @@ const More = () => {
           showcasing one approach to design by utilizing all the endpoints and
           their various options.
         </li>
+        <li>
+          You can also check out the main Repository that contain all 3
+          submodules in this{" "}
+          <a
+            href="https://github.com/Object-ions/Jelly-Belly-Wiki"
+            target="blank"
+          >
+            link
+          </a>{" "}
+        </li>
       </ul>
 
       <h3>Purpose and Learning</h3>
