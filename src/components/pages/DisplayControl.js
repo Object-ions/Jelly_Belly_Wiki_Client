@@ -4,8 +4,6 @@ import ExampleBean from "../ExampleBean";
 import ExampleHistory from "../ExampleHistory";
 import DisplayAbout from "../pages/DisplayAbout";
 import ExampleFact from "../ExampleFact";
-import SplineViewer from "../SplineViewer";
-import { Parallax } from "react-scroll-parallax";
 import Contact from "../Contact";
 import ExampleRecpComb from "../ExampleRecpComb";
 
@@ -19,8 +17,6 @@ const DisplayControl = () => {
       <ExampleFact />
       <ExampleRecpComb />
       <Contact />
-
-      {/* <SplineViewer url="https://prod.spline.design/mjbobhqsR1jJBonF/scene.splinecode" /> */}
     </>
   );
 };

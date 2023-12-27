@@ -1,12 +1,12 @@
-import React, { useEffect, useReducer } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import beansReducer from "../reducers/beans-reducer";
 import { getBeansFailure, getBeansSuccess } from "../actions/index";
 import { Link } from "react-router-dom";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import ErrorComponent from "./ErrorComponent";
 import LoadingComponent from "./LoadingComponent";
+import useFetch from "../hooks/useFetch";
 
 const initialState = {
   isLoaded: false,
@@ -15,29 +15,12 @@ const initialState = {
 };
 
 const DisplayHistory = () => {
-  const [state, dispatch] = useReducer(beansReducer, initialState);
-
-  useEffect(() => {
-    fetch(`https://localhost:5001/api/MileStones`)
-      .then(async (res) => {
-        if (!res.ok) {
-          throw new Error(`${res.status}: ${res.statusText}`);
-        } else {
-          const waitResponse = await res.json();
-          return waitResponse;
-        }
-      })
-      .then((jsonifiedResponse) => {
-        const action = getBeansSuccess(jsonifiedResponse.items);
-        dispatch(action);
-      })
-      .catch((error) => {
-        const action = getBeansFailure(error.message);
-        dispatch(action);
-      });
-  }, []);
-
-  const { error, isLoaded, beans } = state;
+  const { error, isLoaded, beans } = useFetch(
+    "https://localhost:5001/api/MileStones",
+    initialState,
+    getBeansSuccess,
+    getBeansFailure
+  );
 
   if (error) {
     return <ErrorComponent error={error} />;

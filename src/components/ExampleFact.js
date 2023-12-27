@@ -1,5 +1,4 @@
-import React, { useEffect, useReducer } from "react";
-import beansReducer from "../reducers/beans-reducer";
+import React from "react";
 import { getFactsFailure, getFactsSuccess } from "../actions/index";
 import cherryImg from "./../img/cherry-red.png";
 import "flowbite";
@@ -9,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import ErrorComponent from "./ErrorComponent";
 import LoadingComponent from "./LoadingComponent";
+import useFetch from "../hooks/useFetch";
 
 const initialState = {
   isLoaded: false,
@@ -17,35 +17,12 @@ const initialState = {
 };
 
 const ExampleFact = () => {
-  const [state, dispatch] = useReducer(beansReducer, initialState);
-
-  useEffect(() => {
-    const factIds = [23, 2, 3, 4, 5, 6, 7, 8, 9];
-
-    Promise.all(
-      factIds.map((id) =>
-        fetch(`https://localhost:5001/api/Facts/${id}`)
-          .then((res) => {
-            if (!res.ok) {
-              throw new Error(`${res.status}: ${res.statusText}`);
-            }
-            return res.json();
-          })
-          .catch((error) => {
-            dispatch(getFactsFailure(error.message));
-          })
-      )
-    )
-      .then((facts) => {
-        console.log("Fetched facts:", facts);
-        dispatch(getFactsSuccess(facts.filter((fact) => fact)));
-      })
-      .catch((error) => {
-        dispatch(getFactsFailure(error.message));
-      });
-  }, []);
-
-  const { error, isLoaded, facts } = state;
+  const { error, isLoaded, facts } = useFetch(
+    "https://localhost:5001/api/Facts?pageIndex=1&pageSize=9",
+    initialState,
+    getFactsSuccess,
+    getFactsFailure
+  );
 
   if (error) {
     return <ErrorComponent error={error} />;

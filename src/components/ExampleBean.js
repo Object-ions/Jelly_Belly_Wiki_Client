@@ -1,11 +1,11 @@
-import React, { useEffect, useReducer } from "react";
-import beansReducer from "../reducers/beans-reducer";
+import React from "react";
 import { getBeansFailure, getBeansSuccess } from "../actions/index";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import ErrorComponent from "./ErrorComponent";
 import LoadingComponent from "./LoadingComponent";
+import useFetch from "../hooks/useFetch";
 
 const initialState = {
   isLoaded: false,
@@ -14,34 +14,12 @@ const initialState = {
 };
 
 const ExampleBean = () => {
-  const [state, dispatch] = useReducer(beansReducer, initialState);
-
-  useEffect(() => {
-    const beanIds = [92, 21, 43, 40, 65, 80];
-
-    Promise.all(
-      beanIds.map((id) =>
-        fetch(`https://localhost:5001/api/Beans/${id}`)
-          .then((res) => {
-            if (!res.ok) {
-              throw new Error(`${res.status}: ${res.statusText}`);
-            }
-            return res.json();
-          })
-          .catch((error) => {
-            dispatch(getBeansFailure(error.message));
-          })
-      )
-    )
-      .then((beans) => {
-        dispatch(getBeansSuccess(beans.filter((bean) => bean)));
-      })
-      .catch((error) => {
-        dispatch(getBeansFailure(error.message));
-      });
-  }, []);
-
-  const { error, isLoaded, beans } = state;
+  const { error, isLoaded, beans } = useFetch(
+    "https://localhost:5001/api/Beans?colorGroup=brown&pageIndex=1&pageSize=6",
+    initialState,
+    getBeansSuccess,
+    getBeansFailure
+  );
 
   if (error) {
     return <ErrorComponent error={error} />;
@@ -54,7 +32,7 @@ const ExampleBean = () => {
           <div className="item-wrapper explore-beans info-top">
             <h2>Explore Beans</h2>
           </div>
-          {beans.map((bean, index) => (
+          {beans?.map((bean, index) => (
             <div key={index} className="item-wrapper">
               <Link to={"/beans/" + bean.beanId}>
                 <h3>{bean.flavorName}</h3>

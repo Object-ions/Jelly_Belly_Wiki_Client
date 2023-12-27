@@ -10,6 +10,7 @@ import cherryTurnover from "./../img/Cherry-Turnovers.png";
 import miniCherry from "./../img//mini-cherry.png";
 import miniCoconut from "./../img/mini-coconut.png";
 import miniPopcorn from "./../img/mini-popcorn.png";
+import useFetch from "../hooks/useFetch";
 
 const initialState = {
   isLoaded: false,
@@ -18,32 +19,12 @@ const initialState = {
 };
 
 const ExampleCombination = () => {
-  const [state, dispatch] = useReducer(beansReducer, initialState);
-
-  useEffect(() => {
-    fetch(`https://localhost:5001/api/Combinations/1`)
-      .then(async (res) => {
-        if (!res.ok) {
-          throw new Error(`${res.status}: ${res.statusText}`);
-        } else {
-          const waitResponse = await res.json();
-          return waitResponse;
-        }
-      })
-      .then((singleBean) => {
-        const action = getSingleBeanSuccess(singleBean);
-        dispatch(action);
-        console.log(singleBean);
-      })
-      .catch((error) => {
-        const action = getSingleBeanFailure(error.message);
-        dispatch(action);
-      });
-  }, []);
-
-  const { error, isLoaded, singleBean } = state;
-
-  console.log(singleBean);
+  const { error, isLoaded, singleBean } = useFetch(
+    "https://localhost:5001/api/Combinations/1",
+    initialState,
+    getSingleBeanSuccess,
+    getSingleBeanFailure
+  );
 
   if (error) {
     return <ErrorComponent error={error} />;

@@ -1,8 +1,8 @@
 import * as actionType from "./ActionTypes";
 
-export const getBeansSuccess = (beans) => ({
+export const getBeansSuccess = (data) => ({
   type: actionType.GET_BEANS_SUCCESS,
-  beans,
+  beans: data.items,
 });
 
 export const getBeansFailure = (error) => ({
@@ -20,9 +20,9 @@ export const getSingleBeanFailure = (error) => ({
   error,
 });
 
-export const getFactsSuccess = (facts) => ({
+export const getFactsSuccess = (data) => ({
   type: actionType.GET_FACTS_SUCCESS,
-  facts,
+  facts: data.items,
 });
 
 export const getFactsFailure = (error) => ({

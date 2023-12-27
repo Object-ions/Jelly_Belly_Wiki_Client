@@ -1,11 +1,10 @@
-import React, { useEffect, useReducer } from "react";
-import beansReducer from "./../reducers/beans-reducer";
 import { getSingleBeanFailure, getSingleBeanSuccess } from "./../actions/index";
 import { Link, useParams } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import LoadingComponent from "./LoadingComponent";
+import useFetch from "../hooks/useFetch";
 
 const initialState = {
   isLoaded: false,
@@ -14,33 +13,14 @@ const initialState = {
 };
 
 const BeanCard = () => {
-  const [state, dispatch] = useReducer(beansReducer, initialState);
   const { beanId } = useParams();
 
-  useEffect(() => {
-    fetch(`https://localhost:5001/api/Beans/${beanId}`)
-      .then(async (res) => {
-        if (!res.ok) {
-          throw new Error(`${res.status}: ${res.statusText}`);
-        } else {
-          const waitResponse = await res.json();
-          return waitResponse;
-        }
-      })
-      .then((singleBean) => {
-        const action = getSingleBeanSuccess(singleBean);
-        dispatch(action);
-        console.log(singleBean);
-      })
-      .catch((error) => {
-        const action = getSingleBeanFailure(error.message);
-        dispatch(action);
-      });
-  }, []);
-
-  const { error, isLoaded, singleBean } = state;
-
-  console.log(singleBean);
+  const { error, isLoaded, singleBean } = useFetch(
+    `https://localhost:5001/api/Beans/${beanId}`,
+    initialState,
+    getSingleBeanSuccess,
+    getSingleBeanFailure
+  );
 
   if (error) {
     return <ErrorComponent error={error} />;
