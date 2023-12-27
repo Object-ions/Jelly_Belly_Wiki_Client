@@ -127,7 +127,7 @@ This command initiates the test suite and provides output on test results, inclu
    - Verifies state updates for successful and failed beans data fetching.
 
 2. **Actions Test (`index.test.js` in actions folder)**:
-   - Ensures action creators like `getBeansSuccess` and `getBeansFailure` return the correct action objects.
+   - Ensures action creators like `getDataSuccess` and `getBeansFailure` return the correct action objects.
 
 These tests contribute to the stability and maintainability of the application, validating the behavior of core Redux functionalities.
 
