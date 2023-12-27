@@ -1,4 +1,4 @@
-import { getSingleBeanFailure, getSingleBeanSuccess } from "./../actions/index";
+import { getDataFailure, getSingleBeanSuccess } from "./../actions/index";
 import { Link, useParams } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,7 +19,7 @@ const BeanCard = () => {
     `https://localhost:5001/api/Beans/${beanId}`,
     initialState,
     getSingleBeanSuccess,
-    getSingleBeanFailure
+    getDataFailure
   );
 
   if (error) {

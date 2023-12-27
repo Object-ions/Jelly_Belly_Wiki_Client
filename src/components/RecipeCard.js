@@ -1,5 +1,5 @@
 import React from "react";
-import { getSingleBeanFailure, getSingleBeanSuccess } from "./../actions/index";
+import { getDataFailure, getSingleBeanSuccess } from "./../actions/index";
 import { Link, useParams } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,7 +20,7 @@ const RecipeCard = () => {
     `https://localhost:5001/api/Recipes/${recipeId}`,
     initialState,
     getSingleBeanSuccess,
-    getSingleBeanFailure
+    getDataFailure
   );
 
   if (error) {

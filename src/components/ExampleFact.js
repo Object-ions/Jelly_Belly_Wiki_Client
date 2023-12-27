@@ -1,5 +1,5 @@
 import React from "react";
-import { getFactsFailure, getFactsSuccess } from "../actions/index";
+import { getDataFailure, getFactsSuccess } from "../actions/index";
 import cherryImg from "./../img/cherry-red.png";
 import "flowbite";
 import beanImg from "./../img/bean-filled-color.png";
@@ -21,7 +21,7 @@ const ExampleFact = () => {
     "https://localhost:5001/api/Facts?pageIndex=1&pageSize=9",
     initialState,
     getFactsSuccess,
-    getFactsFailure
+    getDataFailure
   );
 
   if (error) {

@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { getBeansFailure, getBeansSuccess } from "../actions/index";
+import { getDataFailure, getBeansSuccess } from "../actions/index";
 import { Link } from "react-router-dom";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import ErrorComponent from "./ErrorComponent";
@@ -19,7 +19,7 @@ const DisplayHistory = () => {
     "https://localhost:5001/api/MileStones",
     initialState,
     getBeansSuccess,
-    getBeansFailure
+    getDataFailure
   );
 
   if (error) {

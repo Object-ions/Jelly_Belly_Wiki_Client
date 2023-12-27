@@ -1,5 +1,5 @@
 import React from "react";
-import { getSingleBeanFailure, getSingleBeanSuccess } from "../actions/index";
+import { getDataFailure, getSingleBeanSuccess } from "../actions/index";
 import { Link } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,7 +18,7 @@ const Recipe = () => {
     "https://localhost:5001/api/Recipes/24",
     initialState,
     getSingleBeanSuccess,
-    getSingleBeanFailure
+    getDataFailure
   );
 
   if (error) {

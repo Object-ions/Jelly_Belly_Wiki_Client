@@ -10,9 +10,9 @@ describe("beans reducer actions", () => {
     });
   });
 
-  it("getBeansFailure should create GET_BEANS_FAILURE action", () => {
+  it("getDataFailure should create GET_BEANS_FAILURE action", () => {
     const error = "An error";
-    expect(actions.getBeansFailure(error)).toEqual({
+    expect(actions.getDataFailure(error)).toEqual({
       type: actionType.GET_BEANS_FAILURE,
       error,
     });

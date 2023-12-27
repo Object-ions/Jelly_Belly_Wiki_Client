@@ -1,5 +1,5 @@
 import React from "react";
-import { getBeansFailure, getBeansSuccess } from "../../actions/index";
+import { getDataFailure, getBeansSuccess } from "../../actions/index";
 import { Link } from "react-router-dom";
 import ErrorComponent from "../ErrorComponent";
 import Loading from "../LoadingComponent";
@@ -16,7 +16,7 @@ const DisplayBean = () => {
     "https://localhost:5001/api/Beans?pageIndex=1&pageSize=150",
     initialState,
     getBeansSuccess,
-    getBeansFailure
+    getDataFailure
   );
 
   if (error) {

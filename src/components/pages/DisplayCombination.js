@@ -1,5 +1,5 @@
 import React from "react";
-import { getBeansFailure, getBeansSuccess } from "../../actions/index";
+import { getDataFailure, getBeansSuccess } from "../../actions/index";
 import ErrorComponent from "../ErrorComponent";
 import happyBean from "../../img/happy-bean.png";
 import Loading from "../LoadingComponent";
@@ -16,7 +16,7 @@ const DisplayCombination = () => {
     "https://localhost:5001/api/Combinations?pageIndex=1&pageSize=60",
     initialState,
     getBeansSuccess,
-    getBeansFailure
+    getDataFailure
   );
 
   if (error) {
