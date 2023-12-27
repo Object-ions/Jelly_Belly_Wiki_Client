@@ -1,4 +1,4 @@
-import { getDataFailure, getSingleBeanSuccess } from "./../actions/index";
+import { getDataFailure, getSingleDataSuccess } from "./../actions/index";
 import { Link, useParams } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,7 +18,7 @@ const BeanCard = () => {
   const { error, isLoaded, singleBean } = useFetch(
     `https://localhost:5001/api/Beans/${beanId}`,
     initialState,
-    getSingleBeanSuccess,
+    getSingleDataSuccess,
     getDataFailure
   );
 

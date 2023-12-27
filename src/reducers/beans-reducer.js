@@ -9,7 +9,7 @@ const beansReducer = (state, action) => {
         beans: action.beans,
       };
 
-    case actionType.GET_SINGLE_BEAN_SUCCESS:
+    case actionType.GET_SINGLE_DATA_SUCCESS:
       return {
         ...state,
         isLoaded: true,

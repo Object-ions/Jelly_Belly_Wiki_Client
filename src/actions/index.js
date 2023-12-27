@@ -5,8 +5,8 @@ export const getDataSuccess = (data) => ({
   beans: data.items,
 });
 
-export const getSingleBeanSuccess = (singleBean) => ({
-  type: actionType.GET_SINGLE_BEAN_SUCCESS,
+export const getSingleDataSuccess = (singleBean) => ({
+  type: actionType.GET_SINGLE_DATA_SUCCESS,
   singleBean,
 });
 

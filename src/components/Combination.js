@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from "react";
 import beansReducer from "../reducers/beans-reducer";
-import { getDataFailure, getSingleBeanSuccess } from "../actions/index";
+import { getDataFailure, getSingleDataSuccess } from "../actions/index";
 import { Link } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,7 +22,7 @@ const ExampleCombination = () => {
   const { error, isLoaded, singleBean } = useFetch(
     "https://localhost:5001/api/Combinations/1",
     initialState,
-    getSingleBeanSuccess,
+    getSingleDataSuccess,
     getDataFailure
   );
 
