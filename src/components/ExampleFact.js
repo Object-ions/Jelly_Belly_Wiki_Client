@@ -1,5 +1,5 @@
 import React from "react";
-import { getFactsFailure, getFactsSuccess } from "../actions/index";
+import { getDataFailure, getDataSuccess } from "../actions/index";
 import cherryImg from "./../img/cherry-red.png";
 import "flowbite";
 import beanImg from "./../img/bean-filled-color.png";
@@ -20,8 +20,8 @@ const ExampleFact = () => {
   const { error, isLoaded, facts } = useFetch(
     "https://localhost:5001/api/Facts?pageIndex=1&pageSize=9",
     initialState,
-    getFactsSuccess,
-    getFactsFailure
+    getDataSuccess,
+    getDataFailure
   );
 
   if (error) {

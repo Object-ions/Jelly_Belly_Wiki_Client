@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { getBeansFailure, getBeansSuccess } from "../../actions/index";
+import { getDataFailure, getDataSuccess } from "../../actions/index";
 import ErrorComponent from "../ErrorComponent";
 import happyBean from "../../img/happy-bean.png";
 import Loading from "../LoadingComponent";
@@ -17,8 +17,8 @@ const DisplayHistory = () => {
   const { error, isLoaded, beans } = useFetch(
     "https://localhost:5001/api/MileStones?pageIndex=1&pageSize=50",
     initialState,
-    getBeansSuccess,
-    getBeansFailure
+    getDataSuccess,
+    getDataFailure
   );
 
   if (error) {

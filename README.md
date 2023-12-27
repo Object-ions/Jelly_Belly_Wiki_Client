@@ -103,11 +103,11 @@ The application uses React's `useReducer` hook for state management, complemente
 
 #### Reducers
 
-Reducers are tested to ensure they correctly handle actions and update the state as expected. The `beansReducer`, for instance, is responsible for managing the state related to beans data. It handles various actions like `GET_BEANS_SUCCESS` and `GET_BEANS_FAILURE`, updating the state accordingly.
+Reducers are tested to ensure they correctly handle actions and update the state as expected. The `beansReducer`, for instance, is responsible for managing the state related to beans data. It handles various actions like `GET_DATA_SUCCESS` and `GET_BEANS_FAILURE`, updating the state accordingly.
 
 #### Actions
 
-Action creators are tested to ensure they return the correct action objects. For example, actions related to fetching beans data (`getBeansSuccess` and `getBeansFailure`) are tested to verify they create the right action type with the provided payload.
+Action creators are tested to ensure they return the correct action objects. For example, actions related to fetching beans data (`getDataSuccess` and `getDataFailure`) are tested to verify they create the right action type with the provided payload.
 
 ### [Running the Tests](#running-the-tests)
 
@@ -127,7 +127,7 @@ This command initiates the test suite and provides output on test results, inclu
    - Verifies state updates for successful and failed beans data fetching.
 
 2. **Actions Test (`index.test.js` in actions folder)**:
-   - Ensures action creators like `getBeansSuccess` and `getBeansFailure` return the correct action objects.
+   - Ensures action creators like `getDataSuccess` and `getDataFailure` return the correct action objects.
 
 These tests contribute to the stability and maintainability of the application, validating the behavior of core Redux functionalities.
 

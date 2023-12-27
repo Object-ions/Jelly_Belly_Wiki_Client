@@ -1,5 +1,5 @@
 import React from "react";
-import { getBeansFailure, getBeansSuccess } from "../../actions/index";
+import { getDataFailure, getDataSuccess } from "../../actions/index";
 import ErrorComponent from "../ErrorComponent";
 import happyBean from "../../img/happy-bean.png";
 import Loading from "../LoadingComponent";
@@ -15,8 +15,8 @@ const DisplayFact = () => {
   const { error, isLoaded, beans } = useFetch(
     "https://localhost:5001/api/Facts?pageIndex=1&pageSize=150",
     initialState,
-    getBeansSuccess,
-    getBeansFailure
+    getDataSuccess,
+    getDataFailure
   );
 
   if (error) {

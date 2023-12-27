@@ -19,7 +19,7 @@ describe("beansReducer", () => {
   test("should change isLoaded to true and update beans", () => {
     const beans = "An article";
     action = {
-      type: actionType.GET_BEANS_SUCCESS,
+      type: actionType.GET_DATA_SUCCESS,
       beans,
     };
 

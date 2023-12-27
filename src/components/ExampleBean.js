@@ -1,5 +1,5 @@
 import React from "react";
-import { getBeansFailure, getBeansSuccess } from "../actions/index";
+import { getDataFailure, getDataSuccess } from "../actions/index";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
@@ -17,8 +17,8 @@ const ExampleBean = () => {
   const { error, isLoaded, beans } = useFetch(
     "https://localhost:5001/api/Beans?colorGroup=brown&pageIndex=1&pageSize=6",
     initialState,
-    getBeansSuccess,
-    getBeansFailure
+    getDataSuccess,
+    getDataFailure
   );
 
   if (error) {
