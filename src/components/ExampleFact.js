@@ -12,12 +12,12 @@ import useFetch from "../hooks/useFetch";
 
 const initialState = {
   isLoaded: false,
-  facts: [],
+  beans: [],
   error: null,
 };
 
 const ExampleFact = () => {
-  const { error, isLoaded, facts } = useFetch(
+  const { error, isLoaded, beans } = useFetch(
     "https://localhost:5001/api/Facts?pageIndex=1&pageSize=9",
     initialState,
     getDataSuccess,
@@ -52,10 +52,10 @@ const ExampleFact = () => {
             </div>
           </div>
           <div>
-            {facts.map((fact, index) => (
+            {beans.map((bean, index) => (
               <div key={index} className="item-wrapper">
-                <h3>{fact.title}</h3>
-                <p>{fact.description}</p>
+                <h3>{bean.title}</h3>
+                <p>{bean.description}</p>
               </div>
             ))}
             <Link to="/facts">
