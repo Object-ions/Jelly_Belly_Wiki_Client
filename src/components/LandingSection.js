@@ -30,9 +30,11 @@ const LandingSection = () => {
       <div className="bottom-description">
         <div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis,
-            quibusdam sed. Molestias eius rerum officiis quibusdam ea dolores
-            voluptas atque?
+            The User Interface efficiently integrates with the Jelly Belly Wiki
+            API, primarily utilizing the GET method to query and retrieve data
+            from the database. This architecture exemplifies a streamlined
+            approach to API consumption, focusing on data retrieval to render
+            real-time information within the UI.
           </p>
         </div>
         <FontAwesomeIcon icon={faArrowDown} fade size="2x" />

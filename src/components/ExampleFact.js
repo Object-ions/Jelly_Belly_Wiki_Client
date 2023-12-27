@@ -38,16 +38,19 @@ const ExampleFact = () => {
               <img src={cherryImg} id="cherryImg-fact" alt="cherry" />
               <h2>Did You Know?</h2>
               <p>
-                Very Cherry has been the most popular Jelly Belly flavor for
-                many years, only briefly surpassed by Buttered Popcorn in 1998.
+                The company has evolved from its original eight flavors in 1976
+                to more than 100 over the years. Current popular flavors include
+                Buttered Popcorn, Very Cherry, Cotton Candy, Watermelon, and
+                Green Apple.
               </p>
             </div>
             <div>
               <img src={beanImg} id="beanImg-fact" alt="beans" />
               <h2>Did You Know?</h2>
               <p>
-                Very Cherry has been the most popular Jelly Belly flavor for
-                many years, only briefly surpassed by Buttered Popcorn in 1998.
+                Jelly Belly have collaborated with brands like Dr. Pepper, A&W
+                Root Beer, Snapple, Tabasco, Krispy Kreme, and Coldstone
+                Creamery.
               </p>
             </div>
           </div>
