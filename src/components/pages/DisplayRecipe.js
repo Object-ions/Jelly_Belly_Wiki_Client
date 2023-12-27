@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { getDataFailure, getDataSuccess } from "../../actions/index";
+import { getDataFailure, getBeansSuccess } from "../../actions/index";
 import ErrorComponent from "../ErrorComponent";
 import happyBean from "../../img/happy-bean.png";
 import { Link } from "react-router-dom";
@@ -18,7 +18,7 @@ const DisplayRecipe = () => {
   const { error, isLoaded, beans } = useFetch(
     "https://localhost:5001/api/Recipes?pageIndex=1&pageSize=50",
     initialState,
-    getDataSuccess,
+    getBeansSuccess,
     getDataFailure
   );
 

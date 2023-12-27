@@ -1,5 +1,5 @@
 import React from "react";
-import { getDataFailure, getDataSuccess } from "../../actions/index";
+import { getDataFailure, getBeansSuccess } from "../../actions/index";
 import { Link } from "react-router-dom";
 import ErrorComponent from "../ErrorComponent";
 import Loading from "../LoadingComponent";
@@ -15,7 +15,7 @@ const DisplayBean = () => {
   const { error, isLoaded, beans } = useFetch(
     "https://localhost:5001/api/Beans?pageIndex=1&pageSize=150",
     initialState,
-    getDataSuccess,
+    getBeansSuccess,
     getDataFailure
   );
 

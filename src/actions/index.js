@@ -5,12 +5,27 @@ export const getDataSuccess = (data) => ({
   beans: data.items,
 });
 
+export const getBeansFailure = (error) => ({
+  type: actionType.GET_BEANS_FAILURE,
+  error,
+});
+
 export const getSingleBeanSuccess = (singleBean) => ({
   type: actionType.GET_SINGLE_BEAN_SUCCESS,
   singleBean,
 });
 
-export const getDataFailure = (error) => ({
-  type: actionType.GET_DATA_FAILURE,
+export const getSingleBeanFailure = (error) => ({
+  type: actionType.GET_SINGLE_BEAN_FAILURE,
+  error,
+});
+
+export const getFactsSuccess = (data) => ({
+  type: actionType.GET_FACTS_SUCCESS,
+  facts: data.items,
+});
+
+export const getFactsFailure = (error) => ({
+  type: actionType.GET_FACTS_FAILURE,
   error,
 });

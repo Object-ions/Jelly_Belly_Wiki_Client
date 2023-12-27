@@ -16,6 +16,13 @@ const beansReducer = (state, action) => {
         singleBean: action.singleBean,
       };
 
+    case actionType.GET_FACTS_SUCCESS:
+      return {
+        ...state,
+        isLoaded: true,
+        facts: action.facts,
+      };
+
     case actionType.GET_DATA_FAILURE:
       return {
         ...state,
