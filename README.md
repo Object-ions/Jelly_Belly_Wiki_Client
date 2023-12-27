@@ -103,7 +103,7 @@ The application uses React's `useReducer` hook for state management, complemente
 
 #### Reducers
 
-Reducers are tested to ensure they correctly handle actions and update the state as expected. The `beansReducer`, for instance, is responsible for managing the state related to beans data. It handles various actions like `GET_DATA_SUCCESS` and `GET_BEANS_FAILURE`, updating the state accordingly.
+Reducers are tested to ensure they correctly handle actions and update the state as expected. The `beansReducer`, for instance, is responsible for managing the state related to beans data. It handles various actions like `GET_DATA_SUCCESS` and `GET_DATA_FAILURE`, updating the state accordingly.
 
 #### Actions
 
