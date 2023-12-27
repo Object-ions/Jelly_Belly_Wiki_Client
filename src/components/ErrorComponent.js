@@ -1,3 +1,4 @@
+import "./ErrorComponent.css";
 import React from "react";
 import errorImg from "../img/single-bean-filled-sad.png";
 

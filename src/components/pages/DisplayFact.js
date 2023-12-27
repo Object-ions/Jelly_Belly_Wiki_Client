@@ -1,3 +1,4 @@
+import "./DisplayFact.css";
 import React from "react";
 import { getDataFailure, getDataSuccess } from "../../actions/index";
 import ErrorComponent from "../ErrorComponent";

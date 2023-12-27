@@ -1,0 +1,88 @@
+/* Landing Section */
+
+.LandingSection {
+  background: var(--light-body-color);
+  height: 95vh;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.LandingSection .container {
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 1rem;
+  margin: 0 auto;
+}
+
+.LandingSection .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: 5rem;
+  font-size: 1.1rem;
+}
+
+.LandingSection .img-wrapper {
+  width: 40rem;
+}
+
+.LandingSection .img-wrapper:hover {
+  animation: favicon-shake 0.7s ease-in-out 2 alternate;
+}
+
+.LandingSection p {
+  color: var(--secondary-color);
+  margin-top: 1rem;
+}
+
+.LandingSection h1,
+.LandingSection h3 {
+  color: var(--btn-red);
+}
+
+.LandingSection img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.LandingSection .btn {
+  background: var(--head-color);
+  border: 1px solid var(--btn-red);
+  border-radius: 1.5rem;
+  padding: 0.75rem;
+  margin-top: 1.5rem;
+  display: inline-block;
+  color: var(--light-body-color);
+}
+
+.LandingSection .bottom-description {
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  width: 90%;
+  max-width: var(--max-width);
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.LandingSection .bottom-description div {
+  width: 10rem;
+}
+
+.LandingSection .bottom-description div p {
+  font-size: 0.7rem;
+}
+
+.LandingSection .bottom-description svg {
+  color: var(--dark-red) !important;
+  text-align: right;
+  animation-duration: 3s;
+}

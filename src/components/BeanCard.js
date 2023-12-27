@@ -1,3 +1,4 @@
+import "./BeanCard.css";
 import { getDataFailure, getSingleDataSuccess } from "./../actions/index";
 import { Link, useParams } from "react-router-dom";
 import ErrorComponent from "./ErrorComponent";

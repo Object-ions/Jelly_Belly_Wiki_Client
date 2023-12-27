@@ -1,3 +1,4 @@
+import "./DisplayBean.css";
 import React from "react";
 import { getDataFailure, getDataSuccess } from "../../actions/index";
 import { Link } from "react-router-dom";

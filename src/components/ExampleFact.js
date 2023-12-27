@@ -1,3 +1,4 @@
+import "./ExampleFact.css";
 import React from "react";
 import { getDataFailure, getDataSuccess } from "../actions/index";
 import cherryImg from "./../img/cherry-red.png";

@@ -1,0 +1,65 @@
+/* Example Facts */
+
+.Example-facts {
+  padding: 5rem 2rem;
+  border-radius: 2rem;
+  background: var(--light-pink);
+  color: var(--dark-red);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.Example-facts > :first-child {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 3rem;
+  font-family: var(--text-font);
+  margin-bottom: 2rem;
+}
+
+.Example-facts .item-wrapper {
+  padding: 0.75rem 0;
+}
+
+.Example-facts .fact-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem;
+  justify-content: space-between;
+}
+
+.Example-facts .fact-side img {
+  width: 5rem;
+}
+
+.Example-facts a {
+  position: relative;
+  display: inline-block;
+  color: var(--head-color);
+  margin-top: 5rem;
+}
+
+.Example-facts a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  width: 0;
+  height: 0.1rem;
+  background-color: var(--head-color);
+  transition: width 0.3s linear;
+}
+
+.Example-facts a:hover::before {
+  width: 100%;
+}
+
+#beanImg-fact {
+  width: 10rem;
+}
+
+#cherryImg-fact {
+  margin-bottom: 1.5rem;
+}

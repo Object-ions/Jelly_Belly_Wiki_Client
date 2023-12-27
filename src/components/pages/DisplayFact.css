@@ -1,0 +1,49 @@
+/* Display Fact */
+.DisplayFact {
+  background: var(--dark-body-color);
+  padding: 5rem 2rem;
+}
+
+.DisplayFact h3 {
+  color: var(--head-color);
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "lobster";
+}
+
+.DisplayFact .fact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 1rem;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: var(--max-width);
+}
+
+.DisplayFact .fact-grid .item-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.2rem;
+  border: 1px solid var(--dark-body-color);
+  border-radius: 1rem;
+}
+
+.DisplayFact .fact-grid .item-wrapper:hover {
+  border: 1px solid var(--btn-red);
+  border-radius: 1rem;
+  background-color: rgba(249, 245, 244, 0.8);
+}
+
+.DisplayFact .fact-grid h4 {
+  color: var(--head-color);
+  padding-bottom: 0.5rem;
+}
+
+.DisplayFact .fact-grid p {
+  color: var(--head-color);
+  font-size: 0.8rem;
+  text-align: center;
+}

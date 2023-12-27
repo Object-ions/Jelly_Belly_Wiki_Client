@@ -1,3 +1,4 @@
+import "./Footer.css";
 import React from "react";
 import LogoFav from "../img/fivcon-final.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

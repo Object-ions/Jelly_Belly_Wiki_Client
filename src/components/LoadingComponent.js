@@ -1,3 +1,4 @@
+import "./LoadingComponent.css";
 import React from "react";
 import happyBean from "../img/happy-bean.png";
 

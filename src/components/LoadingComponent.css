@@ -1,0 +1,19 @@
+/* Loading*/
+.loading {
+  display: flex;
+  flex-direction: column;
+  background: var(--dark-body-color);
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding-top: 5rem;
+  margin: 2rem auto;
+}
+
+.loading h1 {
+  color: var(--head-color);
+  font-family: "lobster";
+}
+.loading img {
+  width: 15rem;
+}

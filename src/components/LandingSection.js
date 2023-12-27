@@ -1,5 +1,5 @@
+import "./LandingSection.css";
 import React from "react";
-// import BeanLogo from "../img/new-logo-with-3d-look2.png";
 import BeanLogo from "../img/animation-pinks.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";

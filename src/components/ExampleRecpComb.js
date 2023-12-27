@@ -1,3 +1,4 @@
+import "./ExampleRecpComb.css";
 import React from "react";
 import Recipe from "./Recipe";
 import Combination from "./Combination";

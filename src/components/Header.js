@@ -1,3 +1,4 @@
+import "./Header.css";
 import React from "react";
 import LogoFav from "../img/fivcon-final.png";
 import { Link } from "react-router-dom";

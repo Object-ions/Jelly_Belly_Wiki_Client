@@ -1,3 +1,4 @@
+import "./Contact.css";
 import React from "react";
 import mandarin from "../img/mandarin.png";
 

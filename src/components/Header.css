@@ -1,0 +1,66 @@
+.Header {
+  height: 5rem;
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  z-index: 10;
+  background: var(--light-body-color);
+}
+
+.Header img,
+.Footer img {
+  width: 5rem;
+  transition: transform 0.3s ease;
+}
+
+.Header img:hover {
+  animation: favicon-shake 0.4s ease 1 alternate;
+}
+
+.Header .container {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header ul {
+  display: flex;
+  justify-content: center;
+}
+
+.Header ul li a {
+  padding: 0.5rem;
+  margin-right: 0.2rem;
+  color: var(--head-color);
+  background: transparent;
+  border: 0.1rem solid transparent;
+  border-radius: 3rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.Header ul li a:hover {
+  border: 0.1rem solid var(--secondary-color);
+  color: var(--head-color);
+}
+
+.Header img {
+  margin: auto;
+}
+
+.Header .api {
+  border: 0.1rem solid #e87a85;
+  border-radius: 3rem;
+  padding: 0.5rem;
+}
+
+.Header .api:hover {
+  background: var(--secondary-color);
+  border: 0.1rem solid var(--secondary-color);
+}
+
+.Header .api a:hover {
+  color: var(--light-body-color);
+}
