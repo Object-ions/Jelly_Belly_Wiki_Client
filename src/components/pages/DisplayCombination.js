@@ -27,7 +27,7 @@ const DisplayCombination = () => {
     return (
       <div className="DisplayRecipe">
         <div className="container">
-          <h3>Explore Recipes ...</h3>
+          <h3>Explore Combinations ...</h3>
           <div className="recipe-grid">
             <img src={happyBean} alt="happy-bean" className="happy-bean" />
             {beans.map((item, index) => (
