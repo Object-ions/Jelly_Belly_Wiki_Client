@@ -72,39 +72,32 @@ const RecipeCard = () => {
             <div className="item-wrapper">
               <h4>Ingredients</h4>
               <ul>
-                {singleBean.ingredients[0].split(",").map((item) => (
+                {singleBean.ingredients.map((item) => (
                   <li>{item}</li>
                 ))}
               </ul>
             </div>
             {/* Additional */}
             <div className="item-wrapper">
-              <h4>{singleBean.additions1[0].split(",")[0]}:</h4>
-              {singleBean.additions1[0] && (
+              <h4>{singleBean.additions1[0]}</h4>
+              {singleBean.additions1 && (
                 <ul>
-                  {singleBean.additions1[0]
-                    .split(",")
-                    .slice(1)
-                    .map((item) => (
-                      <li>{item}</li>
-                    ))}
+                  {singleBean.additions1.slice(1).map((item) => (
+                    <li>{item}</li>
+                  ))}
                 </ul>
               )}
-              {singleBean.additions2[0] && (
-                <p>{singleBean.additions1.join(",")}</p>
-              )}
-              {singleBean.additions3[0] && (
-                <p>{singleBean.additions1.join(",")}</p>
-              )}
+              {singleBean.additions2 && <p>{singleBean.additions2}</p>}
+              {singleBean.additions3 && <p>{singleBean.additions3}</p>}
             </div>
             {/* Directions */}
             <div className="item-wrapper">
               <h4>Directions</h4>
-              <p>{singleBean.directions}</p>
+              <ul>{singleBean.directions.join(",")}</ul>
             </div>
             {/* Tips */}
             <div className="item-wrapper">
-              {singleBean.tips[0] && <p>Tips - {singleBean.tips.join(",")}</p>}
+              {singleBean.tips[0] && <p>Tips - {singleBean.tips}</p>}
             </div>
           </div>
         </div>
