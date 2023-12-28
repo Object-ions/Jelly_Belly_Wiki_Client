@@ -42,6 +42,8 @@ const License = () => {
         SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       </p>
       <br />
+      <h2>Contact</h2>
+      <hr />
       <p>
         If you detect any bug in the program, please reach out to me at:{" "}
         <a href="mailto:mailto:moshikoatia@gmail.com">moshikoatia@gmail.com</a>.

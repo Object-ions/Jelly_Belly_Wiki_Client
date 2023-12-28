@@ -26,9 +26,8 @@ const Query = () => {
       <ul>
         <li>
           groupName:{" "}
-          <a href="https://localhost:5001/api/beans?groupName=Jelly Belly Official Flavors">
-            https://localhost:5001/api/beans?groupName=Jelly Belly Official
-            Flavors
+          <a href="https://localhost:5001/api/beans?groupName=Jelly%20Belly%20Official%20Flavors">
+            https://localhost:5001/api/beans?groupName=Jelly%20Belly%20Official%20Flavors
           </a>
         </li>
         <li>
@@ -80,8 +79,8 @@ const Query = () => {
       <ul>
         <li>
           title:{" "}
-          <a href="https://localhost:5001/api/facts?title=Popularity of Flavors">
-            https://localhost:5001/api/facts?title=Popularity of Flavors
+          <a href="https://localhost:5001/api/facts?title=Popularity%20of%20Flavors">
+            https://localhost:5001/api/facts?title=Popularity%20of%20Flavors
           </a>
         </li>
       </ul>
@@ -91,8 +90,8 @@ const Query = () => {
       <ul>
         <li>
           name:{" "}
-          <a href="https://localhost:5001/api/combinations?name=Cherry Turnover">
-            https://localhost:5001/api/combinations?name=Cherry Turnover
+          <a href="https://localhost:5001/api/combinations?name=Cherry%20Turnover">
+            https://localhost:5001/api/combinations?name=Cherry%20Turnover
           </a>
         </li>
       </ul>
@@ -102,8 +101,8 @@ const Query = () => {
       <ul>
         <li>
           name:{" "}
-          <a href="https://localhost:5001/api/recipes?name=OMBRÉ CAKE">
-            https://localhost:5001/api/recipes?name=OMBRÉ CAKE
+          <a href="https://localhost:5001/api/recipes?name=OMBRÉ%20CAKE">
+            https://localhost:5001/api/recipes?name=OMBRÉ%20CAKE
           </a>
         </li>
       </ul>
