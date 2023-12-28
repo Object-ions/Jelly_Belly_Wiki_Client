@@ -1,7 +1,10 @@
 /* Display History */
+
 .DisplayHistory {
   background: var(--dark-body-color);
   padding: 5rem 2rem;
+  max-width: var(--max-width);
+  margin: auto;
 }
 
 .DisplayHistory h3 {
