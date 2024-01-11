@@ -12,25 +12,37 @@ Challenges in building and seeding the API, particularly in handling data consis
 
 To read more about the data scraping and API back-end and database check out the next section 'Project Overview'
 
+## [Live version of the UI](#live)
+
+[Jelly Belly Wiki - UI](https://jelly-belly-wiki.netlify.app/)
+[Jelly Belly Wiki - API](https://jellybellywikiapi.onrender.com/)
+
+- The UI deployed on Netlify.com
+- The API deployed on Render.com
+- The database deployed on TiDB.com
+
 ## Table of Contents
 
 1. [Project Description](#project-description)
-2. [Project Overview](#project-overview)
-3. [Explore the Project](#explore-the-project)
-4. [Technologies Used](#technologies-used)
-5. [Setup and Installation](#setup-and-installation)
-6. [Test-Driven Development (TDD) with Jest](#test-driven-development-tdd-with-jest)
+2. [Live version of the UI](#live)
+3. [Project Overview](#project-overview)
+4. [Explore the Project](#explore-the-project)
+5. [Technologies Used](#technologies-used)
+6. [Setup and Installation](#setup-and-installation)
+7. [Test-Driven Development (TDD) with Jest](#test-driven-development-tdd-with-jest)
    - [State Management and Actions Testing](#state-management-and-actions-testing)
    - [Running the Tests](#running-the-tests)
    - [Example Tests](#example-tests)
-7. [Known Issue](#known-issue)
-8. [Ongoing Development](#ongoing-development)
-9. [Copyright and Data Accuracy Disclaimer](#copyright-and-data-accuracy-disclaimer)
-   - [Content Origin](#content-origin)
-   - [Disclaimer](#disclaimer)
-   - [Consumer Advice](#consumer-advice)
-10. [License](#license)
-11. [contact](#contact)
+8. [Known Issue](#known-issue)
+9. [Ongoing Development](#ongoing-development)
+10. [Copyright and Data Accuracy Disclaimer](#copyright-and-data-accuracy-disclaimer)
+
+- [Content Origin](#content-origin)
+- [Disclaimer](#disclaimer)
+- [Consumer Advice](#consumer-advice)
+
+11. [License](#license)
+12. [contact](#contact)
 
 ## [Project Overview](#project-overview)
 
