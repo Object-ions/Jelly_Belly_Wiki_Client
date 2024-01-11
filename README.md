@@ -14,17 +14,17 @@ To read more about the data scraping and API back-end and database check out the
 
 ## [Live version of the UI](#live)
 
-[Jelly Belly Wiki - UI](https://jelly-belly-wiki.netlify.app/)
-[Jelly Belly Wiki - API](https://jellybellywikiapi.onrender.com/)
+- [Jelly Belly Wiki - UI](https://jelly-belly-wiki.netlify.app/)
+- [Jelly Belly Wiki - API](https://jellybellywikiapi.onrender.com/)
 
-- The UI deployed on Netlify.com
-- The API deployed on Render.com
-- The database deployed on TiDB.com
+* The UI deployed on Netlify.com
+* The API deployed on Render.com
+* The database deployed on TiDB.com
 
 ## Table of Contents
 
 1. [Project Description](#project-description)
-2. [Live version of the UI](#live)
+2. [Live versions](#live)
 3. [Project Overview](#project-overview)
 4. [Explore the Project](#explore-the-project)
 5. [Technologies Used](#technologies-used)
