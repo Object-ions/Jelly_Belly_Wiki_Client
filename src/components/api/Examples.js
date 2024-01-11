@@ -29,7 +29,7 @@ const Examples = () => {
         <h3>1. Fetching Data:</h3>
         <pre>
           <code>
-            {`fetch('https://localhost:5001/api/Recipes/24')
+            {`fetch('https://jellybellywikiapi.onrender.com/api/Recipes/24')
   .then(res => {
     if (!res.ok) {
       throw new Error(\`\${res.status}: \${res.statusText}\`);

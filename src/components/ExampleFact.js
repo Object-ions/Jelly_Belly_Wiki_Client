@@ -19,7 +19,7 @@ const initialState = {
 
 const ExampleFact = () => {
   const { error, isLoaded, beans } = useFetch(
-    "https://localhost:5001/api/Facts?pageIndex=1&pageSize=9",
+    "https://jellybellywikiapi.onrender.com/api/Facts?pageIndex=1&pageSize=9",
     initialState,
     getDataSuccess,
     getDataFailure

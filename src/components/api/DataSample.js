@@ -28,7 +28,9 @@ const DataSample = () => {
         <div className="flavorName">
           <p>The following query will return beans with the name "7UP".</p>
           <pre>
-            <code>https://localhost:5001/api/Beans?flavorName=7up</code>
+            <code>
+              https://jellybellywikiapi.onrender.com/api/Beans?flavorName=7up
+            </code>
           </pre>
           <h2>Server Response</h2>
           <h3>Code:</h3>
@@ -89,7 +91,7 @@ const DataSample = () => {
         <div className="flavorId">
           <p>The following query will return beans with id of 24.</p>
           <pre>
-            <code>https://localhost:5001/api/Beans/24</code>
+            <code>https://jellybellywikiapi.onrender.com/api/Beans/24</code>
           </pre>
           <h2>Server Response</h2>
           <h3>Code:</h3>
@@ -140,7 +142,9 @@ const DataSample = () => {
             dataset- page number 4, with 2 beans on each page.
           </p>
           <pre>
-            <code>https://localhost:5001/api/Beans?pageIndex=1&pageSize=2</code>
+            <code>
+              https://jellybellywikiapi.onrender.com/api/Beans?pageIndex=1&pageSize=2
+            </code>
           </pre>
 
           <h2>Server Response</h2>

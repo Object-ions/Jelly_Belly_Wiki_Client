@@ -17,7 +17,7 @@ const initialState = {
 
 const DisplayHistory = () => {
   const { error, isLoaded, beans } = useFetch(
-    "https://localhost:5001/api/MileStones",
+    "https://jellybellywikiapi.onrender.com/api/MileStones",
     initialState,
     getDataSuccess,
     getDataFailure

@@ -13,7 +13,7 @@ const initialState = {
 
 const DisplayCombination = () => {
   const { error, isLoaded, beans } = useFetch(
-    "https://localhost:5001/api/Combinations?pageIndex=1&pageSize=60",
+    "https://jellybellywikiapi.onrender.com/api/Combinations?pageIndex=1&pageSize=60",
     initialState,
     getDataSuccess,
     getDataFailure

@@ -17,7 +17,7 @@ const initialState = {
 
 const DisplayRecipe = () => {
   const { error, isLoaded, beans } = useFetch(
-    "https://localhost:5001/api/Recipes?pageIndex=1&pageSize=50",
+    "https://jellybellywikiapi.onrender.com/api/Recipes?pageIndex=1&pageSize=50",
     initialState,
     getDataSuccess,
     getDataFailure

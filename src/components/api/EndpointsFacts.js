@@ -71,7 +71,7 @@ const EndpointsFacts = () => {
         <li>
           To retrieve information about the fact with ID 1:
           <pre>
-            <code>https://localhost:5001/api/Facts/1</code>
+            <code>https://jellybellywikiapi.onrender.com/api/Facts/1</code>
           </pre>
         </li>
       </ul>

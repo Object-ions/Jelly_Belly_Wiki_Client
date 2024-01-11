@@ -18,7 +18,7 @@ const RecipeCard = () => {
   const { recipeId } = useParams();
 
   const { error, isLoaded, singleBean } = useFetch(
-    `https://localhost:5001/api/Recipes/${recipeId}`,
+    `https://jellybellywikiapi.onrender.com/api/Recipes/${recipeId}`,
     initialState,
     getSingleDataSuccess,
     getDataFailure

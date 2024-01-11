@@ -17,7 +17,7 @@ const BeanCard = () => {
   const { beanId } = useParams();
 
   const { error, isLoaded, singleBean } = useFetch(
-    `https://localhost:5001/api/Beans/${beanId}`,
+    `https://jellybellywikiapi.onrender.com/api/Beans/${beanId}`,
     initialState,
     getSingleDataSuccess,
     getDataFailure

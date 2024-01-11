@@ -20,7 +20,7 @@ const initialState = {
 
 const ExampleCombination = () => {
   const { error, isLoaded, singleBean } = useFetch(
-    "https://localhost:5001/api/Combinations/1",
+    "https://jellybellywikiapi.onrender.com/api/Combinations/1",
     initialState,
     getSingleDataSuccess,
     getDataFailure

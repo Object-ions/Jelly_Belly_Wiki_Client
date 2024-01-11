@@ -74,7 +74,9 @@ const EndpointsCombinations = () => {
         <li>
           To retrieve information about the combination with ID 1:
           <pre>
-            <code>https://localhost:5001/api/Combinations/1</code>
+            <code>
+              https://jellybellywikiapi.onrender.com/api/Combinations/1
+            </code>
           </pre>
         </li>
       </ul>

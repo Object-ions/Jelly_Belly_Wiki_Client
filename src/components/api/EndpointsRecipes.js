@@ -71,7 +71,7 @@ const EndpointsRecipes = () => {
         <li>
           To retrieve information about the recipe with ID 27:
           <pre>
-            <code>https://localhost:5001/api/Recipes/27</code>
+            <code>https://jellybellywikiapi.onrender.com/api/Recipes/27</code>
           </pre>
         </li>
       </ul>

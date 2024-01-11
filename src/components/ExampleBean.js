@@ -16,7 +16,7 @@ const initialState = {
 
 const ExampleBean = () => {
   const { error, isLoaded, beans } = useFetch(
-    "https://localhost:5001/api/Beans?colorGroup=brown&pageIndex=1&pageSize=6",
+    "https://jellybellywikiapi.onrender.com/api/Beans?colorGroup=brown&pageIndex=1&pageSize=6",
     initialState,
     getDataSuccess,
     getDataFailure
