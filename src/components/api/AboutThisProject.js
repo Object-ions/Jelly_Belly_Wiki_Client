@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const More = () => {
   return (
@@ -8,6 +8,17 @@ const More = () => {
       <p>
         This API has been developed by Moshe Atia Poston and is an open-source
         project. It is free for download and use by anyone interested.
+      </p>
+
+      <h4>
+        Utilize this API either locally on your development environment or
+        remotely via a cloud-hosted database.
+      </h4>
+      <p>
+        To integrate the API within your local setup, ensure to adhere to the
+        provided configuration steps meticulously. For remote access leveraging
+        the cloud-hosted database, initiate interactions through the defined API
+        endpoints.
       </p>
 
       <h3>Content and Sources</h3>
@@ -31,7 +42,7 @@ const More = () => {
       <p>
         If you have suggestions, comments, or contributions for this API or
         website, please feel free to reach out. You can contact me through the
-        "Contact" section on this website or directly via email at{" "}
+        "Contact" section on this website or directly via email at{' '}
         <a href="mailto:moshikoatia@gmail.com">moshikoatia@gmail.com</a>. Your
         input and collaboration are greatly appreciated.
       </p>
@@ -82,13 +93,13 @@ const More = () => {
         </li>
         <li>
           You can also check out the main Repository that contain all 3
-          submodules in this{" "}
+          submodules in this{' '}
           <a
             href="https://github.com/Object-ions/Jelly-Belly-Wiki"
             target="blank"
           >
             link
-          </a>{" "}
+          </a>{' '}
         </li>
       </ul>
 

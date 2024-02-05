@@ -1,12 +1,15 @@
-import React from "react";
+import React from 'react';
 
 const CreateDatabase = () => {
   return (
     <div className="doc">
-      <h3>Create the Database</h3>
+      <h3>
+        Create the Database <p>(work locally)</p>
+      </h3>
+
       <ul>
         <li>
-          6. In your terminal, under the project's production directory{" "}
+          6. In your terminal, under the project's production directory{' '}
           <code>JellyBellyWikiApi.Solution</code>, run this command to create
           the database.
           <pre>
@@ -27,8 +30,8 @@ const CreateDatabase = () => {
 
       <h3>Launching the API</h3>
       <p>
-        7. In the command line in the project's production directory{" "}
-        <code>JellyBellyWikiApi.Solution</code>, enter the command{" "}
+        7. In the command line in the project's production directory{' '}
+        <code>JellyBellyWikiApi.Solution</code>, enter the command{' '}
         <code>dotnet watch run</code>. This will compile and execute the
         application. and will open 'Swagger' on localhost:5001
       </p>

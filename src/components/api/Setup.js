@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Setup = () => {
   const connectionStringTemplate = `{
@@ -19,18 +19,20 @@ const Setup = () => {
 
   return (
     <div className="doc">
-      <h2>Setup/Installation Requirements</h2>
+      <h2>
+        Setup/Installation Requirements<p>(work locally)</p>
+      </h2>
 
       <h3>Required Technology</h3>
       <ul>
         <li>
-          1. Follow the instructions on this{" "}
+          1. Follow the instructions on this{' '}
           <a
             href="https://old.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql"
             target="blank"
           >
             page
-          </a>{" "}
+          </a>{' '}
           for installing and configuring MySQL if you don't already have it
           installed.
         </li>
@@ -44,10 +46,10 @@ const Setup = () => {
           </pre>
         </li>
         <li>
-          3. Install Postman -{" "}
+          3. Install Postman -{' '}
           <a href="https://www.postman.com/downloads/" target="blank">
             Download
-          </a>{" "}
+          </a>{' '}
           and install Postman (Optional - recommended if you wish to conduct API
           testing and data retrieval independently, without immediate
           application integration.).
@@ -74,8 +76,8 @@ const Setup = () => {
 
       <ul>
         <li>
-          Using the terminal, navigate to the production directory-{" "}
-          <code>JellyBellyWikiApi.Solution</code> and create a new file called{" "}
+          Using the terminal, navigate to the production directory-{' '}
+          <code>JellyBellyWikiApi.Solution</code> and create a new file called{' '}
           <code>appsettings.json</code>
         </li>
         <li>
